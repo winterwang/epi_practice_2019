@@ -64,7 +64,7 @@ knitr::opts_chunk$set(echo = TRUE)
 \begin{tabular}{|l|l|l|l|l|}\hline
 変数                     & \multicolumn{2}{c|}{遺伝変異あり (n = 50)}     & \multicolumn{2}{c|}{遺伝変異なし (n = 150)}   \\\hline
                        & \vtop{\hbox{\strut 平均値}\hbox{\strut (mean)}}&\vtop{\hbox{\strut  標準偏差}\hbox{\strut (standard deviation) }} & \vtop{\hbox{\strut 平均値}\hbox{\strut (mean)}}&\vtop{\hbox{\strut  標準偏差}\hbox{\strut (standard deviation) }} \\\hline
-認識能力テスト，COG            & 69.2       & 9.2                       & 60.2       & 9.0                       \\
+認識能力テスト，COG            & 69.2       & 9.0                       & 60.2       & 9.0                       \\
 脳萎縮度, atrophy, \%/year & 0.67       & 0.21                      & 0.23       & 0.10                     \\\hline
 \end{tabular}
 \end{center}
@@ -186,7 +186,14 @@ my.var.test(50, 0.21^2, 150, 0.1^2)
 \underline{手計算の結果とは一致していると確認できる．}
 
 
+この検定結果は「両群の脳萎縮度の分散が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
 
+There is strong evidence against the null hypothesis that the variances are the same in the two groups.
+
+\newpage
+\vfill
+
+3.  2.の結果を踏まえて，帰無仮設「両群の間にの脳萎縮度の平均値が等しい」を検定せよ．
 
 \newpage
 \vfill
