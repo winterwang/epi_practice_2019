@@ -83,30 +83,62 @@ $$
 - $S:$ A群及びB群の共通標準偏差；
 - $n_A + n_B -2:$ 共通標準偏差を推定する時の自由度．
 
-また，EZR で t value，自由度 (degree of freedom)を使って P 値を計算する時，以下のコマンドを利用してください：
+また，EZR で t 値，自由度 (degree of freedom)を使って P 値を計算する時，以下のコマンドを利用してください：
 
 ```{r eval=FALSE}
 2*pt(t value, degree of freedom, lower=FALSE)
 ```
 
 
+\newpage
+\vfill
+
+## 答え
+
+両群の標準偏差は 9.0 と推定され，分散が等しいと仮定できるから，Student の t 検定を行う：
+
+$$
+T = \frac{\bar{X}_A - \bar{X}_B}{S\sqrt{1/n_A + 1/n_B}}
+$$
+
+
+$$
+\begin{aligned}
+\because\;\;  S & = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}} \\
+\therefore\;\; S & =  \sqrt{\frac{(50 - 1)9^2 + (150 - 1)9^2}{50 + 150 -2}} = 9 \\
+\Rightarrow\;\; T & = \frac{\bar{X}_A - \bar{X}_B}{S\sqrt{1/n_A + 1/n_B}} \\ 
+                  & = \frac{69.2 - 60.2}{9\times\sqrt{1/50 + 1/150}} \\ 
+                  & = \frac{9}{9\times0.1633} = 6.1237
+\end{aligned}
+$$
+
+自由度 (degree of freedom)は $n_A + n_B -2 = 198$，P値の計算は EZR を利用する：
+
+```{r eval=TRUE}
+2*pt(6.1237, 198, lower=FALSE)
+```
+
 
 <!-- \clearpage -->
 <!-- \thispagestyle{empty} -->
 <!-- \phantom{a} -->
 <!-- \vfill -->
-\newpage
-\vfill
 
-
+\bigskip
+\bigskip
 
 以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
 
-```{r eval=FALSE}
+```{r eval=TRUE}
 source("http://aoki2.si.gunma-u.ac.jp/R/src/my_t_test.R", encoding="euc-jp")
 my.t.test(50, 69.2, 9.0^2, 150, 60.2, 9.0^2, var.equal=TRUE)
 ```
 
+\underline{手計算の結果とは一致していると確認できる．}
+
+この検定結果は「両群のCOG平均値が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
+
+There is strong evidence against the null hypothesis that the means are the same in the two groups.
 
 \newpage
 \vfill
@@ -114,10 +146,50 @@ my.t.test(50, 69.2, 9.0^2, 150, 60.2, 9.0^2, var.equal=TRUE)
 2. この患者データから，遺伝子変異ありとなしの群の間に脳萎縮度 (atrophy) の比較を 1. と同じ方法で検定してもよいか？どの検定方法を使えば 1. と同じ検定方法を使えるかどうかを判断できるを説明せよ．実際にこの検定方法を行ってください．
 
 
+なお，EZR で F 値，両群の分散，両群それぞれの自由度 (df) を使って P 値を計算する時に，以下のコマンドを利用してください：
+
+```{r eval=FALSE}
+2*pf(F value, df in group 1, df in group 2, lower=FALSE)
+```
 
 
 
 
+## 答え
+
+テーブルから両群の標準偏差はそれぞれ 0.21, 0.10 だと推定され，分散 (variance) が等しいという前提が満たされていない．１．の検定方法を使う時には，両群の分散が等しいという前提条件が必須だから，同じ Student t 検定を行うことができない．「両群の分散」が等しいという帰無仮説を検定するには F 検定を利用する：
+
+$$
+\begin{aligned}
+F & = \frac{S^2_A}{S^2_B} \\
+  & = \frac{0.21^2}{0.10^2} \\
+  & = 4.41
+\end{aligned}
+$$
+
+
+自由度 (degree of freedom)はそれぞれ $n_A - 1 = 49; n_B -2 = 149$，P値の計算は EZR を利用する：
+
+```{r eval=TRUE}
+2*pf(4.41, 49, 149, lower.tail = FALSE)
+```
+
+\bigskip
+
+以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
+
+```{r eval=TRUE}
+source("http://aoki2.si.gunma-u.ac.jp/R/src/my_var_test.R", encoding="euc-jp")
+my.var.test(50, 0.21^2, 150, 0.1^2)
+```
+
+\underline{手計算の結果とは一致していると確認できる．}
+
+
+
+
+\newpage
+\vfill
 # 参考図書：
 1.「Rによる保健医療データ解析演習」，中澤　港，（http://minato.sip21c.org/msb/medstatbookx.pdf）
 2.「みんなの医療統計 12日間で基礎理論とEZRを完全マスター!」，新谷　歩．

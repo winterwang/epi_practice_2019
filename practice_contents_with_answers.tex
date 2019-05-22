@@ -195,7 +195,7 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
   \(n_A + n_B -2:\) 共通標準偏差を推定する時の自由度．
 \end{itemize}
 
-また，EZR で t value，自由度 (degree of freedom)を使って P
+また，EZR で t 値，自由度 (degree of freedom)を使って P
 値を計算する時，以下のコマンドを利用してください：
 
 \begin{Shaded}
@@ -207,6 +207,41 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \newpage
 \vfill
 
+\subsection{答え}
+
+両群の標準偏差は 9.0 と推定され，分散が等しいと仮定できるから，Student
+の t 検定を行う：
+
+\[
+T = \frac{\bar{X}_A - \bar{X}_B}{S\sqrt{1/n_A + 1/n_B}}
+\]
+
+\[
+\begin{aligned}
+\because\;\;  S & = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}} \\
+\therefore\;\; S & =  \sqrt{\frac{(50 - 1)9^2 + (150 - 1)9^2}{50 + 150 -2}} = 9 \\
+\Rightarrow\;\; T & = \frac{\bar{X}_A - \bar{X}_B}{S\sqrt{1/n_A + 1/n_B}} \\ 
+                  & = \frac{69.2 - 60.2}{9\times\sqrt{1/50 + 1/150}} \\ 
+                  & = \frac{9}{9\times0.1633} = 6.1237
+\end{aligned}
+\]
+
+自由度 (degree of freedom)は \(n_A + n_B -2 = 198\)，P値の計算は EZR
+を利用する：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2}\OperatorTok{*}\KeywordTok{pt}\NormalTok{(}\FloatTok{6.1237}\NormalTok{, }\DecValTok{198}\NormalTok{, }\DataTypeTok{lower=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4.831141e-09
+\end{verbatim}
+
+\bigskip
+\bigskip
+
 以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
 
 \begin{Shaded}
@@ -216,6 +251,23 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \end{Highlighting}
 \end{Shaded}
 
+\begin{verbatim}
+## 
+##  等分散を仮定した，二群の平均値の差の検定
+## 
+## data:  
+## n1 = 50, mean1 = 69.2, variance1 = 81
+## n2 = 150, mean2 = 60.2, variance2 = 81
+## t = 6.1237, df = 198, p-value = 4.831e-09
+\end{verbatim}
+
+\underline{手計算の結果とは一致していると確認できる．}
+
+この検定結果は「両群のCOG平均値が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
+
+There is strong evidence against the null hypothesis that the means are
+the same in the two groups.
+
 \newpage
 \vfill
 
@@ -224,10 +276,74 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \setcounter{enumi}{1}
 \tightlist
 \item
-  この患者データから，遺伝子変異ありとなしの群の間に脳萎縮度の比較を 1.
-  と同じ方法で検定してもよいか？どの検定方法を使えば 1.
-  と同じ検定方法を使えるかどうかを判断できるを説明せよ．
+  この患者データから，遺伝子変異ありとなしの群の間に脳萎縮度 (atrophy)
+  の比較を 1. と同じ方法で検定してもよいか？どの検定方法を使えば 1.
+  と同じ検定方法を使えるかどうかを判断できるを説明せよ．実際にこの検定方法を行ってください．
 \end{enumerate}
+
+なお，EZR で F 値，両群の分散，両群それぞれの自由度 (df) を使って P
+値を計算する時に，以下のコマンドを利用してください：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2}\OperatorTok{*}\KeywordTok{pf}\NormalTok{(F value, df }\ControlFlowTok{in}\NormalTok{ group }\DecValTok{1}\NormalTok{, df }\ControlFlowTok{in}\NormalTok{ group }\DecValTok{2}\NormalTok{, }\DataTypeTok{lower=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{-1}{%
+\subsection{答え}\label{-1}}
+
+テーブルから両群の標準偏差はそれぞれ 0.21, 0.10 だと推定され，分散
+(variance)
+が等しいという前提が満たされていない．１．の検定方法を使う時には，両群の分散が等しいという前提条件が必須だから，同じ
+Student t
+検定を行うことができない．「両群の分散」が等しいという帰無仮説を検定するには
+F 検定を利用する：
+
+\[
+\begin{aligned}
+F & = \frac{S^2_A}{S^2_B} \\
+  & = \frac{0.21^2}{0.10^2} \\
+  & = 4.41
+\end{aligned}
+\]
+
+自由度 (degree of freedom)はそれぞれ
+\(n_A - 1 = 49; n_B -2 = 149\)，P値の計算は EZR を利用する：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2}\OperatorTok{*}\KeywordTok{pf}\NormalTok{(}\FloatTok{4.41}\NormalTok{, }\DecValTok{49}\NormalTok{, }\DecValTok{149}\NormalTok{, }\DataTypeTok{lower.tail =} \OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2.971758e-12
+\end{verbatim}
+
+\bigskip
+
+以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{source}\NormalTok{(}\StringTok{"http://aoki2.si.gunma-u.ac.jp/R/src/my_var_test.R"}\NormalTok{, }\DataTypeTok{encoding=}\StringTok{"euc-jp"}\NormalTok{)}
+\KeywordTok{my.var.test}\NormalTok{(}\DecValTok{50}\NormalTok{, }\FloatTok{0.21}\OperatorTok{^}\DecValTok{2}\NormalTok{, }\DecValTok{150}\NormalTok{, }\FloatTok{0.1}\OperatorTok{^}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  二次データから，二群の等分散性の検定
+## 
+## data:  n1 = 50, variance1 = 0.0441, n2 = 150, variance2 = 0.01
+## F = 4.41, num df = 49, denom df = 149, p-value = 2.972e-12
+\end{verbatim}
+
+\underline{手計算の結果とは一致していると確認できる．}
+
+\newpage
+\vfill
 
 \section{参考図書：}
 
