@@ -23,7 +23,6 @@
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
             pdfborder={0 0 0},
@@ -150,7 +149,7 @@
 
 \begin{document}
 
-\section{問題１}
+\section{問題１：両群間計量データの平均値を比較する}
 
 ２００名の認知症患者を募集し，認識能力テスト(cognitive test,
 COG)，及び脳萎縮の進行度 (brain atrophy,
@@ -175,9 +174,10 @@ COG)，及び脳萎縮の進行度 (brain atrophy,
   帰無仮説を「遺伝子変異ありと変異なし両群の間に，COGの平均値は等しい」とする．上記のデータ及び適宜な方法を使って検定せよ．検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：
 \end{enumerate}
 
-\[
+\begin{equation}
+  \label{eq:1}
 S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
-\]
+\end{equation}
 
 \begin{itemize}
 \tightlist
@@ -192,7 +192,7 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \item
   \(S:\) A群及びB群の共通標準偏差；
 \item
-  \(n_A + n_B -2:\) 共通標準偏差を推定する時の自由度．
+  \(n_A + n_B -2:\) 分散が等しい時の自由度．
 \end{itemize}
 
 また，EZR で t 値，自由度 (degree of freedom)を使って P
@@ -216,7 +216,7 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 T = \frac{\bar{X}_A - \bar{X}_B}{S\sqrt{1/n_A + 1/n_B}}
 \]
 
-\[
+公式(\ref{eq:1})により，共通分散/標準偏差を推定する： \[
 \begin{aligned}
 \because\;\;  S & = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}} \\
 \therefore\;\; S & =  \sqrt{\frac{(50 - 1)9^2 + (150 - 1)9^2}{50 + 150 -2}} = 9 \\
@@ -239,8 +239,11 @@ T = \frac{\bar{X}_A - \bar{X}_B}{S\sqrt{1/n_A + 1/n_B}}
 ## [1] 4.831141e-09
 \end{verbatim}
 
+\begin{center}\includegraphics[width=0.9\linewidth]{pic/tvaluepvalue00} \end{center}
 \bigskip
-\bigskip
+
+\newpage
+\vfill
 
 以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
 
@@ -261,12 +264,15 @@ T = \frac{\bar{X}_A - \bar{X}_B}{S\sqrt{1/n_A + 1/n_B}}
 ## t = 6.1237, df = 198, p-value = 4.831e-09
 \end{verbatim}
 
+\begin{center}\includegraphics[width=0.9\linewidth]{pic/myttest01} \end{center}
+\bigskip
+
 \underline{手計算の結果とは一致していると確認できる．}
 
 この検定結果は「両群のCOG平均値が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
 
-There is strong evidence against the null hypothesis that the means are
-the same in the two groups.
+There is strong evidence against the null hypothesis that the means of
+COG are the same in the two groups.
 
 \newpage
 \vfill
@@ -321,6 +327,7 @@ F & = \frac{S^2_A}{S^2_B} \\
 ## [1] 2.971758e-12
 \end{verbatim}
 
+\begin{center}\includegraphics[width=0.9\linewidth]{pic/ftest} \end{center}
 \bigskip
 
 以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
@@ -340,12 +347,15 @@ F & = \frac{S^2_A}{S^2_B} \\
 ## F = 4.41, num df = 49, denom df = 149, p-value = 2.972e-12
 \end{verbatim}
 
+\begin{center}\includegraphics[width=0.9\linewidth]{pic/ftest01} \end{center}
+\bigskip
+
 \underline{手計算の結果とは一致していると確認できる．}
 
 この検定結果は「両群の脳萎縮度の分散が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
 
 There is strong evidence against the null hypothesis that the variances
-are the same in the two groups.
+of atrophy are the same in the two groups.
 
 \newpage
 \vfill
@@ -355,8 +365,93 @@ are the same in the two groups.
 \setcounter{enumi}{2}
 \tightlist
 \item
-  2.の結果を踏まえて，帰無仮設「両群の間にの脳萎縮度の平均値が等しい」を検定せよ．
+  2.の結果を踏まえて，帰無仮設「両群の脳萎縮度の平均値が等しい」を検定せよ．なお，両群の分散が等しいという前提が満たされていない時に，自由度(df)の計算式は以下となる：
 \end{enumerate}
+
+\begin{equation}
+\label{eq:2}
+\mathbf{df} = \frac{(S^2_A/n_A + S^2_B/n_B)^2}{(S_A^2/n_A)^2/(n_A-1)+(S_B^2/n_B)^2/(n_B-1)}
+\end{equation}
+
+また，EZR で t 値，自由度 (df)を使って P
+値を計算する時，以下のコマンドを利用してください：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2}\OperatorTok{*}\KeywordTok{pt}\NormalTok{(t value, df, }\DataTypeTok{lower=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{-2}{%
+\subsection{答え}\label{-2}}
+
+2.の検定結果から，「両群の脳萎縮度の分散が等しい」という帰無仮説を棄却されたため，Welch
+の t 検定を採用する．
+
+\[
+\begin{aligned}
+\Rightarrow\;\; T & = \frac{\bar{X}_A - \bar{X}_B}{\sqrt{S^2_A/n_A + S^2_B/n_B}} \\ 
+                  & = \frac{0.67 - 0.23}{\sqrt{0.21^2/50 + 0.10^2/150}} \\ 
+                  & = \frac{0.44}{\sqrt{0.0009486667}} = 14.28551
+\end{aligned}
+\]
+
+自由度は公式(\ref{eq:2})により計算できる：
+
+\[
+\begin{aligned}
+\mathbf{df} & = \frac{(S^2_A/n_A + S^2_B/n_B)^2}{(S_A^2/n_A)^2/(n_A-1)+(S_B^2/n_B)^2/(n_B-1)} \\
+            & = \frac{(0.21^2/50 + 0.10^2/150)^2}{(0.21^2/50)^2/(50-1)+(0.10^2/150)^2/(150-1)} \\
+            & = 58.58105
+\end{aligned}
+\] P値の計算は EZR を利用する：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2}\OperatorTok{*}\KeywordTok{pt}\NormalTok{(}\FloatTok{14.28551}\NormalTok{, }\FloatTok{58.58105}\NormalTok{, }\DataTypeTok{lower=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 9.601543e-21
+\end{verbatim}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{pic/tvaluepvalue01} \end{center}
+\bigskip
+
+以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{source}\NormalTok{(}\StringTok{"http://aoki2.si.gunma-u.ac.jp/R/src/my_t_test.R"}\NormalTok{, }\DataTypeTok{encoding=}\StringTok{"euc-jp"}\NormalTok{)}
+\KeywordTok{my.t.test}\NormalTok{(}\DecValTok{50}\NormalTok{, }\FloatTok{0.67}\NormalTok{, }\FloatTok{0.21}\OperatorTok{^}\DecValTok{2}\NormalTok{, }\DecValTok{150}\NormalTok{, }\FloatTok{0.23}\NormalTok{, }\FloatTok{0.10}\OperatorTok{^}\DecValTok{2}\NormalTok{, }\DataTypeTok{var.equal=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  ウエルチの方法による，二群の平均値の差の検定
+## 
+## data:  
+## n1 = 50, mean1 = 0.67, variance1 = 0.0441
+## n2 = 150, mean2 = 0.23, variance2 = 0.01
+## t = 14.286, df = 56.581, p-value < 2.2e-16
+\end{verbatim}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{pic/myttest02} \end{center}
+\bigskip
+
+\underline{手計算の結果とは一致していると確認できる．}
+
+この検定結果は「両群の脳萎縮度の平均値が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
+
+There is strong evidence against the null hypothesis that the means of
+atrophy are the same in the two groups.
+
+\newpage
+\vfill
+
+\section{問題２}
 
 \newpage
 \vfill

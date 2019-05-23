@@ -53,7 +53,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-# 問題１
+# 問題１：両群間計量データの平均値を比較する
 
 <!-- 近年の研究によると，ビタミンＥはがんの発症予防に有用かもしれないと言われている．ある研究者がこの仮説を検証したくて， -->
 
@@ -72,16 +72,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 1. 帰無仮説を「遺伝子変異ありと変異なし両群の間に，COGの平均値は等しい」とする．上記のデータ及び適宜な方法を使って検定せよ．検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：
 
-$$
+\begin{equation}
+  \label{eq:1}
 S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
-$$
+\end{equation}
 
 - $S_A:$ A群の標準偏差；
 - $n_A:$ A群の人数；
 - $S_B:$ B群の標準偏差；
 - $n_B:$ B群の人数；
 - $S:$ A群及びB群の共通標準偏差；
-- $n_A + n_B -2:$ 共通標準偏差を推定する時の自由度．
+- $n_A + n_B -2:$ 分散が等しい時の自由度．
 
 また，EZR で t 値，自由度 (degree of freedom)を使って P 値を計算する時，以下のコマンドを利用してください：
 
@@ -101,7 +102,7 @@ $$
 T = \frac{\bar{X}_A - \bar{X}_B}{S\sqrt{1/n_A + 1/n_B}}
 $$
 
-
+公式(\ref{eq:1})により，共通分散/標準偏差を推定する：
 $$
 \begin{aligned}
 \because\;\;  S & = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}} \\
@@ -119,13 +120,19 @@ $$
 ```
 
 
+```{r pvalue00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='90%'}
+knitr::include_graphics("pic/tvaluepvalue00.png")
+```
+\bigskip
+
+\newpage
+\vfill
+
+
 <!-- \clearpage -->
 <!-- \thispagestyle{empty} -->
 <!-- \phantom{a} -->
 <!-- \vfill -->
-
-\bigskip
-\bigskip
 
 以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
 
@@ -134,11 +141,18 @@ source("http://aoki2.si.gunma-u.ac.jp/R/src/my_t_test.R", encoding="euc-jp")
 my.t.test(50, 69.2, 9.0^2, 150, 60.2, 9.0^2, var.equal=TRUE)
 ```
 
+```{r myttest00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='90%'}
+knitr::include_graphics("pic/myttest01.png")
+```
+\bigskip
+
+
+
 \underline{手計算の結果とは一致していると確認できる．}
 
 この検定結果は「両群のCOG平均値が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
 
-There is strong evidence against the null hypothesis that the means are the same in the two groups.
+There is strong evidence against the null hypothesis that the means of COG are the same in the two groups.
 
 \newpage
 \vfill
@@ -174,6 +188,10 @@ $$
 2*pf(4.41, 49, 149, lower.tail = FALSE)
 ```
 
+
+```{r ftest, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='90%'}
+knitr::include_graphics("pic/ftest.png")
+```
 \bigskip
 
 以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
@@ -183,20 +201,105 @@ source("http://aoki2.si.gunma-u.ac.jp/R/src/my_var_test.R", encoding="euc-jp")
 my.var.test(50, 0.21^2, 150, 0.1^2)
 ```
 
+
+```{r ftest01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='90%'}
+knitr::include_graphics("pic/ftest01.png")
+```
+\bigskip
+
 \underline{手計算の結果とは一致していると確認できる．}
 
 
 この検定結果は「両群の脳萎縮度の分散が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
 
-There is strong evidence against the null hypothesis that the variances are the same in the two groups.
+There is strong evidence against the null hypothesis that the variances of atrophy are the same in the two groups.
 
 \newpage
 \vfill
 
-3.  2.の結果を踏まえて，帰無仮設「両群の間にの脳萎縮度の平均値が等しい」を検定せよ．
+3.  2.の結果を踏まえて，帰無仮設「両群の脳萎縮度の平均値が等しい」を検定せよ．なお，両群の分散が等しいという前提が満たされていない時に，自由度(df)の計算式は以下となる：
+
+
+\begin{equation}
+\label{eq:2}
+\mathbf{df} = \frac{(S^2_A/n_A + S^2_B/n_B)^2}{(S_A^2/n_A)^2/(n_A-1)+(S_B^2/n_B)^2/(n_B-1)}
+\end{equation}
+
+また，EZR で t 値，自由度 (df)を使って P 値を計算する時，以下のコマンドを利用してください：
+
+```{r eval=FALSE}
+2*pt(t value, df, lower=FALSE)
+```
+
+
+## 答え
+
+2.の検定結果から，「両群の脳萎縮度の分散が等しい」という帰無仮説を棄却されたため，Welch の t 検定を採用する．
+
+$$
+\begin{aligned}
+\Rightarrow\;\; T & = \frac{\bar{X}_A - \bar{X}_B}{\sqrt{S^2_A/n_A + S^2_B/n_B}} \\ 
+                  & = \frac{0.67 - 0.23}{\sqrt{0.21^2/50 + 0.10^2/150}} \\ 
+                  & = \frac{0.44}{\sqrt{0.0009486667}} = 14.28551
+\end{aligned}
+$$
+
+自由度は公式(\ref{eq:2})により計算できる：
+
+$$
+\begin{aligned}
+\mathbf{df} & = \frac{(S^2_A/n_A + S^2_B/n_B)^2}{(S_A^2/n_A)^2/(n_A-1)+(S_B^2/n_B)^2/(n_B-1)} \\
+            & = \frac{(0.21^2/50 + 0.10^2/150)^2}{(0.21^2/50)^2/(50-1)+(0.10^2/150)^2/(150-1)} \\
+            & = 58.58105
+\end{aligned}
+$$
+P値の計算は EZR を利用する：
+
+```{r eval=TRUE}
+2*pt(14.28551, 58.58105, lower=FALSE)
+```
+
+```{r pvalue01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='90%'}
+knitr::include_graphics("pic/tvaluepvalue01.png")
+```
+\bigskip
+
+
+
+以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
+
+```{r eval=TRUE}
+source("http://aoki2.si.gunma-u.ac.jp/R/src/my_t_test.R", encoding="euc-jp")
+my.t.test(50, 0.67, 0.21^2, 150, 0.23, 0.10^2, var.equal=FALSE)
+```
+
+
+
+```{r myttest01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='90%'}
+knitr::include_graphics("pic/myttest02.png")
+```
+\bigskip
+
+
+
+\underline{手計算の結果とは一致していると確認できる．}
+
+
+この検定結果は「両群の脳萎縮度の平均値が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
+
+There is strong evidence against the null hypothesis that the means of atrophy are the same in the two groups.
+
 
 \newpage
 \vfill
+
+
+# 問題２：線形回帰モデル
+
+
+\newpage
+\vfill
+
 # 参考図書：
 1.「Rによる保健医療データ解析演習」，中澤　港，（http://minato.sip21c.org/msb/medstatbookx.pdf）
 2.「みんなの医療統計 12日間で基礎理論とEZRを完全マスター!」，新谷　歩．
