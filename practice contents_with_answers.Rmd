@@ -623,6 +623,9 @@ knitr::include_graphics("pic/scatter07.png")
 ```
 
 
+# 問題３：$\chi^2$ 検定，オッズ比
+
+
 
 \newpage
 \vfill
