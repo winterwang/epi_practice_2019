@@ -38,11 +38,11 @@ header-includes:
 - \setsansfont[]{IPAPGothic}
 - \usepackage{afterpage}
 - \sectionfont{\fontsize{12}{15}\selectfont}
-- \author{学籍番号:}
+- \author{氏名:}
 - \course{疫学演習 2019-6-5 \& 2019-6-12}
 - \problemset{ }
 - \problem{ }
-- \collab{氏名:}
+- \collab{学籍番号:}
 sansfont: IPAPGothic
 fontsize: 11pt
 ---
@@ -380,10 +380,11 @@ knitr::include_graphics("pic/box01.png")
 
 
 
-```{r scatter, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.height= 5, fig.align='center', out.width='50%', warning=FALSE, eval=FALSE}
+```{r scatter, fig.align='center', fig.asp=.7, fig.height=5, fig.width=8, warning=FALSE, cache=TRUE, include=FALSE, out.width='50%'}
 par(mfrow=c(1,2))
 library(haven)
-Dataset <- read_dta("~/ドキュメント/githubprojects/LSHTMlearningnote/backupfiles/growgam1.dta")
+# Dataset <- read_dta("~/ドキュメント/githubprojects/LSHTMlearningnote/backupfiles/growgam1.dta")
+Dataset <- read_dta("../LSHTMlearningnote/backupfiles/growgam1.dta")
 plot(Dataset$age,Dataset$wt, 
      xlab = "年齢 (months)", ylab = "体重 (kg)",
      main = "体重と年齢の散布図",
@@ -400,7 +401,7 @@ boxplot(Dataset$wt ~ Dataset$sex, ylim = c(0, 18),
 
 以下のコードをRスクリプトに入力して,実行をクリックしてください．(結果を下の余白に記入すること)
 
-```{r eval=FALSE}
+```{r eval=TRUE}
 # 年齢の平均値
 mean(Dataset$age)
 # 年齢の分散
@@ -415,8 +416,6 @@ cov(Dataset$wt, Dataset$age)
 
 
 
-\newpage
-\vfill
 
 ## 年齢を説明変数，体重を目的変数とする場合，年齢の傾き(回帰係数)，と切片を求めよ．なお，分散と共分散の定義を以下とする，$\bar{X}$ は $X$ の平均値を示す：
 
@@ -441,7 +440,7 @@ $$
 
 以下のコードをRスクリプトに入力して,実行をクリックしてください．（結果を下の余白に記入すること）
 
-```{r eval=FALSE}
+```{r eval=TRUE}
 # 傾き (slope)
 beta <- cov(Dataset$wt, Dataset$age) / var(Dataset$age)
 beta
@@ -451,7 +450,7 @@ alpha
 ```
 
 
-```{r betaalpha, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='80%'}
+```{r betaalpha, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='75%'}
 knitr::include_graphics("pic/betaalpha.png")
 ```
 

@@ -23,7 +23,6 @@
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
             pdfborder={0 0 0},
@@ -87,7 +86,7 @@
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{0}
+\setcounter{secnumdepth}{5}
 % Redefines (sub)paragraphs to behave more like sections
 \ifx\paragraph\undefined\else
 \let\oldparagraph\paragraph
@@ -122,6 +121,7 @@
     \date{}
     \predate{}\postdate{}
   
+\usepackage[ipa]{zxjafont}
 \usepackage{sectsty}
 \usepackage{tikz}
 \usetikzlibrary{trees}
@@ -142,15 +142,16 @@
 \setsansfont[]{IPAPGothic}
 \usepackage{afterpage}
 \sectionfont{\fontsize{12}{15}\selectfont}
-\author{学籍番号:}
+\author{氏名:}
 \course{疫学演習 2019-6-5 \& 2019-6-12}
 \problemset{ }
 \problem{ }
-\collab{氏名:}
+\collab{学籍番号:}
 
 \begin{document}
 
-\section{問題１}
+\hypertarget{section}{%
+\section{問題１：両群間計量データの平均値を比較する}\label{section}}
 
 ２００名の認知症患者を募集し，認識能力テスト(cognitive test,
 COG)，及び脳萎縮の進行度 (brain atrophy,
@@ -162,7 +163,7 @@ COG)，及び脳萎縮の進行度 (brain atrophy,
 \begin{tabular}{|l|l|l|l|l|}\hline
 変数                     & \multicolumn{2}{c|}{遺伝変異あり (n = 50)}     & \multicolumn{2}{c|}{遺伝変異なし (n = 150)}   \\\hline
                        & \vtop{\hbox{\strut 平均値}\hbox{\strut (mean)}}&\vtop{\hbox{\strut  標準偏差}\hbox{\strut (standard deviation) }} & \vtop{\hbox{\strut 平均値}\hbox{\strut (mean)}}&\vtop{\hbox{\strut  標準偏差}\hbox{\strut (standard deviation) }} \\\hline
-認識能力テスト，COG            & 69.2       & 9.2                       & 60.2       & 9.0                       \\
+認識能力テスト，COG            & 69.2       & 9.0                       & 60.2       & 9.0                       \\
 脳萎縮度, atrophy, \%/year & 0.67       & 0.21                      & 0.23       & 0.10                     \\\hline
 \end{tabular}
 \end{center}
@@ -175,9 +176,10 @@ COG)，及び脳萎縮の進行度 (brain atrophy,
   帰無仮説を「遺伝子変異ありと変異なし両群の間に，COGの平均値は等しい」とする．上記のデータ及び適宜な方法を使って検定せよ．検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：
 \end{enumerate}
 
-\[
+\begin{equation}
+  \label{eq:1}
 S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
-\]
+\end{equation}
 
 \begin{itemize}
 \tightlist
@@ -192,10 +194,10 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \item
   \(S:\) A群及びB群の共通標準偏差；
 \item
-  \(n_A + n_B -2:\) 共通標準偏差を推定する時の自由度．
+  \(n_A + n_B -2:\) 分散が等しい時の自由度．
 \end{itemize}
 
-また，EZR で t value，自由度 (degree of freedom)を使って P
+また，EZR で t 値，自由度 (degree of freedom)を使って P
 値を計算する時，以下のコマンドを利用してください：
 
 \begin{Shaded}
@@ -203,6 +205,12 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \DecValTok{2}\OperatorTok{*}\KeywordTok{pt}\NormalTok{(t value, degree of freedom, }\DataTypeTok{lower=}\OtherTok{FALSE}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
+
+\newpage
+\vfill
+
+\hypertarget{section-1}{%
+\subsection{答え}\label{section-1}}
 
 \newpage
 \vfill
@@ -216,6 +224,11 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \end{Highlighting}
 \end{Shaded}
 
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
+\begin{center}\includegraphics[width=0.9\linewidth]{pic/myttest01} \end{center}
+\bigskip
+
 \newpage
 \vfill
 
@@ -224,12 +237,370 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \setcounter{enumi}{1}
 \tightlist
 \item
-  この患者データから，遺伝子変異ありとなしの群の間に脳萎縮度の比較を 1.
-  と同じ方法で検定してもよいか？どの検定方法を使えば 1.
-  と同じ検定方法を使えるかどうかを判断できるを説明せよ．
+  この患者データから，遺伝子変異ありとなしの群の間に脳萎縮度 (atrophy)
+  の比較を 1. と同じ方法で検定してもよいか？どの検定方法を使えば 1.
+  と同じ検定方法を使えるかどうかを判断できるを説明せよ．実際にこの検定方法を行ってください．
 \end{enumerate}
 
-\section{参考図書：}
+なお，EZR で F 値，両群の分散，両群それぞれの自由度 (df) を使って P
+値を計算する時に，以下のコマンドを利用してください：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2}\OperatorTok{*}\KeywordTok{pf}\NormalTok{(F value, df }\ControlFlowTok{in}\NormalTok{ group }\DecValTok{1}\NormalTok{, df }\ControlFlowTok{in}\NormalTok{ group }\DecValTok{2}\NormalTok{, }\DataTypeTok{lower=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-2}{%
+\subsection{答え}\label{section-2}}
+
+\bigskip
+\newpage
+\vfill
+
+以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{source}\NormalTok{(}\StringTok{"http://aoki2.si.gunma-u.ac.jp/R/src/my_var_test.R"}\NormalTok{, }\DataTypeTok{encoding=}\StringTok{"euc-jp"}\NormalTok{)}
+\KeywordTok{my.var.test}\NormalTok{(}\DecValTok{50}\NormalTok{, }\FloatTok{0.21}\OperatorTok{^}\DecValTok{2}\NormalTok{, }\DecValTok{150}\NormalTok{, }\FloatTok{0.1}\OperatorTok{^}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\bigskip\bigskip\bigskip\bigskip\bigskip
+
+\begin{center}\includegraphics[width=0.9\linewidth]{pic/ftest01} \end{center}
+
+\newpage
+\vfill
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  2.の結果を踏まえて，帰無仮設「両群の脳萎縮度の平均値が等しい」を検定せよ．なお，両群の分散が等しいという前提が満たされていない時に，自由度(df)の計算式は以下となる：
+\end{enumerate}
+
+\begin{equation}
+\label{eq:2}
+\mathbf{df} = \frac{(S^2_A/n_A + S^2_B/n_B)^2}{(S_A^2/n_A)^2/(n_A-1)+(S_B^2/n_B)^2/(n_B-1)}
+\end{equation}
+
+また，EZR で t 値，自由度 (df)を使って P
+値を計算する時，以下のコマンドを利用してください：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2}\OperatorTok{*}\KeywordTok{pt}\NormalTok{(t value, df, }\DataTypeTok{lower=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-3}{%
+\subsection{答え}\label{section-3}}
+
+\newpage
+\vfill
+
+以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{source}\NormalTok{(}\StringTok{"http://aoki2.si.gunma-u.ac.jp/R/src/my_t_test.R"}\NormalTok{, }\DataTypeTok{encoding=}\StringTok{"euc-jp"}\NormalTok{)}
+\KeywordTok{my.t.test}\NormalTok{(}\DecValTok{50}\NormalTok{, }\FloatTok{0.67}\NormalTok{, }\FloatTok{0.21}\OperatorTok{^}\DecValTok{2}\NormalTok{, }\DecValTok{150}\NormalTok{, }\FloatTok{0.23}\NormalTok{, }\FloatTok{0.10}\OperatorTok{^}\DecValTok{2}\NormalTok{, }\DataTypeTok{var.equal=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\bigskip\bigskip\bigskip\bigskip\bigskip
+
+\begin{center}\includegraphics[width=0.9\linewidth]{pic/myttest02} \end{center}
+\bigskip
+
+\newpage
+\vfill
+
+\hypertarget{section-4}{%
+\section{問題２：線形回帰モデル}\label{section-4}}
+
+190名の乳幼児の性別（1 = 男，2 = 女），年齢 (月,
+months)，体重（kg）のデータを収集した．このデータを用いで，以下の問題を解答したい：
+
+\begin{itemize}
+\item
+  子供の年齢が一ヶ月の増加によって，体重はどれぐらい増えているか？
+\item
+  男の子は女の子と比べて，平均的に体重はどれぐらい大きい/小さい？
+\end{itemize}
+
+\hypertarget{section-5}{%
+\subsection{データのインポート}\label{section-5}}
+
+\hypertarget{section-6}{%
+\subsubsection{ステップ １}\label{section-6}}
+
+\begin{center}\includegraphics[width=0.5\linewidth]{pic/import00} \end{center}
+
+\hypertarget{section-7}{%
+\subsubsection{ステップ２}\label{section-7}}
+
+\begin{center}\includegraphics[width=0.5\linewidth]{pic/import02} \end{center}
+
+\hypertarget{section-8}{%
+\subsubsection{ステップ３}\label{section-8}}
+
+\begin{center}\includegraphics[width=0.7\linewidth]{pic/import03} \end{center}
+
+\hypertarget{section-9}{%
+\subsubsection{ステップ４}\label{section-9}}
+
+\begin{center}\includegraphics[width=0.5\linewidth]{pic/import04} \end{center}
+
+\hypertarget{section-10}{%
+\subsubsection{ステップ５}\label{section-10}}
+
+\begin{center}\includegraphics[width=0.15\linewidth]{pic/import05} \end{center}
+
+\hypertarget{section-11}{%
+\subsection{体重と年齢の散布図，性別により体重の箱ひげ図}\label{section-11}}
+
+\begin{center}\includegraphics[width=0.85\linewidth]{pic/scatter00} \end{center}
+
+上記左のグラフを描くため，以下のコードをRスクリプトに入力して，実行をクリックしてください．
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{age,Dataset}\OperatorTok{$}\NormalTok{wt, }
+     \DataTypeTok{xlab =} \StringTok{"年齢 (months)"}\NormalTok{, }\DataTypeTok{ylab =} \StringTok{"体重 (kg)"}\NormalTok{,}
+     \DataTypeTok{main =} \StringTok{"体重と年齢の散布図"}\NormalTok{,}
+     \DataTypeTok{ylim =} \KeywordTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{, }\DecValTok{20}\NormalTok{), }\DataTypeTok{pch=}\KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\bigskip
+
+\begin{center}\includegraphics[width=0.8\linewidth]{pic/scatter01} \end{center}
+
+\newpage
+\vfill
+
+性別により体重の箱ひげ図を描くため，以下のコードをRスクリプトに入力して，実行をクリックしてください．
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{boxplot}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt }\OperatorTok{~}\StringTok{ }\NormalTok{Dataset}\OperatorTok{$}\NormalTok{sex, }\DataTypeTok{ylim =} \KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{18}\NormalTok{),}
+        \DataTypeTok{main =} \StringTok{"体重と年齢"}\NormalTok{, }\DataTypeTok{xlab =} \StringTok{"性別"}\NormalTok{, }\DataTypeTok{ylab =} \StringTok{"体重 (kg)"}\NormalTok{,}
+        \DataTypeTok{col =} \StringTok{"green"}\NormalTok{, }\DataTypeTok{names =} \KeywordTok{c}\NormalTok{(}\StringTok{"男性"}\NormalTok{, }\StringTok{"女性"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{pic/box01} \end{center}
+
+\hypertarget{ezr-mean--cor1-2-}{%
+\subsection{\texorpdfstring{年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の相関係数を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド
+\texttt{mean(変数名)} を使う；共分散を計算したい時に，コマンド
+\texttt{cor(変数1,\ 変数2)}
+を利用する．}{年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の相関係数を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド mean(変数名) を使う；共分散を計算したい時に，コマンド cor(変数1, 変数2) を利用する．}}\label{ezr-mean--cor1-2-}}
+
+以下のコードをRスクリプトに入力して,実行をクリックしてください．(結果を下の余白に記入すること)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# 年齢の平均値}
+\KeywordTok{mean}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{age)}
+\CommentTok{# 年齢の分散}
+\KeywordTok{var}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{age)}
+\CommentTok{# 体重の平均値}
+\KeywordTok{mean}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt)}
+\CommentTok{# 体重の分散}
+\KeywordTok{var}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt)}
+\CommentTok{# 体重と年齢の共分散 covariance}
+\KeywordTok{cov}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt, Dataset}\OperatorTok{$}\NormalTok{age)}
+\end{Highlighting}
+\end{Shaded}
+
+\newpage
+\vfill
+
+\hypertarget{barx--x-}{%
+\subsection{\texorpdfstring{年齢を説明変数，体重を目的変数とする場合，年齢の傾き(回帰係数)，と切片を求めよ．なお，分散と共分散の定義を以下とする，\(\bar{X}\)
+は \(X\)
+の平均値を示す：}{年齢を説明変数，体重を目的変数とする場合，年齢の傾き(回帰係数)，と切片を求めよ．なお，分散と共分散の定義を以下とする，\textbackslash{}bar\{X\} は X の平均値を示す：}}\label{barx--x-}}
+
+\begin{itemize}
+\tightlist
+\item
+  分散 variance:
+\end{itemize}
+
+\[
+\begin{aligned}
+\mathbf{Var}(X) & = \frac{(X_1-\bar{X})^2+(X_2-\bar{X})^2+\cdots+(X_n-\bar{X})^2}{n - 1} \\
+                & = \frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n -1}
+\end{aligned}
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  共分散 covariance:
+\end{itemize}
+
+\[
+\begin{aligned}
+\mathbf{Cov}(X, Y) & = \frac{(X_1 - \bar{X})(Y_1-\bar{Y}) + (X_2 - \bar{X})(Y_2-\bar{Y}) + \cdots + (X_n - \bar{X})(Y_n-\bar{Y})}{n - 1} \\
+                   & = \frac{\sum_{i = 1}^n(X_i - \bar{X})(Y_i-\bar{Y})}{n - 1}
+\end{aligned}
+\]
+
+以下のコードをRスクリプトに入力して,実行をクリックしてください．（結果を下の余白に記入すること）
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# 傾き (slope)}
+\NormalTok{beta <-}\StringTok{ }\KeywordTok{cov}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt, Dataset}\OperatorTok{$}\NormalTok{age) }\OperatorTok{/}\StringTok{ }\KeywordTok{var}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{age)}
+\NormalTok{beta}
+\CommentTok{# 切片 (intercept)}
+\NormalTok{alpha <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt) }\OperatorTok{-}\StringTok{ }\KeywordTok{mean}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{age)}\OperatorTok{*}\NormalTok{beta}
+\NormalTok{alpha}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{pic/betaalpha} \end{center}
+
+\hypertarget{ezr}{%
+\subsection{実際にEZRで線形モデルを作って見よう：}\label{ezr}}
+
+\hypertarget{section-12}{%
+\subsubsection{ステップ１}\label{section-12}}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{pic/lm00} \end{center}
+
+\hypertarget{section-13}{%
+\subsubsection{ステップ２}\label{section-13}}
+
+\begin{center}\includegraphics[width=0.6\linewidth]{pic/lm01} \end{center}
+
+\hypertarget{section-14}{%
+\subsubsection{ステップ３}\label{section-14}}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{pic/lm02} \end{center}
+
+自分の計算結果とは一致するかを確認してください．
+
+\hypertarget{section-15}{%
+\subsection{今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．}\label{section-15}}
+
+\hypertarget{section-16}{%
+\subsubsection{答え}\label{section-16}}
+
+\newpage
+\vfill
+
+\hypertarget{section-17}{%
+\subsection{性別を説明変数に入れたモデルを作る}\label{section-17}}
+
+\hypertarget{factor-}{%
+\subsubsection{性別変数を因子 (factor) に変換する}\label{factor-}}
+
+\hypertarget{section-18}{%
+\paragraph{ステップ１}\label{section-18}}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{pic/sexfactor00} \end{center}
+
+\hypertarget{section-19}{%
+\paragraph{ステップ２}\label{section-19}}
+
+\begin{center}\includegraphics[width=0.4\linewidth]{pic/sexfactor01} \end{center}
+
+\hypertarget{section-20}{%
+\paragraph{ステップ３}\label{section-20}}
+
+\begin{center}\includegraphics[width=0.15\linewidth]{pic/sexfactor02} \end{center}
+
+\hypertarget{section-21}{%
+\paragraph{ステップ４--水準名に男性，女性を入力する}\label{section-21}}
+
+\begin{center}\includegraphics[width=0.15\linewidth]{pic/sexfactor03} \end{center}
+
+\hypertarget{section-22}{%
+\subsubsection{重回帰線形モデルを作る}\label{section-22}}
+
+\hypertarget{section-23}{%
+\paragraph{ステップ１}\label{section-23}}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{pic/lm00} \end{center}
+\bigskip
+\bigskip
+\bigskip
+
+\hypertarget{control-}{%
+\paragraph{ステップ２---複数の説明変数を選択する時に control
+キーを押しながらマウスで変数名をクリックする}\label{control-}}
+
+\begin{center}\includegraphics[width=0.4\linewidth]{pic/lm04} \end{center}
+
+\newpage
+\vfill
+
+\hypertarget{section-24}{%
+\subsubsection{重回帰線形モデルの結果を確認する}\label{section-24}}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{pic/lm05} \end{center}
+
+\hypertarget{section-25}{%
+\subsection{重回帰線形モデルの計算結果を用いて，体重の平均値を年齢と性別の線形モデルで表示せよ．各回帰係数の意味を説明せよ．}\label{section-25}}
+
+\hypertarget{section-26}{%
+\subsection{答え}\label{section-26}}
+
+\newpage
+\vfill
+
+\hypertarget{section-27}{%
+\subsection{上記の重回帰線形モデルを用いて，年齢が34ヶ月の女の子の体重の予測値を計算せよ．}\label{section-27}}
+
+\hypertarget{section-28}{%
+\subsection{答え}\label{section-28}}
+
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+
+\hypertarget{section-29}{%
+\subsection{男女別の年齢と体重の散布図を描く}\label{section-29}}
+
+\begin{center}\includegraphics[width=0.5\linewidth]{pic/scatter02} \end{center}
+
+\hypertarget{section-30}{%
+\subsubsection{ステップ１}\label{section-30}}
+
+\begin{center}\includegraphics[width=0.5\linewidth]{pic/scatter03} \end{center}
+
+\hypertarget{section-31}{%
+\paragraph{ステップ２}\label{section-31}}
+
+\begin{center}\includegraphics[width=0.4\linewidth]{pic/scatter04} \end{center}
+
+\hypertarget{section-32}{%
+\paragraph{ステップ３}\label{section-32}}
+
+\begin{center}\includegraphics[width=0.15\linewidth]{pic/scatter05} \end{center}
+
+\hypertarget{section-33}{%
+\paragraph{ステップ４}\label{section-33}}
+
+\begin{center}\includegraphics[width=0.4\linewidth]{pic/scatter06} \end{center}
+
+\hypertarget{section-34}{%
+\paragraph{ステップ５}\label{section-34}}
+
+\begin{center}\includegraphics[width=0.15\linewidth]{pic/scatter07} \end{center}
+
+\newpage
+\vfill
+
+\hypertarget{section-35}{%
+\section{参考図書：}\label{section-35}}
 
 1.「Rによる保健医療データ解析演習」，中澤　港，（\url{http://minato.sip21c.org/msb/medstatbookx.pdf}）
 2.「みんなの医療統計 12日間で基礎理論とEZRを完全マスター!」，新谷　歩．

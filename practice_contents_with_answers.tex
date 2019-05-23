@@ -142,15 +142,16 @@
 \setsansfont[]{IPAPGothic}
 \usepackage{afterpage}
 \sectionfont{\fontsize{12}{15}\selectfont}
-\author{学籍番号:}
+\author{氏名:}
 \course{疫学演習 2019-6-5 \& 2019-6-12}
 \problemset{ }
 \problem{ }
-\collab{氏名:}
+\collab{学籍番号:}
 
 \begin{document}
 
-\section{問題１：両群間計量データの平均値を比較する}
+\hypertarget{section}{%
+\section{問題１：両群間計量データの平均値を比較する}\label{section}}
 
 ２００名の認知症患者を募集し，認識能力テスト(cognitive test,
 COG)，及び脳萎縮の進行度 (brain atrophy,
@@ -208,7 +209,8 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \newpage
 \vfill
 
-\subsection{答え}
+\hypertarget{section-1}{%
+\subsection{答え}\label{section-1}}
 
 両群の標準偏差は 9.0 と推定され，分散が等しいと仮定できるから，Student
 の t 検定を行う：
@@ -297,8 +299,8 @@ COG are the same in the two groups.
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{-1}{%
-\subsection{答え}\label{-1}}
+\hypertarget{section-2}{%
+\subsection{答え}\label{section-2}}
 
 テーブルから両群の標準偏差はそれぞれ 0.21, 0.10 だと推定され，分散
 (variance)
@@ -383,8 +385,8 @@ of atrophy are the same in the two groups.
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{-2}{%
-\subsection{答え}\label{-2}}
+\hypertarget{section-3}{%
+\subsection{答え}\label{section-3}}
 
 2.の検定結果から，「両群の脳萎縮度の分散が等しい」という帰無仮説を棄却されたため，Welch
 の t 検定を採用する．
@@ -452,7 +454,8 @@ atrophy are the same in the two groups.
 \newpage
 \vfill
 
-\section{問題２：線形回帰モデル}
+\hypertarget{section-4}{%
+\section{問題２：線形回帰モデル}\label{section-4}}
 
 190名の乳幼児の性別（1 = 男，2 = 女），年齢 (月,
 months)，体重（kg）のデータを収集した．このデータを用いで，以下の問題を解答したい：
@@ -464,33 +467,36 @@ months)，体重（kg）のデータを収集した．このデータを用い�
   男の子は女の子と比べて，平均的に体重はどれぐらい大きい/小さい？
 \end{itemize}
 
-\subsection{データのインポート}
+\hypertarget{section-5}{%
+\subsection{データのインポート}\label{section-5}}
 
-\subsubsection{ステップ １}
+\hypertarget{section-6}{%
+\subsubsection{ステップ １}\label{section-6}}
 
 \begin{center}\includegraphics[width=0.5\linewidth]{pic/import00} \end{center}
 
-\hypertarget{-1}{%
-\subsubsection{ステップ２}\label{-1}}
+\hypertarget{section-7}{%
+\subsubsection{ステップ２}\label{section-7}}
 
 \begin{center}\includegraphics[width=0.5\linewidth]{pic/import02} \end{center}
 
-\hypertarget{-2}{%
-\subsubsection{ステップ３}\label{-2}}
+\hypertarget{section-8}{%
+\subsubsection{ステップ３}\label{section-8}}
 
 \begin{center}\includegraphics[width=0.7\linewidth]{pic/import03} \end{center}
 
-\hypertarget{-3}{%
-\subsubsection{ステップ４}\label{-3}}
+\hypertarget{section-9}{%
+\subsubsection{ステップ４}\label{section-9}}
 
 \begin{center}\includegraphics[width=0.5\linewidth]{pic/import04} \end{center}
 
-\hypertarget{-4}{%
-\subsubsection{ステップ５}\label{-4}}
+\hypertarget{section-10}{%
+\subsubsection{ステップ５}\label{section-10}}
 
 \begin{center}\includegraphics[width=0.15\linewidth]{pic/import05} \end{center}
 
-\subsection{体重と年齢の散布図，性別により体重の箱ひげ図}
+\hypertarget{section-11}{%
+\subsection{体重と年齢の散布図，性別により体重の箱ひげ図}\label{section-11}}
 
 \begin{center}\includegraphics[width=0.85\linewidth]{pic/scatter00} \end{center}
 
@@ -536,19 +542,56 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 \begin{Highlighting}[]
 \CommentTok{# 年齢の平均値}
 \KeywordTok{mean}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{age)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 16.97895
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \CommentTok{# 年齢の分散}
 \KeywordTok{var}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{age)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 69.5022
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \CommentTok{# 体重の平均値}
 \KeywordTok{mean}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 9.644737
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \CommentTok{# 体重の分散}
 \KeywordTok{var}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3.513068
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \CommentTok{# 体重と年齢の共分散 covariance}
 \KeywordTok{cov}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt, Dataset}\OperatorTok{$}\NormalTok{age)}
 \end{Highlighting}
 \end{Shaded}
 
-\newpage
-\vfill
+\begin{verbatim}
+## [1] 11.49089
+\end{verbatim}
 
 \hypertarget{barx--x-}{%
 \subsection{\texorpdfstring{年齢を説明変数，体重を目的変数とする場合，年齢の傾き(回帰係数)，と切片を求めよ．なお，分散と共分散の定義を以下とする，\(\bar{X}\)
@@ -588,38 +631,52 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 \CommentTok{# 傾き (slope)}
 \NormalTok{beta <-}\StringTok{ }\KeywordTok{cov}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt, Dataset}\OperatorTok{$}\NormalTok{age) }\OperatorTok{/}\StringTok{ }\KeywordTok{var}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{age)}
 \NormalTok{beta}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.1653314
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \CommentTok{# 切片 (intercept)}
 \NormalTok{alpha <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt) }\OperatorTok{-}\StringTok{ }\KeywordTok{mean}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{age)}\OperatorTok{*}\NormalTok{beta}
 \NormalTok{alpha}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.8\linewidth]{pic/betaalpha} \end{center}
+\begin{verbatim}
+## [1] 6.837584
+\end{verbatim}
+
+\begin{center}\includegraphics[width=0.75\linewidth]{pic/betaalpha} \end{center}
 
 \hypertarget{ezr}{%
 \subsection{実際にEZRで線形モデルを作って見よう：}\label{ezr}}
 
-\hypertarget{-5}{%
-\subsubsection{ステップ１}\label{-5}}
+\hypertarget{section-12}{%
+\subsubsection{ステップ１}\label{section-12}}
 
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/lm00} \end{center}
 
-\hypertarget{-6}{%
-\subsubsection{ステップ２}\label{-6}}
+\hypertarget{section-13}{%
+\subsubsection{ステップ２}\label{section-13}}
 
 \begin{center}\includegraphics[width=0.6\linewidth]{pic/lm01} \end{center}
 
-\hypertarget{-7}{%
-\subsubsection{ステップ３}\label{-7}}
+\hypertarget{section-14}{%
+\subsubsection{ステップ３}\label{section-14}}
 
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/lm02} \end{center}
 
 自分の計算結果とは一致するかを確認してください．
 
-\subsection{今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．}
+\hypertarget{section-15}{%
+\subsection{今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．}\label{section-15}}
 
-\hypertarget{-3}{%
-\subsubsection{答え}\label{-3}}
+\hypertarget{section-16}{%
+\subsubsection{答え}\label{section-16}}
 
 \[
 Y = 6.838 + 0.165 X
@@ -641,57 +698,62 @@ Y = 6.838 + 0.165 X
 \newpage
 \vfill
 
-\subsection{性別を説明変数に入れたモデルを作る}
+\hypertarget{section-17}{%
+\subsection{性別を説明変数に入れたモデルを作る}\label{section-17}}
 
-\hypertarget{-factor-}{%
-\subsubsection{性別変数を因子 (factor) に変換する}\label{-factor-}}
+\hypertarget{factor-}{%
+\subsubsection{性別変数を因子 (factor) に変換する}\label{factor-}}
 
-\hypertarget{-8}{%
-\paragraph{ステップ１}\label{-8}}
+\hypertarget{section-18}{%
+\paragraph{ステップ１}\label{section-18}}
 
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/sexfactor00} \end{center}
 
-\hypertarget{-9}{%
-\paragraph{ステップ２}\label{-9}}
+\hypertarget{section-19}{%
+\paragraph{ステップ２}\label{section-19}}
 
 \begin{center}\includegraphics[width=0.4\linewidth]{pic/sexfactor01} \end{center}
 
-\hypertarget{-10}{%
-\paragraph{ステップ３}\label{-10}}
+\hypertarget{section-20}{%
+\paragraph{ステップ３}\label{section-20}}
 
 \begin{center}\includegraphics[width=0.15\linewidth]{pic/sexfactor02} \end{center}
 
-\paragraph{ステップ４--水準名に男性，女性を入力する}
+\hypertarget{section-21}{%
+\paragraph{ステップ４--水準名に男性，女性を入力する}\label{section-21}}
 
 \begin{center}\includegraphics[width=0.15\linewidth]{pic/sexfactor03} \end{center}
 
-\subsubsection{重回帰線形モデルを作る}
+\hypertarget{section-22}{%
+\subsubsection{重回帰線形モデルを作る}\label{section-22}}
 
-\hypertarget{-11}{%
-\paragraph{ステップ１}\label{-11}}
+\hypertarget{section-23}{%
+\paragraph{ステップ１}\label{section-23}}
 
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/lm00} \end{center}
 \bigskip
 \bigskip
 \bigskip
 
-\hypertarget{-control-}{%
+\hypertarget{control-}{%
 \paragraph{ステップ２---複数の説明変数を選択する時に control
-キーを押しながらマウスで変数名をクリックする}\label{-control-}}
+キーを押しながらマウスで変数名をクリックする}\label{control-}}
 
 \begin{center}\includegraphics[width=0.4\linewidth]{pic/lm04} \end{center}
 
 \newpage
 \vfill
 
-\subsubsection{重回帰線形モデルの結果を確認する}
+\hypertarget{section-24}{%
+\subsubsection{重回帰線形モデルの結果を確認する}\label{section-24}}
 
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/lm05} \end{center}
 
-\subsection{重回帰線形モデルの計算結果を用いて，体重の平均値を年齢と性別の線形モデルで表示せよ．各回帰係数の意味を説明せよ．}
+\hypertarget{section-25}{%
+\subsection{重回帰線形モデルの計算結果を用いて，体重の平均値を年齢と性別の線形モデルで表示せよ．各回帰係数の意味を説明せよ．}\label{section-25}}
 
-\hypertarget{-4}{%
-\subsection{答え}\label{-4}}
+\hypertarget{section-26}{%
+\subsection{答え}\label{section-26}}
 
 \[
 Y = 7.152 + 0.164 X_1 - 0.519X_2
@@ -721,11 +783,11 @@ Y = 7.152 + 0.164 X_1 - 0.519X_2
 \newpage
 \vfill
 
-\hypertarget{34}{%
-\subsection{上記の重回帰線形モデルを用いて，年齢が34ヶ月の女の子の体重の予測値を計算せよ．}\label{34}}
+\hypertarget{section-27}{%
+\subsection{上記の重回帰線形モデルを用いて，年齢が34ヶ月の女の子の体重の予測値を計算せよ．}\label{section-27}}
 
-\hypertarget{-5}{%
-\subsection{答え}\label{-5}}
+\hypertarget{section-28}{%
+\subsection{答え}\label{section-28}}
 
 \begin{itemize}
 \tightlist
@@ -742,39 +804,41 @@ Y & = 7.152 + 0.164 \times 34 -0.519\times 1 \\
 \end{aligned}
 \]
 
-\subsection{男女別の年齢と体重の散布図を描く}
+\hypertarget{section-29}{%
+\subsection{男女別の年齢と体重の散布図を描く}\label{section-29}}
 
 \begin{center}\includegraphics[width=0.5\linewidth]{pic/scatter02} \end{center}
 
-\hypertarget{-12}{%
-\subsubsection{ステップ１}\label{-12}}
+\hypertarget{section-30}{%
+\subsubsection{ステップ１}\label{section-30}}
 
 \begin{center}\includegraphics[width=0.5\linewidth]{pic/scatter03} \end{center}
 
-\hypertarget{-13}{%
-\paragraph{ステップ２}\label{-13}}
+\hypertarget{section-31}{%
+\paragraph{ステップ２}\label{section-31}}
 
 \begin{center}\includegraphics[width=0.4\linewidth]{pic/scatter04} \end{center}
 
-\hypertarget{-14}{%
-\paragraph{ステップ３}\label{-14}}
+\hypertarget{section-32}{%
+\paragraph{ステップ３}\label{section-32}}
 
 \begin{center}\includegraphics[width=0.15\linewidth]{pic/scatter05} \end{center}
 
-\hypertarget{-15}{%
-\paragraph{ステップ４}\label{-15}}
+\hypertarget{section-33}{%
+\paragraph{ステップ４}\label{section-33}}
 
 \begin{center}\includegraphics[width=0.4\linewidth]{pic/scatter06} \end{center}
 
-\hypertarget{-16}{%
-\paragraph{ステップ５}\label{-16}}
+\hypertarget{section-34}{%
+\paragraph{ステップ５}\label{section-34}}
 
 \begin{center}\includegraphics[width=0.15\linewidth]{pic/scatter07} \end{center}
 
 \newpage
 \vfill
 
-\section{参考図書：}
+\hypertarget{section-35}{%
+\section{参考図書：}\label{section-35}}
 
 1.「Rによる保健医療データ解析演習」，中澤　港，（\url{http://minato.sip21c.org/msb/medstatbookx.pdf}）
 2.「みんなの医療統計 12日間で基礎理論とEZRを完全マスター!」，新谷　歩．
