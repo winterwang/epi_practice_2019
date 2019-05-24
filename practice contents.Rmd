@@ -145,7 +145,7 @@ my.t.test(50, 69.2, 9.0^2, 150, 60.2, 9.0^2, var.equal=TRUE)
 ```
 \bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
 ```{r myttest00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='90%'}
-knitr::include_graphics("pic/myttest01.png")
+knitr::include_graphics("pic/myttest01cut.png")
 ```
 \bigskip
 
@@ -208,7 +208,7 @@ my.var.test(50, 0.21^2, 150, 0.1^2)
 \bigskip\bigskip\bigskip\bigskip\bigskip
 
 ```{r ftest01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='90%'}
-knitr::include_graphics("pic/ftest01.png")
+knitr::include_graphics("pic/ftest01cut.png")
 ```
 
 <!-- \underline{手計算の結果とは一致していると確認できる．} -->
@@ -282,7 +282,7 @@ my.t.test(50, 0.67, 0.21^2, 150, 0.23, 0.10^2, var.equal=FALSE)
 
 
 ```{r myttest01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='90%'}
-knitr::include_graphics("pic/myttest02.png")
+knitr::include_graphics("pic/myttest02cut.png")
 ```
 \bigskip
 

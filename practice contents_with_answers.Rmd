@@ -623,9 +623,10 @@ knitr::include_graphics("pic/scatter07.png")
 ```
 
 
-# 問題３：$\chi^2$ 検定，オッズ比
-(SME lecture9)
+# 問題３：$\chi^2$ 検定，オッズ比，ロジスティクス回帰モデル
+<!-- (SME lecture9) -->
 
+1990年代，アフリカナイジェリアのある村で
 
 
 
