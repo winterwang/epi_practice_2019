@@ -38,11 +38,11 @@ header-includes:
 - \setsansfont[]{IPAPGothic}
 - \usepackage{afterpage}
 - \sectionfont{\fontsize{12}{15}\selectfont}
-- \author{氏名:}
+- \author{学籍番号:}
 - \course{疫学演習 2019-6-5 \& 2019-6-12}
 - \problemset{ }
 - \problem{ }
-- \collab{学籍番号:}
+- \collab{氏名:}
 sansfont: IPAPGothic
 fontsize: 11pt
 ---
