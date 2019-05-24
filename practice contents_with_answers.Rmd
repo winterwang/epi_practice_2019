@@ -626,7 +626,7 @@ knitr::include_graphics("pic/scatter07.png")
 # 問題３：$\chi^2$ 検定，オッズ比，ロジスティクス回帰モデル
 <!-- (SME lecture9) -->
 
-1990年代，アフリカナイジェリア北部でオンコセルカ症 (回旋糸状虫症, onchocerciasis; river blindness とも呼ばれる) が流行していた．
+1990年代，アフリカナイジェリア北部でオンコセルカ症 (回旋糸状虫症, onchocerciasis; river blindness とも呼ばれる) が流行していた．ある研究チームが流行していた地域の34個の村の全住民に目の検査を行った．また，住民の皮膚検体からマイクロフィラリアの負荷 (microfilarial load)を測定し，糸状虫感染症の強度指標として評価した。目の検査受けた住民はWHOの診断基準を元に，「視覚障害 (visually impaired)」と「視力正常 (normal vision」に分類された．
 
 
 
