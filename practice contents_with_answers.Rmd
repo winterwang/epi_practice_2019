@@ -813,10 +813,54 @@ knitr::include_graphics("pic/logstic07.png")
 knitr::include_graphics("pic/logstic08.png")
 ```
 
+計算したオッズ比はここの結果とは一致しているかを確認してください．
+
+
+
 10. 
 ```{r logistic09, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='55%'}
 knitr::include_graphics("pic/logstic09.png")
 ```
+
+- (intercept/切片) の `-3.689` は”視力正常”群の対数オッズであることを確認できる；
+- `vimp` (視覚障害)の回帰係数 `1.7167` は”視覚障害”と”視力正常”群に比べた log(OR) = log(odds in 視覚障害) - log(odds in 視力正常) = -1.9704 - (-3.689)である．
+
+
+
+## 年齢の影響を見る
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+       & \multicolumn{10}{c|}{視覚障害 (0 = no, 1 = yes)}                                                                                                  \\ \hline
+死亡     & 0             & 1          & 0            & 1           & 0            & 1           & 0           & 1           & 0            & 1           \\ \hline
+1 = yes & 29            & 2          & 38           & 10          & 15           & 11          & 15          & 17          & 97           & 40          \\ \hline
+0 = no & 2301          & 22         & 1271         & 124         & 212          & 69          & 90          & 72          & 3874         & 287         \\ \hline
+  n     & 2330          &  24         & 1309         & 134         & 227          & 80          & 105          & 89          & 3971         & 327         \\ \hline
+年齢     & \multicolumn{2}{c|}{15-34} & \multicolumn{2}{c|}{35-54} & \multicolumn{2}{c|}{55-64} & \multicolumn{2}{c|}{65 +} & \multicolumn{2}{c|}{Total} \\ \hline
+\end{tabular}
+\end{center}
+
+
+上記のデータをよく見ると，視覚障害のオッズは年齢と共に上昇している (年齢が15-34歳群の0.01から年齢が65歳以上群の0.84に上げた)．しかし，年齢の上昇と共に，死亡のオッズも上がる．年齢はここで，\underline{交絡因子 (confounder) }と定義される．
+
+### 以上のデータと解説をよく理解した上で，下表を完成せよ：
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+      & \multicolumn{2}{c|}{オッズ}    &        \\ \hline
+年齢    & 視力正常              & 視覚障害    & オッズ比   \\ \hline
+15-34 & 29/2301 = 0.01260 & 0.0909  & 7.214  \\ \hline
+35-54 & 0.02990           & 0.08065 & 2.6973 \\ \hline
+55-64 & 0.07075           & 0.15942 & 2.2533 \\ \hline
+65+   & 0.16667           & 0.23611 & 1.4166 \\ \hline
+\end{tabular}
+\end{center}
+
+### EZRで年齢を調整したロジスティクス回帰モデルを作る
+
+
 
 \newpage
 \vfill
