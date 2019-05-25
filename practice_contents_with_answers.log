@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2018.9.25)  24 MAY 2019 12:04
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2018.9.25)  25 MAY 2019 17:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1649,6 +1649,15 @@ LaTeX Warning: Label `-4' multiply defined.
 
 LaTeX Warning: Label `-5' multiply defined.
 
+
+LaTeX Warning: Label `-6' multiply defined.
+
+
+LaTeX Warning: Label `ezr' multiply defined.
+
+
+LaTeX Warning: Label `-' multiply defined.
+
 )
 \openout1 = `practice_contents_with_answers.aux'.
 
@@ -2133,17 +2142,86 @@ File: pic/scatter05.png Graphic file (type bmp)
 <pic/scatter05.png>
 File: pic/scatter06.png Graphic file (type bmp)
 <pic/scatter06.png>
+[22]
 File: pic/scatter07.png Graphic file (type bmp)
 <pic/scatter07.png>
-[22] [23] [24] [25]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 845.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 845.
+[23]
+
+Package xcolor Warning: Incompatible color definition on input line 886.
+
+
+Package xcolor Warning: Incompatible color definition on input line 890.
+
+
+Package xcolor Warning: Incompatible color definition on input line 890.
+
+
+Package xcolor Warning: Incompatible color definition on input line 892.
+
+
+Package xcolor Warning: Incompatible color definition on input line 896.
+
+
+Package xcolor Warning: Incompatible color definition on input line 896.
+
+File: pic/mychisqtest02.png Graphic file (type bmp)
+<pic/mychisqtest02.png>
+
+Package xcolor Warning: Incompatible color definition on input line 907.
+
+[24]
+
+Package xcolor Warning: Incompatible color definition on input line 913.
+
+
+Package xcolor Warning: Incompatible color definition on input line 913.
+
+
+Package xcolor Warning: Incompatible color definition on input line 921.
+
+
+Package xcolor Warning: Incompatible color definition on input line 925.
+
+
+Package xcolor Warning: Incompatible color definition on input line 925.
+
+File: pic/mychisqtest01.png Graphic file (type bmp)
+<pic/mychisqtest01.png>
+[25]
+File: pic/import00.png Graphic file (type bmp)
+<pic/import00.png>
+[26]
+File: pic/logstic01.png Graphic file (type bmp)
+<pic/logstic01.png>
+File: pic/logstic02.png Graphic file (type bmp)
+<pic/logstic02.png>
+File: pic/logstic03.png Graphic file (type bmp)
+<pic/logstic03.png>
+[27]
+File: pic/logstic04.png Graphic file (type bmp)
+<pic/logstic04.png>
+File: pic/logstic05.png Graphic file (type bmp)
+<pic/logstic05.png>
+[28]
+File: pic/logstic06.png Graphic file (type bmp)
+<pic/logstic06.png>
+File: pic/logstic07.png Graphic file (type bmp)
+<pic/logstic07.png>
+[29]
+File: pic/logstic08.png Graphic file (type bmp)
+<pic/logstic08.png>
+File: pic/logstic09.png Graphic file (type bmp)
+<pic/logstic09.png>
+[30] [31] [32]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1086.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1086.
 (./practice_contents_with_answers.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 845.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 845.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1086.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1086.
+
 Package rerunfilecheck Info: File `practice_contents_with_answers.out' has not 
 changed.
-(rerunfilecheck)             Checksum: 45ECBE91B9F2F09D2AFF82406C08BD2F.
+(rerunfilecheck)             Checksum: E7EE3FC3755631B4D18706EB54C20EB6.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2152,12 +2230,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 37515 strings out of 492970
- 705467 string characters out of 6136052
- 864831 words of memory out of 5000000
- 40870 multiletter control sequences out of 15000+600000
+ 37564 strings out of 492970
+ 706408 string characters out of 6136052
+ 866448 words of memory out of 5000000
+ 40908 multiletter control sequences out of 15000+600000
  575814 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  55i,12n,121p,10472b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on practice_contents_with_answers.pdf (25 pages).
+Output written on practice_contents_with_answers.pdf (32 pages).

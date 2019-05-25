@@ -584,41 +584,45 @@ Y & = 7.152 + 0.164 \times 34 -0.519\times 1 \\
 \end{aligned}
 $$
 
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
 ## 男女別の年齢と体重の散布図を描く
 
-```{r scatter02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='50%'}
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
+```{r scatter02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='60%'}
 knitr::include_graphics("pic/scatter02.png")
 ```
 
 
 ### ステップ１
 
-```{r scatter00003, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='50%'}
+```{r scatter00003, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.height="50%", out.width='50%'}
 knitr::include_graphics("pic/scatter03.png")
 ```
 
 
-#### ステップ２
+### ステップ２
 
 ```{r scatter03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='40%'}
 knitr::include_graphics("pic/scatter04.png")
 ```
 
-#### ステップ３
+### ステップ３
 
-```{r scatter04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='15%'}
+```{r scatter04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='25%'}
 knitr::include_graphics("pic/scatter05.png")
 ```
 
-#### ステップ４
+### ステップ４
 
-```{r scatter05, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='40%'}
+```{r scatter05, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='50%'}
 knitr::include_graphics("pic/scatter06.png")
 ```
 
-#### ステップ５
+### ステップ５
 
-```{r scatter06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='15%'}
+```{r scatter06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='25%'}
 knitr::include_graphics("pic/scatter07.png")
 ```
 
@@ -626,9 +630,193 @@ knitr::include_graphics("pic/scatter07.png")
 # 問題３：$\chi^2$ 検定，オッズ比，ロジスティクス回帰モデル
 <!-- (SME lecture9) -->
 
-1990年代，アフリカナイジェリア北部でオンコセルカ症 (回旋糸状虫症, onchocerciasis; river blindness とも呼ばれる) が流行していた．ある研究チームが流行していた地域の34個の村の全住民に目の検査を行った．また，住民の皮膚検体からマイクロフィラリアの負荷 (microfilarial load)を測定し，糸状虫感染症の強度指標として評価した。目の検査受けた住民はWHOの診断基準を元に，「視覚障害 (visually impaired)」と「視力正常 (normal vision」に分類された．
+1990年代，アフリカナイジェリア北部でオンコセルカ症 (回旋糸状虫症, onchocerciasis; river blindness とも呼ばれる) が流行していた．ある研究チームが流行していた地域の34個の村に住む15歳以上の全住民に目の検査を行った．目の検査受けた住民はWHOの診断基準を元に，「視覚障害 (visually impaired)」と「視力正常 (normal vision」に分類された．対象者を三年間観察され，その期間中に死亡者を登録された．
+
+<!-- ．また，住民の皮膚検体からマイクロフィラリアの負荷 (microfilarial load)を測定し，糸状虫感染症の強度指標として評価した。 -->
+
+## 視覚障害と死亡の関係
+
+視覚障害の有無と死亡リスクの関連を見るために，以下の表をまとめた：
 
 
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+死亡 & 視力正常           & 視覚障害          & 合計             \\ \hline
+0  & 3874 (97.56\%) & 287 (87.77\%) & 4161 (96.81\%) \\ \hline
+1  & 97 (2.44\%)    & 40 (12.23\%)  & 137 (3.19\%)   \\ \hline
+合計 & 3971 (100\%)   & 327 (100\%)   & 4298 (100\%)   \\ \hline
+\end{tabular}
+\end{center}
+
+### もし，視覚障害と対象者の死亡リスクと関連がない場合，下の表（各セルの期待者数）を入力せよ：
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+死亡 & 視力正常                     & 視覚障害                   & 合計             \\ \hline
+0  & 3971$\times$4161/4298 = 3844.4232 & 327$\times$4161/4298 = 316.5768 & 4161 (96.81\%) \\ \hline
+1  & 3971$\times$137/4298 = 126.5768   & 327$\times$173/4298 = 10.4232   & 137 (3.19\%)   \\ \hline
+合計 & 3971 (100\%)             & 327 (100\%)            & 4298 (100\%)   \\ \hline
+\end{tabular}
+\end{center}
+
+### 上記の２つの表の数字を使って $\chi^2$ 統計量を計算せよ
+
+### 答え
+
+$$
+\begin{aligned}
+\chi^2 & = \frac{(3874 - 3844.4232)^2}{3844.4232} + \frac{(287 - 316.5768)^2}{316.5768} + \frac{(97 - 126.5768)^2}{126.5768} + \frac{(40 - 10.4232)^2}{10.4232} \\
+       & = 93.829
+\end{aligned}
+$$
+
+### 2 $\times$ 2 の分割表では，自由度は $(2-1)\times(2-1) = 1$ ．
+
+
+EZRで，$\chi^2$統計量と自由度(df)を使って P 値を計算したい場合，以下のコマンドが利用できる：
+
+```{r eval=FALSE}
+2*pchisq(chisquare統計量, df, lower = FALSE)
+```
+
+
+
+<!-- \newpage -->
+<!-- \vfill -->
+
+```{r}
+2*pchisq(93.829, 1, lower = FALSE)
+```
+
+
+```{r chisqtest01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='70%'}
+knitr::include_graphics("pic/mychisqtest02.png")
+```
+
+
+以下のコードをRスクリプトに入力して,実行をクリックしてください.自分の検定結果とは一致するかを確認し
+てください.
+
+```{r chisqtest, eval=TRUE}
+source("http://aoki2.si.gunma-u.ac.jp/R/src/my-chisq-test.R", encoding="euc-jp")
+a <- my.chisq.test(matrix(c(3874, 97, 287, 40), nrow = 2))
+a$expected # 期待者数表
+a
+```
+
+
+```{r chisqtest02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='80%'}
+knitr::include_graphics("pic/mychisqtest01.png")
+```
+
+
+
+
+\underline{手計算の結果とは一致していると確認できる．}
+
+
+この検定結果は「視覚障害と対象者の死亡リスクと関連がない」という帰無仮説を棄却するために非常に強い証拠を提供したと言える． (There is strong evidence against the null hypothesis that there is no association between visual impairment and risk of death.)
+
+\newpage
+\vfill
+
+### 視覚障害と死亡の関係を示すテーブルの数を元に，下表を完成せよ：
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+                 & 視力正常   & 視覚障害    & トータル   \\ \hline
+リスク (risk)       & 0.0244 & 0.1223  & 0.0319 \\ \hline
+オッズ (odds)       & 0.0250 & 0.1394  & 0.0329 \\ \hline
+対数オッズ (log-odds) & -3.689 & -1.9704 & -3.414 \\ \hline
+\end{tabular}
+\end{center}
+
+
+\bigskip
+
+では，視覚障害者と死亡の関連を示すオッズ比は：
+
+$$
+\mathbf{OR} = 0.1394 \div 0.025 = 5.576
+$$
+
+このオッズ比の対数を取った値 $\mathbf{log(OR)}$ は：
+
+$$
+\mathbf{log(OR)} = 1.717
+$$
+
+### EZRでロジスティクス回帰モデルを作る
+
+#### ステップ１ --- データのインポート
+
+1. 
+```{r logistic00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='50%'}
+knitr::include_graphics("pic/import00.png")
+```
+
+\newpage
+\vfill
+
+2. 
+```{r logistic01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='30%'}
+knitr::include_graphics("pic/logstic01.png")
+```
+
+3. 
+```{r logistic02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='70%'}
+knitr::include_graphics("pic/logstic02.png")
+```
+
+
+4. 
+```{r logistic03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='70%'}
+knitr::include_graphics("pic/logstic03.png")
+```
+
+\newpage
+\vfill
+5.
+```{r logistic04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='70%'}
+knitr::include_graphics("pic/logstic04.png")
+```
+
+#### ステップ２ --- ロジスティクスモデルを作る
+
+6. 
+```{r logistic05, cache=TRUE, echo=FALSE, fig.align='center', out.width = '0.8\\textwidth',  out.height= '0.9\\textwidth'}
+knitr::include_graphics("pic/logstic05.png")
+```
+
+\newpage
+\vfill
+7. 
+```{r logistic06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='50%'}
+knitr::include_graphics("pic/logstic06.png")
+```
+
+8.
+```{r logistic07, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='50%'}
+knitr::include_graphics("pic/logstic07.png")
+```
+
+\newpage
+\vfill
+9.
+```{r logistic08, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='55%'}
+knitr::include_graphics("pic/logstic08.png")
+```
+
+10. 
+```{r logistic09, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='55%'}
+knitr::include_graphics("pic/logstic09.png")
+```
 
 \newpage
 \vfill

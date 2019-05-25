@@ -792,41 +792,282 @@ Y & = 7.152 + 0.164 \times 34 -0.519\times 1 \\
 \end{aligned}
 \]
 
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
 \subsection{男女別の年齢と体重の散布図を描く}
 
-\begin{center}\includegraphics[width=0.5\linewidth]{pic/scatter02} \end{center}
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
+\begin{center}\includegraphics[width=0.6\linewidth]{pic/scatter02} \end{center}
 
 \hypertarget{-12}{%
 \subsubsection{ステップ１}\label{-12}}
 
-\begin{center}\includegraphics[width=0.5\linewidth]{pic/scatter03} \end{center}
+\begin{center}\includegraphics[width=0.5\linewidth,height=0.5\textheight]{pic/scatter03} \end{center}
 
 \hypertarget{-13}{%
-\paragraph{ステップ２}\label{-13}}
+\subsubsection{ステップ２}\label{-13}}
 
 \begin{center}\includegraphics[width=0.4\linewidth]{pic/scatter04} \end{center}
 
 \hypertarget{-14}{%
-\paragraph{ステップ３}\label{-14}}
+\subsubsection{ステップ３}\label{-14}}
 
-\begin{center}\includegraphics[width=0.15\linewidth]{pic/scatter05} \end{center}
+\begin{center}\includegraphics[width=0.25\linewidth]{pic/scatter05} \end{center}
 
 \hypertarget{-15}{%
-\paragraph{ステップ４}\label{-15}}
+\subsubsection{ステップ４}\label{-15}}
 
-\begin{center}\includegraphics[width=0.4\linewidth]{pic/scatter06} \end{center}
+\begin{center}\includegraphics[width=0.5\linewidth]{pic/scatter06} \end{center}
 
 \hypertarget{-16}{%
-\paragraph{ステップ５}\label{-16}}
+\subsubsection{ステップ５}\label{-16}}
 
-\begin{center}\includegraphics[width=0.15\linewidth]{pic/scatter07} \end{center}
+\begin{center}\includegraphics[width=0.25\linewidth]{pic/scatter07} \end{center}
 
 \hypertarget{chi2-}{%
 \section{\texorpdfstring{問題３：\(\chi^2\)
 検定，オッズ比，ロジスティクス回帰モデル}{問題３：\textbackslash{}chi\^{}2 検定，オッズ比，ロジスティクス回帰モデル}}\label{chi2-}}
 
 1990年代，アフリカナイジェリア北部でオンコセルカ症 (回旋糸状虫症,
-onchocerciasis; river blindness とも呼ばれる) が流行していた．
+onchocerciasis; river blindness とも呼ばれる)
+が流行していた．ある研究チームが流行していた地域の34個の村に住む15歳以上の全住民に目の検査を行った．目の検査受けた住民はWHOの診断基準を元に，「視覚障害
+(visually impaired)」と「視力正常 (normal
+vision」に分類された．対象者を三年間観察され，その期間中に死亡者を登録された．
+
+\subsection{視覚障害と死亡の関係}
+
+視覚障害の有無と死亡リスクの関連を見るために，以下の表をまとめた：
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+死亡 & 視力正常           & 視覚障害          & 合計             \\ \hline
+0  & 3874 (97.56\%) & 287 (87.77\%) & 4161 (96.81\%) \\ \hline
+1  & 97 (2.44\%)    & 40 (12.23\%)  & 137 (3.19\%)   \\ \hline
+合計 & 3971 (100\%)   & 327 (100\%)   & 4298 (100\%)   \\ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{もし，視覚障害と対象者の死亡リスクと関連がない場合，下の表（各セルの期待者数）を入力せよ：}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+死亡 & 視力正常                     & 視覚障害                   & 合計             \\ \hline
+0  & 3971$\times$4161/4298 = 3844.4232 & 327$\times$4161/4298 = 316.5768 & 4161 (96.81\%) \\ \hline
+1  & 3971$\times$137/4298 = 126.5768   & 327$\times$173/4298 = 10.4232   & 137 (3.19\%)   \\ \hline
+合計 & 3971 (100\%)             & 327 (100\%)            & 4298 (100\%)   \\ \hline
+\end{tabular}
+\end{center}
+
+\hypertarget{-chi2-}{%
+\subsubsection{\texorpdfstring{上記の２つの表の数字を使って \(\chi^2\)
+統計量を計算せよ}{上記の２つの表の数字を使って \textbackslash{}chi\^{}2 統計量を計算せよ}}\label{-chi2-}}
+
+\hypertarget{-6}{%
+\subsubsection{答え}\label{-6}}
+
+\[
+\begin{aligned}
+\chi^2 & = \frac{(3874 - 3844.4232)^2}{3844.4232} + \frac{(287 - 316.5768)^2}{316.5768} + \frac{(97 - 126.5768)^2}{126.5768} + \frac{(40 - 10.4232)^2}{10.4232} \\
+       & = 93.829
+\end{aligned}
+\]
+
+\hypertarget{times-2--2-1times2-1-1}{%
+\subsubsection{\texorpdfstring{2 \(\times\) 2 の分割表では，自由度は
+\((2-1)\times(2-1) = 1\)
+．}{2 \textbackslash{}times 2 の分割表では，自由度は (2-1)\textbackslash{}times(2-1) = 1 ．}}\label{times-2--2-1times2-1-1}}
+
+EZRで，\(\chi^2\)統計量と自由度(df)を使って P
+値を計算したい場合，以下のコマンドが利用できる：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2}\OperatorTok{*}\KeywordTok{pchisq}\NormalTok{(chisquare統計量, df, }\DataTypeTok{lower =} \OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2}\OperatorTok{*}\KeywordTok{pchisq}\NormalTok{(}\FloatTok{93.829}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DataTypeTok{lower =} \OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 6.879894e-22
+\end{verbatim}
+
+\begin{center}\includegraphics[width=0.7\linewidth]{pic/mychisqtest02} \end{center}
+
+以下のコードをRスクリプトに入力して,実行をクリックしてください.自分の検定結果とは一致するかを確認し
+てください.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{source}\NormalTok{(}\StringTok{"http://aoki2.si.gunma-u.ac.jp/R/src/my-chisq-test.R"}\NormalTok{, }\DataTypeTok{encoding=}\StringTok{"euc-jp"}\NormalTok{)}
+\NormalTok{a <-}\StringTok{ }\KeywordTok{my.chisq.test}\NormalTok{(}\KeywordTok{matrix}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{3874}\NormalTok{, }\DecValTok{97}\NormalTok{, }\DecValTok{287}\NormalTok{, }\DecValTok{40}\NormalTok{), }\DataTypeTok{nrow =} \DecValTok{2}\NormalTok{))}
+\NormalTok{a}\OperatorTok{$}\NormalTok{expected }\CommentTok{# 期待者数表}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##           [,1]      [,2]
+## [1,] 3844.4232 316.57678
+## [2,]  126.5768  10.42322
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  カイ二乗分布を用いる独立性の検定（残差分析）
+## 
+## data:  matrix(c(3874, 97, 287, 40), nrow = 2)
+## X-squared = 93.829, df = 1, p-value < 2.2e-16
+\end{verbatim}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{pic/mychisqtest01} \end{center}
+
+\underline{手計算の結果とは一致していると確認できる．}
+
+この検定結果は「視覚障害と対象者の死亡リスクと関連がない」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
+(There is strong evidence against the null hypothesis that there is no
+association between visual impairment and risk of death.)
+
+\newpage
+\vfill
+
+\subsubsection{視覚障害と死亡の関係を示すテーブルの数を元に，下表を完成せよ：}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+                 & 視力正常   & 視覚障害    & トータル   \\ \hline
+リスク (risk)       & 0.0244 & 0.1223  & 0.0319 \\ \hline
+オッズ (odds)       & 0.0250 & 0.1394  & 0.0329 \\ \hline
+対数オッズ (log-odds) & -3.689 & -1.9704 & -3.414 \\ \hline
+\end{tabular}
+\end{center}
+
+\bigskip
+
+では，視覚障害者と死亡の関連を示すオッズ比は：
+
+\[
+\mathbf{OR} = 0.1394 \div 0.025 = 5.576
+\]
+
+このオッズ比の対数を取った値 \(\mathbf{log(OR)}\) は：
+
+\[
+\mathbf{log(OR)} = 1.717
+\]
+
+\hypertarget{ezr}{%
+\subsubsection{EZRでロジスティクス回帰モデルを作る}\label{ezr}}
+
+\hypertarget{-}{%
+\paragraph{ステップ１ --- データのインポート}\label{-}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.5\linewidth]{pic/import00} \end{center}
+
+\newpage
+\vfill
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.3\linewidth]{pic/logstic01} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.7\linewidth]{pic/logstic02} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.7\linewidth]{pic/logstic03} \end{center}
+
+\newpage
+\vfill
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.7\linewidth]{pic/logstic04} \end{center}
+
+\hypertarget{-}{%
+\paragraph{ステップ２ --- ロジスティクスモデルを作る}\label{-}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.8\textwidth,height=0.9\textwidth]{pic/logstic05} \end{center}
+
+\newpage
+\vfill
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.5\linewidth]{pic/logstic06} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.5\linewidth]{pic/logstic07} \end{center}
+
+\newpage
+\vfill
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.55\linewidth]{pic/logstic08} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.55\linewidth]{pic/logstic09} \end{center}
 
 \newpage
 \vfill
