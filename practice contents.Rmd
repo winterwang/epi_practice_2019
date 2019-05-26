@@ -221,7 +221,7 @@ knitr::include_graphics("pic/ftest01cut.png")
 \newpage
 \vfill
 
-3.  2.の結果を踏まえて，帰無仮設「両群の脳萎縮度の平均値が等しい」を検定せよ．なお，両群の分散が等しいという前提が満たされていない時に，自由度(df)の計算式は以下となる：
+3.  2.の結果を踏まえて，帰無仮説「両群の脳萎縮度の平均値が等しい」を検定せよ．なお，両群の分散が等しいという前提が満たされていない時に，自由度(df)の計算式は以下となる：
 
 
 \begin{equation}
@@ -313,7 +313,7 @@ knitr::include_graphics("pic/myttest02cut.png")
 
 ### ステップ １
 
-```{r import00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='50%'}
+```{r import00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='80%'}
 knitr::include_graphics("pic/import00.png")
 ```
 
@@ -338,7 +338,7 @@ knitr::include_graphics("pic/import04.png")
 
 ### ステップ５
 
-```{r import04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='15%'}
+```{r import04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='20%'}
 knitr::include_graphics("pic/import05.png")
 ```
 
@@ -478,7 +478,7 @@ knitr::include_graphics("pic/lm01.png")
 ```{r lm02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='80%'}
 knitr::include_graphics("pic/lm02.png")
 ```
-自分の計算結果とは一致するかを確認してください．
+推定された回帰係数自分の計算結果とは一致するかを確認してください．
 
 
 ## 今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．
@@ -516,13 +516,15 @@ knitr::include_graphics("pic/sexfactor01.png")
 
 #### ステップ３
 
-```{r sexfactor02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='15%'}
+```{r sexfactor02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='25%'}
 knitr::include_graphics("pic/sexfactor02.png")
 ```
 
+\newpage
+\vfill
 #### ステップ４--水準名に男性，女性を入力する
 
-```{r sexfactor03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='15%'}
+```{r sexfactor03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='25%'}
 knitr::include_graphics("pic/sexfactor03.png")
 ```
 
@@ -530,16 +532,13 @@ knitr::include_graphics("pic/sexfactor03.png")
 
 #### ステップ１
 
-```{r lm03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=10, fig.align='center', out.width='80%'}
+```{r lm03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=10, fig.align='center', out.width='70%'}
 knitr::include_graphics("pic/lm00.png")
 ```
-\bigskip
-\bigskip
-\bigskip
 
 #### ステップ２---複数の説明変数を選択する時に control キーを押しながらマウスで変数名をクリックする
 
-```{r lm04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='40%'}
+```{r lm04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='50%'}
 knitr::include_graphics("pic/lm04.png")
 ```
 
@@ -583,7 +582,7 @@ knitr::include_graphics("pic/lm05.png")
 <!-- - $X_2 = 1$; -->
 \bigskip\bigskip\bigskip\bigskip\bigskip
 \bigskip\bigskip\bigskip\bigskip\bigskip
-\bigskip\bigskip\bigskip\bigskip\bigskip
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip -->
 
 
 <!-- $$ -->
@@ -602,20 +601,20 @@ knitr::include_graphics("pic/scatter02.png")
 
 ### ステップ１
 
-```{r scatter00003, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='50%'}
+```{r scatter00003, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.height='50%' , out.width='50%'}
 knitr::include_graphics("pic/scatter03.png")
 ```
 
 
 #### ステップ２
 
-```{r scatter03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='40%'}
+```{r scatter03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='50%'}
 knitr::include_graphics("pic/scatter04.png")
 ```
 
 #### ステップ３
 
-```{r scatter04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='15%'}
+```{r scatter04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='20%'}
 knitr::include_graphics("pic/scatter05.png")
 ```
 
@@ -627,15 +626,336 @@ knitr::include_graphics("pic/scatter06.png")
 
 #### ステップ５
 
-```{r scatter06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='15%'}
+```{r scatter06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='25%'}
 knitr::include_graphics("pic/scatter07.png")
+```
+
+
+# 問題３：$\chi^2$ 検定，オッズ比，ロジスティクス回帰モデル
+<!-- (SME lecture9) -->
+
+1990年代，アフリカナイジェリア北部でオンコセルカ症 (回旋糸状虫症, onchocerciasis; river blindness とも呼ばれる) が流行していた．ある研究チームが流行していた地域の34個の村に住む15歳以上の全住民に目の検査を行った．目の検査受けた住民はWHOの診断基準を元に，「視覚障害 (visually impaired)」と「視力正常 (normal vision」に分類された．対象者を三年間観察され，その期間中に死亡者を登録された．
+
+<!-- ．また，住民の皮膚検体からマイクロフィラリアの負荷 (microfilarial load)を測定し，糸状虫感染症の強度指標として評価した。 -->
+
+## 視覚障害と死亡の関係
+
+視覚障害の有無と死亡リスクの関連を見るために，以下の表をまとめた：
+
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+死亡 & 視力正常           & 視覚障害          & 合計             \\ \hline
+0  & 3874 (97.56\%) & 287 (87.77\%) & 4161 (96.81\%) \\ \hline
+1  & 97 (2.44\%)    & 40 (12.23\%)  & 137 (3.19\%)   \\ \hline
+合計 & 3971 (100\%)   & 327 (100\%)   & 4298 (100\%)   \\ \hline
+\end{tabular}
+\end{center}
+
+### もし，視覚障害と対象者の死亡リスクと関連がない場合，下の表（各セルの期待者数）を入力せよ：
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+死亡 & 視力正常                      & 視覚障害                   & 合計             \\ \hline
+0  &                                 &                            &   4161 (96.81\%)        \\ \hline
+1  &                                 &                            &  137 (3.19\%)    \\ \hline
+合計 & 3971 (100\%)             & 327 (100\%)            & 4298 (100\%)   \\ \hline
+\end{tabular}
+\end{center}
+
+### 上記の２つの表の数字を使って $\chi^2$ 統計量を計算せよ
+
+### 答え
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip -->
+<!-- $$ -->
+<!-- \begin{aligned} -->
+<!-- \chi^2 & = \frac{(3874 - 3844.4232)^2}{3844.4232} + \frac{(287 - 316.5768)^2}{316.5768} + \frac{(97 - 126.5768)^2}{126.5768} + \frac{(40 - 10.4232)^2}{10.4232} \\ -->
+<!--        & = 93.829 -->
+<!-- \end{aligned} -->
+<!-- $$ -->
+
+### 2 $\times$ 2 の分割表では，自由度は $\rule{3cm}{0.2mm}$
+
+<!-- $(2-1)\times(2-1) = 1$ ． -->
+
+\newpage
+\vfill
+EZRで，$\chi^2$統計量と自由度(df)を使って P 値を計算したい場合，以下のコマンドが利用できる：
+
+```{r eval=FALSE}
+2*pchisq(chisquare統計量, df, lower = FALSE)
+```
+
+
+
+<!-- \newpage -->
+<!-- \vfill -->
+
+```{r eval=FALSE, echo=FALSE}
+2*pchisq(93.829, 1, lower = FALSE)
+```
+
+
+```{r chisqtest01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='70%'}
+knitr::include_graphics("pic/mychisqtest02cut.png")
+```
+
+
+以下のコードをRスクリプトに入力して,実行をクリックしてください.自分の検定結果とは一致するかを確認し
+てください.
+
+```{r chisqtest, eval=FALSE}
+source("http://aoki2.si.gunma-u.ac.jp/R/src/my-chisq-test.R", encoding="euc-jp")
+a <- my.chisq.test(matrix(c(3874, 97, 287, 40), nrow = 2))
+a$expected # 期待者数表
+a
+```
+
+
+```{r chisqtest02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='80%'}
+knitr::include_graphics("pic/mychisqtest01cut.png")
+```
+
+
+
+
+<!-- \underline{手で計算した結果とは一致していると確認できる．} -->
+
+
+<!-- この検定結果は「視覚障害と対象者の死亡リスクと関連がない」という帰無仮説を棄却するために非常に強い証拠を提供したと言える． (There is strong evidence against the null hypothesis that there is no association between visual impairment and risk of death.) -->
+
+\newpage
+\vfill
+
+### 視覚障害と死亡の関係を示すテーブルのデータを元に，下表を完成せよ：
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+                 & 視力正常   & 視覚障害    & トータル   \\ \hline
+リスク (risk)       &  &   & 0.0319 \\ \hline
+オッズ (odds)       &  &   & 0.0329 \\ \hline
+対数オッズ (log-odds) &  &  & -3.414 \\ \hline
+\end{tabular}
+\end{center}
+
+
+\bigskip
+
+では，視覚障害者と死亡の関連を示すオッズ比を算出せよ：
+
+<!-- $$ -->
+<!-- \mathbf{OR} = 0.1394 \div 0.025 = 5.576 -->
+<!-- $$ -->
+$$
+\mathbf{OR} = 
+$$
+
+
+このオッズ比の対数を取った値 $\mathbf{log(OR)}$ は：
+
+$$
+\mathbf{log(OR)} = 
+$$
+
+### EZRでロジスティクス回帰モデルを作る
+
+#### ステップ１ --- データのインポート
+
+1. 
+```{r logistic00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='50%'}
+knitr::include_graphics("pic/import00.png")
+```
+
+\newpage
+\vfill
+
+2. 
+```{r logistic01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='30%'}
+knitr::include_graphics("pic/logstic01.png")
+```
+
+3. 
+```{r logistic02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='70%'}
+knitr::include_graphics("pic/logstic02.png")
+```
+
+
+4. 
+```{r logistic03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='70%'}
+knitr::include_graphics("pic/logstic03.png")
+```
+
+\newpage
+\vfill
+5.
+```{r logistic04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='70%'}
+knitr::include_graphics("pic/logstic04.png")
+```
+
+#### ステップ２ --- ロジスティクスモデルを作る
+
+6. 
+```{r logistic05, cache=TRUE, echo=FALSE, fig.align='center', out.width = '0.8\\textwidth',  out.height= '0.9\\textwidth'}
+knitr::include_graphics("pic/logstic05.png")
+```
+
+\newpage
+\vfill
+7. 
+```{r logistic06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='50%'}
+knitr::include_graphics("pic/logstic06.png")
+```
+
+8.
+```{r logistic07, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='50%'}
+knitr::include_graphics("pic/logstic07.png")
+```
+
+\newpage
+\vfill
+9.
+```{r logistic08, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='55%'}
+knitr::include_graphics("pic/logstic08.png")
+```
+
+計算したオッズ比はここの結果とは一致しているかを確認してください．
+
+
+
+10. 出力のところをスクロールアップすると $\mathbf{log(OR)}$ の結果が確認できる
+```{r logistic09, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='52%'}
+knitr::include_graphics("pic/logstic09.png")
+```
+
+- (intercept/切片) の `-3.689` は”視力正常”群の対数オッズであることを確認できる；
+- `vimp` (視覚障害)の回帰係数 `1.7167` は”視覚障害”と”視力正常”群に比べた log(OR) = log(odds in 視覚障害) - log(odds in 視力正常) = -1.9704 - (-3.689)である．
+
+
+
+## 年齢の影響を考慮する
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+       & \multicolumn{10}{c|}{視覚障害 (0 = no, 1 = yes)}                                                                                                  \\ \hline
+死亡     & 0             & 1          & 0            & 1           & 0            & 1           & 0           & 1           & 0            & 1           \\ \hline
+1 = yes & 29            & 2          & 38           & 10          & 15           & 11          & 15          & 17          & 97           & 40          \\ \hline
+0 = no & 2301          & 22         & 1271         & 124         & 212          & 69          & 90          & 72          & 3874         & 287         \\ \hline
+  n     &           &           &          &          &           &           &           &           &          &          \\ \hline
+年齢     & \multicolumn{2}{c|}{15-34} & \multicolumn{2}{c|}{35-54} & \multicolumn{2}{c|}{55-64} & \multicolumn{2}{c|}{65 +} & \multicolumn{2}{c|}{Total} \\ \hline
+\end{tabular}
+\end{center}
+
+
+上記のデータをよく見ると，視覚障害のオッズは年齢と共に上昇している (年齢が15-34歳群の$(2 + 22) / (29 + 2301) = 0.010$から年齢が65歳以上群の$(17+72)/(15+90) =  0.848$に上げた)．しかし，年齢の上昇と共に，死亡のオッズも上がる．年齢はここで，\underline{交絡因子 (confounder) }と定義される．
+
+### 以上のデータと解説をよく理解した上で，下表を完成せよ：
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+      & \multicolumn{2}{c|}{オッズ}    &        \\ \hline
+年齢    & 視力正常              & 視覚障害    & オッズ比   \\ \hline
+15-34 & 29/2301 = 0.01260 &   &   \\ \hline
+35-54 & 0.02990           &  &  \\ \hline
+55-64 & 0.07075           &  &  \\ \hline
+65+   & 0.16667           &  &  \\ \hline
+\end{tabular}
+\end{center}
+
+各年齢層では視覚障害と死亡との関連はどう変化しているか？
+
+
+\newpage
+\vfill
+
+### EZRで年齢グループを調整したロジスティクス回帰モデルを作る
+
+#### 年齢グループ `agegrp` 変数を因子 (factor) に変換する
+
+1. 
+```{r mltlogistic00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='55%'}
+knitr::include_graphics("pic/mltlogstic00.png")
+```
+
+
+2. 
+```{r mltlogistic01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='55%'}
+knitr::include_graphics("pic/mltlogstic01.png")
+```
+
+3. 
+```{r mltlogistic02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='30%'}
+knitr::include_graphics("pic/mltlogstic02.png")
 ```
 
 
 
 \newpage
 \vfill
+4. 水準名に各年齢グループの名前を入力する
+```{r mltlogistic03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='30%'}
+knitr::include_graphics("pic/mltlogstic03.png")
+```
+
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip
+
+#### 多変量ロジスティクス回帰モデルを作る
+
+1. 
+```{r mltlogistic04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='80%'}
+knitr::include_graphics("pic/mltlogstic04.png")
+```
+\newpage
+\vfill
+2. `agegrp` が因子になったことが確認できる．\newline `died` (死亡) を目的変数へ，`vimp` (視覚障害) を説明変数へ
+```{r mltlogistic05, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='50%'}
+knitr::include_graphics("pic/mltlogstic05.png")
+```
+
+
+
+3. `agegrp` も目的変数へ移動すると自動的に `+` が入れられる．OKをクリックする．
+
+```{r mltlogistic06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='50%'}
+knitr::include_graphics("pic/mltlogstic06.png")
+```
+
+4. 視覚障害と死亡の関係を評価する年齢調整オッズ比が計算される．
+
+```{r mltlogistic07, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='50%'}
+knitr::include_graphics("pic/mltlogstic07.png")
+```
+
+#### 単変量ロジスティクス回帰モデルで評価した粗オッズ比 (crude odds ratio) と比べ，年齢調整オッズ比はどう変わったかを説明せよ．
+
+
+#### 答え 
+
+
+<!-- 年齢を考慮していない場合，視覚障害者は視力正常者と比べ，三年間の間に死亡するオッズが5.57倍であり，95%信頼区間が 3.78 - 8.20 と推定される． -->
+
+<!-- 多変量ロジスティクス回帰モデルを用いて，視覚障害と死亡の関係に年齢の交絡考慮した後，オッズ比が 2.20 になり，95%信頼区間が 1.41 - 3.44 と推定される．このオッズ比が大きく変化した（小さくなった）ことは，年齢がこの関連の強い交絡因子であることを示唆される．また，年齢調整したオッズ比の95%信頼区間は 1 を跨いでいない．以上の結果を踏まえて，「視覚障害者は視力正常者と比べ，観察期間中に死亡するオッズが有意に高いこと」を支持するために，非常に強い証拠を提供した． -->
+
+<!-- (なお，この解析は，「各年齢層内の視覚障害と死亡の関係が等しい」という前提が仮定される．つまり，2.20は各年齢層の視覚障害と死亡の関係を評価する共通オッズ比 [common odds ratio] である．) -->
+
+\newpage
+\vfill
+
+# 問題４：生存分析
+
+
+\newpage
+\vfill
 
 # 参考図書：
-1.「Rによる保健医療データ解析演習」，中澤　港，（http://minato.sip21c.org/msb/medstatbookx.pdf）
-2.「みんなの医療統計 12日間で基礎理論とEZRを完全マスター!」，新谷　歩．
+1. 中澤　港，「Rによる保健医療データ解析演習」，（http://minato.sip21c.org/msb/medstatbookx.pdf）
+2. 新谷　歩，「みんなの医療統計 12日間で基礎理論とEZRを完全マスター!」．

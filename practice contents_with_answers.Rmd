@@ -220,7 +220,7 @@ There is strong evidence against the null hypothesis that the variances of atrop
 \newpage
 \vfill
 
-3.  2.の結果を踏まえて，帰無仮設「両群の脳萎縮度の平均値が等しい」を検定せよ．なお，両群の分散が等しいという前提が満たされていない時に，自由度(df)の計算式は以下となる：
+3.  2.の結果を踏まえて，帰無仮説「両群の脳萎縮度の平均値が等しい」を検定せよ．なお，両群の分散が等しいという前提が満たされていない時に，自由度(df)の計算式は以下となる：
 
 
 \begin{equation}
@@ -310,7 +310,7 @@ There is strong evidence against the null hypothesis that the means of atrophy a
 
 ### ステップ １
 
-```{r import00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='50%'}
+```{r import00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='80%'}
 knitr::include_graphics("pic/import00.png")
 ```
 
@@ -335,7 +335,7 @@ knitr::include_graphics("pic/import04.png")
 
 ### ステップ５
 
-```{r import04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='15%'}
+```{r import04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='20%'}
 knitr::include_graphics("pic/import05.png")
 ```
 
@@ -473,7 +473,7 @@ knitr::include_graphics("pic/lm01.png")
 ```{r lm02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='80%'}
 knitr::include_graphics("pic/lm02.png")
 ```
-自分の計算結果とは一致するかを確認してください．
+推定された回帰係数と自分の計算結果とは一致するかを確認してください．
 
 
 ## 今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．
@@ -490,8 +490,8 @@ $$
 - $6.838:$ 子供の年齢が0ヶ月の時に，体重の平均値は 6.838 kg．
 
 
-\newpage
-\vfill
+<!-- \newpage -->
+<!-- \vfill -->
 
 ## 性別を説明変数に入れたモデルを作る
 
@@ -511,13 +511,13 @@ knitr::include_graphics("pic/sexfactor01.png")
 
 #### ステップ３
 
-```{r sexfactor02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='15%'}
+```{r sexfactor02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='25%'}
 knitr::include_graphics("pic/sexfactor02.png")
 ```
 
 #### ステップ４--水準名に男性，女性を入力する
 
-```{r sexfactor03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='15%'}
+```{r sexfactor03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='25%'}
 knitr::include_graphics("pic/sexfactor03.png")
 ```
 
@@ -530,16 +530,16 @@ knitr::include_graphics("pic/lm00.png")
 ```
 \bigskip
 \bigskip
-\bigskip
-
-#### ステップ２---複数の説明変数を選択する時に control キーを押しながらマウスで変数名をクリックする
-
-```{r lm04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='40%'}
-knitr::include_graphics("pic/lm04.png")
-```
 
 \newpage
 \vfill
+
+#### ステップ２---複数の説明変数を選択する時に control キーを押しながらマウスで変数名をクリックする
+
+```{r lm04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='60%'}
+knitr::include_graphics("pic/lm04.png")
+```
+
 
 ### 重回帰線形モデルの結果を確認する
 
@@ -604,13 +604,13 @@ knitr::include_graphics("pic/scatter03.png")
 
 ### ステップ２
 
-```{r scatter03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='40%'}
+```{r scatter03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.height='50%' , out.width='50%'}
 knitr::include_graphics("pic/scatter04.png")
 ```
 
 ### ステップ３
 
-```{r scatter04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='25%'}
+```{r scatter04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='20%'}
 knitr::include_graphics("pic/scatter05.png")
 ```
 
@@ -817,8 +817,8 @@ knitr::include_graphics("pic/logstic08.png")
 
 
 
-10. 
-```{r logistic09, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='55%'}
+10. 出力のところをスクロールアップすると $\mathbf{log(OR)}$ の結果が確認できる
+```{r logistic09, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='52%'}
 knitr::include_graphics("pic/logstic09.png")
 ```
 
@@ -858,6 +858,13 @@ knitr::include_graphics("pic/logstic09.png")
 \end{tabular}
 \end{center}
 
+Look at the stratum-specific odds ratios, it appears that there may be a trend and that the odds ratio for visual impairment may decline with age.
+
+各年齢層では，視覚障害と死亡の関係を評価するオッズ比は大きく異なることがわかり，年齢と共に減っていく傾向があるかもしれない．年齢を考慮せずに視覚障害と死亡との関係を評価することは妥当ではないことが示唆される．
+
+\newpage
+\vfill
+
 ### EZRで年齢グループを調整したロジスティクス回帰モデルを作る
 
 #### 年齢グループ `agegrp` 変数を因子 (factor) に変換する
@@ -867,8 +874,7 @@ knitr::include_graphics("pic/logstic09.png")
 knitr::include_graphics("pic/mltlogstic00.png")
 ```
 
-\newpage
-\vfill
+
 2. 
 ```{r mltlogistic01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='55%'}
 knitr::include_graphics("pic/mltlogstic01.png")
@@ -878,14 +884,12 @@ knitr::include_graphics("pic/mltlogstic01.png")
 ```{r mltlogistic02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='30%'}
 knitr::include_graphics("pic/mltlogstic02.png")
 ```
-
+\newpage
+\vfill
 4. 水準名に各年齢グループの名前を入力する
 ```{r mltlogistic03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='30%'}
 knitr::include_graphics("pic/mltlogstic03.png")
 ```
-
-\newpage
-\vfill
 
 #### 多変量ロジスティクス回帰モデルを作る
 
@@ -893,14 +897,13 @@ knitr::include_graphics("pic/mltlogstic03.png")
 ```{r mltlogistic04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='80%'}
 knitr::include_graphics("pic/mltlogstic04.png")
 ```
-
+\newpage
+\vfill
 2. `agegrp` が因子になったことが確認できる．\newline `died` (死亡) を目的変数へ，`vimp` (視覚障害) を説明変数へ
 ```{r mltlogistic05, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='50%'}
 knitr::include_graphics("pic/mltlogstic05.png")
 ```
 
-\newpage
-\vfill
 
 3. `agegrp` も目的変数へ移動すると自動的に `+` が入れられる．OKをクリックする．
 
