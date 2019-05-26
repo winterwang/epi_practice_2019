@@ -150,8 +150,7 @@
 
 \begin{document}
 
-\hypertarget{section}{%
-\section{問題１：両群間計量データの平均値を比較する}\label{section}}
+\section{問題１：両群間計量データの平均値を比較する}
 
 ２００名の認知症患者を募集し，認識能力テスト(cognitive test,
 COG)，及び脳萎縮の進行度 (brain atrophy,
@@ -209,8 +208,7 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \newpage
 \vfill
 
-\hypertarget{section-1}{%
-\subsection{答え}\label{section-1}}
+\subsection{答え}
 
 両群の標準偏差は 9.0 と推定され，分散が等しいと仮定できるから，Student
 の t 検定を行う：
@@ -270,7 +268,7 @@ T = \frac{\bar{X}_A - \bar{X}_B}{S\sqrt{1/n_A + 1/n_B}}
 \begin{center}\includegraphics[width=0.9\linewidth]{pic/myttest01} \end{center}
 \bigskip
 
-\underline{手計算の結果とは一致していると確認できる．}
+\underline{手で計算した結果とは一致していると確認できる．}
 
 この検定結果は「両群のCOG平均値が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
 
@@ -299,8 +297,8 @@ COG are the same in the two groups.
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{section-2}{%
-\subsection{答え}\label{section-2}}
+\hypertarget{-1}{%
+\subsection{答え}\label{-1}}
 
 テーブルから両群の標準偏差はそれぞれ 0.21, 0.10 だと推定され，分散
 (variance)
@@ -353,7 +351,7 @@ F & = \frac{S^2_A}{S^2_B} \\
 \begin{center}\includegraphics[width=0.9\linewidth]{pic/ftest01} \end{center}
 \bigskip
 
-\underline{手計算の結果とは一致していると確認できる．}
+\underline{手で計算した結果とは一致していると確認できる．}
 
 この検定結果は「両群の脳萎縮度の分散が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
 
@@ -385,8 +383,8 @@ of atrophy are the same in the two groups.
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{section-3}{%
-\subsection{答え}\label{section-3}}
+\hypertarget{-2}{%
+\subsection{答え}\label{-2}}
 
 2.の検定結果から，「両群の脳萎縮度の分散が等しい」という帰無仮説を棄却されたため，Welch
 の t 検定を採用する．
@@ -444,7 +442,7 @@ of atrophy are the same in the two groups.
 \begin{center}\includegraphics[width=0.9\linewidth]{pic/myttest02} \end{center}
 \bigskip
 
-\underline{手計算の結果とは一致していると確認できる．}
+\underline{手で計算した結果とは一致していると確認できる．}
 
 この検定結果は「両群の脳萎縮度の平均値が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
 
@@ -454,8 +452,7 @@ atrophy are the same in the two groups.
 \newpage
 \vfill
 
-\hypertarget{section-4}{%
-\section{問題２：線形回帰モデル}\label{section-4}}
+\section{問題２：線形回帰モデル}
 
 190名の乳幼児の性別（1 = 男，2 = 女），年齢 (月,
 months)，体重（kg）のデータを収集した．このデータを用いで，以下の問題を解答したい：
@@ -467,36 +464,33 @@ months)，体重（kg）のデータを収集した．このデータを用い�
   男の子は女の子と比べて，平均的に体重はどれぐらい大きい/小さい？
 \end{itemize}
 
-\hypertarget{section-5}{%
-\subsection{データのインポート}\label{section-5}}
+\subsection{データのインポート}
 
-\hypertarget{section-6}{%
-\subsubsection{ステップ １}\label{section-6}}
+\subsubsection{ステップ １}
 
 \begin{center}\includegraphics[width=0.5\linewidth]{pic/import00} \end{center}
 
-\hypertarget{section-7}{%
-\subsubsection{ステップ２}\label{section-7}}
+\hypertarget{-1}{%
+\subsubsection{ステップ２}\label{-1}}
 
 \begin{center}\includegraphics[width=0.5\linewidth]{pic/import02} \end{center}
 
-\hypertarget{section-8}{%
-\subsubsection{ステップ３}\label{section-8}}
+\hypertarget{-2}{%
+\subsubsection{ステップ３}\label{-2}}
 
 \begin{center}\includegraphics[width=0.7\linewidth]{pic/import03} \end{center}
 
-\hypertarget{section-9}{%
-\subsubsection{ステップ４}\label{section-9}}
+\hypertarget{-3}{%
+\subsubsection{ステップ４}\label{-3}}
 
 \begin{center}\includegraphics[width=0.5\linewidth]{pic/import04} \end{center}
 
-\hypertarget{section-10}{%
-\subsubsection{ステップ５}\label{section-10}}
+\hypertarget{-4}{%
+\subsubsection{ステップ５}\label{-4}}
 
 \begin{center}\includegraphics[width=0.15\linewidth]{pic/import05} \end{center}
 
-\hypertarget{section-11}{%
-\subsection{体重と年齢の散布図，性別により体重の箱ひげ図}\label{section-11}}
+\subsection{体重と年齢の散布図，性別により体重の箱ひげ図}
 
 \begin{center}\includegraphics[width=0.85\linewidth]{pic/scatter00} \end{center}
 
@@ -655,28 +649,27 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 \hypertarget{ezr}{%
 \subsection{実際にEZRで線形モデルを作って見よう：}\label{ezr}}
 
-\hypertarget{section-12}{%
-\subsubsection{ステップ１}\label{section-12}}
+\hypertarget{-5}{%
+\subsubsection{ステップ１}\label{-5}}
 
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/lm00} \end{center}
 
-\hypertarget{section-13}{%
-\subsubsection{ステップ２}\label{section-13}}
+\hypertarget{-6}{%
+\subsubsection{ステップ２}\label{-6}}
 
 \begin{center}\includegraphics[width=0.6\linewidth]{pic/lm01} \end{center}
 
-\hypertarget{section-14}{%
-\subsubsection{ステップ３}\label{section-14}}
+\hypertarget{-7}{%
+\subsubsection{ステップ３}\label{-7}}
 
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/lm02} \end{center}
 
 自分の計算結果とは一致するかを確認してください．
 
-\hypertarget{section-15}{%
-\subsection{今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．}\label{section-15}}
+\subsection{今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．}
 
-\hypertarget{section-16}{%
-\subsubsection{答え}\label{section-16}}
+\hypertarget{-3}{%
+\subsubsection{答え}\label{-3}}
 
 \[
 Y = 6.838 + 0.165 X
@@ -698,62 +691,57 @@ Y = 6.838 + 0.165 X
 \newpage
 \vfill
 
-\hypertarget{section-17}{%
-\subsection{性別を説明変数に入れたモデルを作る}\label{section-17}}
+\subsection{性別を説明変数に入れたモデルを作る}
 
-\hypertarget{factor-}{%
-\subsubsection{性別変数を因子 (factor) に変換する}\label{factor-}}
+\hypertarget{-factor-}{%
+\subsubsection{性別変数を因子 (factor) に変換する}\label{-factor-}}
 
-\hypertarget{section-18}{%
-\paragraph{ステップ１}\label{section-18}}
+\hypertarget{-8}{%
+\paragraph{ステップ１}\label{-8}}
 
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/sexfactor00} \end{center}
 
-\hypertarget{section-19}{%
-\paragraph{ステップ２}\label{section-19}}
+\hypertarget{-9}{%
+\paragraph{ステップ２}\label{-9}}
 
 \begin{center}\includegraphics[width=0.4\linewidth]{pic/sexfactor01} \end{center}
 
-\hypertarget{section-20}{%
-\paragraph{ステップ３}\label{section-20}}
+\hypertarget{-10}{%
+\paragraph{ステップ３}\label{-10}}
 
 \begin{center}\includegraphics[width=0.15\linewidth]{pic/sexfactor02} \end{center}
 
-\hypertarget{section-21}{%
-\paragraph{ステップ４--水準名に男性，女性を入力する}\label{section-21}}
+\paragraph{ステップ４--水準名に男性，女性を入力する}
 
 \begin{center}\includegraphics[width=0.15\linewidth]{pic/sexfactor03} \end{center}
 
-\hypertarget{section-22}{%
-\subsubsection{重回帰線形モデルを作る}\label{section-22}}
+\subsubsection{重回帰線形モデルを作る}
 
-\hypertarget{section-23}{%
-\paragraph{ステップ１}\label{section-23}}
+\hypertarget{-11}{%
+\paragraph{ステップ１}\label{-11}}
 
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/lm00} \end{center}
 \bigskip
 \bigskip
 \bigskip
 
-\hypertarget{control-}{%
+\hypertarget{-control-}{%
 \paragraph{ステップ２---複数の説明変数を選択する時に control
-キーを押しながらマウスで変数名をクリックする}\label{control-}}
+キーを押しながらマウスで変数名をクリックする}\label{-control-}}
 
 \begin{center}\includegraphics[width=0.4\linewidth]{pic/lm04} \end{center}
 
 \newpage
 \vfill
 
-\hypertarget{section-24}{%
-\subsubsection{重回帰線形モデルの結果を確認する}\label{section-24}}
+\subsubsection{重回帰線形モデルの結果を確認する}
 
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/lm05} \end{center}
 
-\hypertarget{section-25}{%
-\subsection{重回帰線形モデルの計算結果を用いて，体重の平均値を年齢と性別の線形モデルで表示せよ．各回帰係数の意味を説明せよ．}\label{section-25}}
+\subsection{重回帰線形モデルの計算結果を用いて，体重の平均値を年齢と性別の線形モデルで表示せよ．各回帰係数の意味を説明せよ．}
 
-\hypertarget{section-26}{%
-\subsection{答え}\label{section-26}}
+\hypertarget{-4}{%
+\subsection{答え}\label{-4}}
 
 \[
 Y = 7.152 + 0.164 X_1 - 0.519X_2
@@ -783,11 +771,11 @@ Y = 7.152 + 0.164 X_1 - 0.519X_2
 \newpage
 \vfill
 
-\hypertarget{section-27}{%
-\subsection{上記の重回帰線形モデルを用いて，年齢が34ヶ月の女の子の体重の予測値を計算せよ．}\label{section-27}}
+\hypertarget{34}{%
+\subsection{上記の重回帰線形モデルを用いて，年齢が34ヶ月の女の子の体重の予測値を計算せよ．}\label{34}}
 
-\hypertarget{section-28}{%
-\subsection{答え}\label{section-28}}
+\hypertarget{-5}{%
+\subsection{答え}\label{-5}}
 
 \begin{itemize}
 \tightlist
@@ -806,35 +794,34 @@ Y & = 7.152 + 0.164 \times 34 -0.519\times 1 \\
 
 \bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
 
-\hypertarget{section-29}{%
-\subsection{男女別の年齢と体重の散布図を描く}\label{section-29}}
+\subsection{男女別の年齢と体重の散布図を描く}
 
 \bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
 
 \begin{center}\includegraphics[width=0.6\linewidth]{pic/scatter02} \end{center}
 
-\hypertarget{section-30}{%
-\subsubsection{ステップ１}\label{section-30}}
+\hypertarget{-12}{%
+\subsubsection{ステップ１}\label{-12}}
 
 \begin{center}\includegraphics[width=0.5\linewidth,height=0.5\textheight]{pic/scatter03} \end{center}
 
-\hypertarget{section-31}{%
-\subsubsection{ステップ２}\label{section-31}}
+\hypertarget{-13}{%
+\subsubsection{ステップ２}\label{-13}}
 
 \begin{center}\includegraphics[width=0.4\linewidth]{pic/scatter04} \end{center}
 
-\hypertarget{section-32}{%
-\subsubsection{ステップ３}\label{section-32}}
+\hypertarget{-14}{%
+\subsubsection{ステップ３}\label{-14}}
 
 \begin{center}\includegraphics[width=0.25\linewidth]{pic/scatter05} \end{center}
 
-\hypertarget{section-33}{%
-\subsubsection{ステップ４}\label{section-33}}
+\hypertarget{-15}{%
+\subsubsection{ステップ４}\label{-15}}
 
 \begin{center}\includegraphics[width=0.5\linewidth]{pic/scatter06} \end{center}
 
-\hypertarget{section-34}{%
-\subsubsection{ステップ５}\label{section-34}}
+\hypertarget{-16}{%
+\subsubsection{ステップ５}\label{-16}}
 
 \begin{center}\includegraphics[width=0.25\linewidth]{pic/scatter07} \end{center}
 
@@ -848,8 +835,7 @@ onchocerciasis; river blindness とも呼ばれる)
 (visually impaired)」と「視力正常 (normal
 vision」に分類された．対象者を三年間観察され，その期間中に死亡者を登録された．
 
-\hypertarget{section-35}{%
-\subsection{視覚障害と死亡の関係}\label{section-35}}
+\subsection{視覚障害と死亡の関係}
 
 視覚障害の有無と死亡リスクの関連を見るために，以下の表をまとめた：
 
@@ -863,8 +849,7 @@ vision」に分類された．対象者を三年間観察され，その期間�
 \end{tabular}
 \end{center}
 
-\hypertarget{section-36}{%
-\subsubsection{もし，視覚障害と対象者の死亡リスクと関連がない場合，下の表（各セルの期待者数）を入力せよ：}\label{section-36}}
+\subsubsection{もし，視覚障害と対象者の死亡リスクと関連がない場合，下の表（各セルの期待者数）を入力せよ：}
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
@@ -876,12 +861,12 @@ vision」に分類された．対象者を三年間観察され，その期間�
 \end{tabular}
 \end{center}
 
-\hypertarget{chi2--1}{%
+\hypertarget{-chi2-}{%
 \subsubsection{\texorpdfstring{上記の２つの表の数字を使って \(\chi^2\)
-統計量を計算せよ}{上記の２つの表の数字を使って \textbackslash{}chi\^{}2 統計量を計算せよ}}\label{chi2--1}}
+統計量を計算せよ}{上記の２つの表の数字を使って \textbackslash{}chi\^{}2 統計量を計算せよ}}\label{-chi2-}}
 
-\hypertarget{section-37}{%
-\subsubsection{答え}\label{section-37}}
+\hypertarget{-6}{%
+\subsubsection{答え}\label{-6}}
 
 \[
 \begin{aligned}
@@ -949,7 +934,7 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/mychisqtest01} \end{center}
 
-\underline{手計算の結果とは一致していると確認できる．}
+\underline{手で計算した結果とは一致していると確認できる．}
 
 この検定結果は「視覚障害と対象者の死亡リスクと関連がない」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
 (There is strong evidence against the null hypothesis that there is no
@@ -958,8 +943,7 @@ association between visual impairment and risk of death.)
 \newpage
 \vfill
 
-\hypertarget{section-38}{%
-\subsubsection{視覚障害と死亡の関係を示すテーブルの数を元に，下表を完成せよ：}\label{section-38}}
+\subsubsection{視覚障害と死亡の関係を示すテーブルの数を元に，下表を完成せよ：}
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
@@ -985,11 +969,11 @@ association between visual impairment and risk of death.)
 \mathbf{log(OR)} = 1.717
 \]
 
-\hypertarget{ezr-1}{%
-\subsubsection{EZRでロジスティクス回帰モデルを作る}\label{ezr-1}}
+\hypertarget{ezr}{%
+\subsubsection{EZRでロジスティクス回帰モデルを作る}\label{ezr}}
 
-\hypertarget{section-39}{%
-\paragraph{ステップ１ --- データのインポート}\label{section-39}}
+\hypertarget{-}{%
+\paragraph{ステップ１ --- データのインポート}\label{-}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1036,8 +1020,8 @@ association between visual impairment and risk of death.)
 
 \begin{center}\includegraphics[width=0.7\linewidth]{pic/logstic04} \end{center}
 
-\hypertarget{section-40}{%
-\paragraph{ステップ２ --- ロジスティクスモデルを作る}\label{section-40}}
+\hypertarget{-}{%
+\paragraph{ステップ２ --- ロジスティクスモデルを作る}\label{-}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1098,8 +1082,7 @@ association between visual impairment and risk of death.)
   - log(odds in 視力正常) = -1.9704 - (-3.689)である．
 \end{itemize}
 
-\hypertarget{section-41}{%
-\subsection{年齢の影響を見る}\label{section-41}}
+\subsection{年齢の影響を考慮する}
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
@@ -1114,10 +1097,9 @@ association between visual impairment and risk of death.)
 \end{center}
 
 上記のデータをよく見ると，視覚障害のオッズは年齢と共に上昇している
-(年齢が15-34歳群の0.01から年齢が65歳以上群の0.84に上げた)．しかし，年齢の上昇と共に，死亡のオッズも上がる．年齢はここで，\underline{交絡因子 (confounder) }と定義される．
+(年齢が15-34歳群の\((2 + 22) / (29 + 2301) = 0.010\)から年齢が65歳以上群の\((17+72)/(15+90) = 0.848\)に上げた)．しかし，年齢の上昇と共に，死亡のオッズも上がる．年齢はここで，\underline{交絡因子 (confounder) }と定義される．
 
-\hypertarget{section-42}{%
-\subsubsection{以上のデータと解説をよく理解した上で，下表を完成せよ：}\label{section-42}}
+\subsubsection{以上のデータと解説をよく理解した上で，下表を完成せよ：}
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
@@ -1131,23 +1113,135 @@ association between visual impairment and risk of death.)
 \end{tabular}
 \end{center}
 
-\hypertarget{ezr-2}{%
-\subsubsection{EZRで年齢を調整したロジスティクス回帰モデルを作る}\label{ezr-2}}
+\hypertarget{ezr}{%
+\subsubsection{EZRで年齢グループを調整したロジスティクス回帰モデルを作る}\label{ezr}}
+
+\hypertarget{-agegrp--factor-}{%
+\paragraph{\texorpdfstring{年齢グループ \texttt{agegrp} 変数を因子
+(factor)
+に変換する}{年齢グループ agegrp 変数を因子 (factor) に変換する}}\label{-agegrp--factor-}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.55\linewidth,height=0.5\textheight]{pic/mltlogstic00} \end{center}
 
 \newpage
 \vfill
 
-\hypertarget{section-43}{%
-\section{問題４：生存分析}\label{section-43}}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.55\linewidth,height=0.5\textheight]{pic/mltlogstic01} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.3\linewidth,height=0.5\textheight]{pic/mltlogstic02} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  水準名に各年齢グループの名前を入力する
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.3\linewidth,height=0.5\textheight]{pic/mltlogstic03} \end{center}
 
 \newpage
 \vfill
 
-\hypertarget{section-44}{%
-\section{参考図書：}\label{section-44}}
+\paragraph{多変量ロジスティクス回帰モデルを作る}
 
-1.「Rによる保健医療データ解析演習」，中澤　港，（\url{http://minato.sip21c.org/msb/medstatbookx.pdf}）
-2.「みんなの医療統計 12日間で基礎理論とEZRを完全マスター!」，新谷　歩．
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.8\linewidth,height=0.5\textheight]{pic/mltlogstic04} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \texttt{agegrp} が因子になったことが確認できる．\newline \texttt{died}
+  (死亡) を目的変数へ，\texttt{vimp} (視覚障害) を説明変数へ
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.5\linewidth,height=0.5\textheight]{pic/mltlogstic05} \end{center}
+
+\newpage
+\vfill
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \texttt{agegrp} も目的変数へ移動すると自動的に \texttt{+}
+  が入れられる．OKをクリックする．
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.5\linewidth,height=0.5\textheight]{pic/mltlogstic06} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  視覚障害と死亡の関係を評価する年齢調整オッズ比が計算される．
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.5\linewidth,height=0.5\textheight]{pic/mltlogstic07} \end{center}
+
+\hypertarget{-crude-odds-ratio-}{%
+\paragraph{単変量ロジスティクス回帰モデルで評価した粗オッズ比 (crude
+odds ratio)
+と比べ，年齢調整オッズ比はどう変わったかを説明せよ．}\label{-crude-odds-ratio-}}
+
+\hypertarget{-7}{%
+\paragraph{答え}\label{-7}}
+
+年齢を考慮していない場合，視覚障害者は視力正常者と比べ，三年間の間死亡したオッズが5.57倍高い，95\%信頼区間が
+3.78 - 8.20 と推定される．
+
+多変量ロジスティクス回帰モデルを用いて，視覚障害と死亡の関係に年齢の交絡考慮した後，オッズ比が
+2.20 になり，95\%信頼区間が 1.41 - 3.44
+と推定される．このオッズ比が大きく変化した（小さくなった）ことは，年齢がこの関連の強い交絡因子であることを示唆される．また，年齢調整したオッズ比の95\%信頼区間は
+1
+を跨いでいない．以上の結果を踏まえて，「視覚障害者は視力正常者と比べ，観察期間中に死亡するオッズが有意に高いこと」を支持するために，非常に強い証拠を提供した．
+
+(なお，この解析は，「各年齢層内の視覚障害と死亡の関係が等しい」という前提が仮定される．つまり，2.20は各年齢層の視覚障害と死亡の関係を評価する共通オッズ比
+{[}common odds ratio{]} である．)
+
+\newpage
+\vfill
+
+\section{問題４：生存分析}
+
+\newpage
+\vfill
+
+\section{参考図書：}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  中澤　港，「Rによる保健医療データ解析演習」，（\url{http://minato.sip21c.org/msb/medstatbookx.pdf}）
+\item
+  新谷　歩，「みんなの医療統計 12日間で基礎理論とEZRを完全マスター!」．
+\item
+\end{enumerate}
 
 
 \end{document}

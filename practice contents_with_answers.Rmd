@@ -151,7 +151,7 @@ knitr::include_graphics("pic/myttest01.png")
 
 
 
-\underline{手計算の結果とは一致していると確認できる．}
+\underline{手で計算した結果とは一致していると確認できる．}
 
 この検定結果は「両群のCOG平均値が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
 
@@ -210,7 +210,7 @@ knitr::include_graphics("pic/ftest01.png")
 ```
 \bigskip
 
-\underline{手計算の結果とは一致していると確認できる．}
+\underline{手で計算した結果とは一致していると確認できる．}
 
 
 この検定結果は「両群の脳萎縮度の分散が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
@@ -285,7 +285,7 @@ knitr::include_graphics("pic/myttest02.png")
 
 
 
-\underline{手計算の結果とは一致していると確認できる．}
+\underline{手で計算した結果とは一致していると確認できる．}
 
 
 この検定結果は「両群の脳萎縮度の平均値が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
@@ -716,7 +716,7 @@ knitr::include_graphics("pic/mychisqtest01.png")
 
 
 
-\underline{手計算の結果とは一致していると確認できる．}
+\underline{手で計算した結果とは一致していると確認できる．}
 
 
 この検定結果は「視覚障害と対象者の死亡リスクと関連がない」という帰無仮説を棄却するために非常に強い証拠を提供したと言える． (There is strong evidence against the null hypothesis that there is no association between visual impairment and risk of death.)
@@ -827,7 +827,7 @@ knitr::include_graphics("pic/logstic09.png")
 
 
 
-## 年齢の影響を見る
+## 年齢の影響を考慮する
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
@@ -842,7 +842,7 @@ knitr::include_graphics("pic/logstic09.png")
 \end{center}
 
 
-上記のデータをよく見ると，視覚障害のオッズは年齢と共に上昇している (年齢が15-34歳群の0.01から年齢が65歳以上群の0.84に上げた)．しかし，年齢の上昇と共に，死亡のオッズも上がる．年齢はここで，\underline{交絡因子 (confounder) }と定義される．
+上記のデータをよく見ると，視覚障害のオッズは年齢と共に上昇している (年齢が15-34歳群の$(2 + 22) / (29 + 2301) = 0.010$から年齢が65歳以上群の$(17+72)/(15+90) =  0.848$に上げた)．しかし，年齢の上昇と共に，死亡のオッズも上がる．年齢はここで，\underline{交絡因子 (confounder) }と定義される．
 
 ### 以上のデータと解説をよく理解した上で，下表を完成せよ：
 
@@ -858,9 +858,73 @@ knitr::include_graphics("pic/logstic09.png")
 \end{tabular}
 \end{center}
 
-### EZRで年齢を調整したロジスティクス回帰モデルを作る
+### EZRで年齢グループを調整したロジスティクス回帰モデルを作る
+
+#### 年齢グループ `agegrp` 変数を因子 (factor) に変換する
+
+1. 
+```{r mltlogistic00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='55%'}
+knitr::include_graphics("pic/mltlogstic00.png")
+```
+
+\newpage
+\vfill
+2. 
+```{r mltlogistic01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='55%'}
+knitr::include_graphics("pic/mltlogstic01.png")
+```
+
+3. 
+```{r mltlogistic02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='30%'}
+knitr::include_graphics("pic/mltlogstic02.png")
+```
+
+4. 水準名に各年齢グループの名前を入力する
+```{r mltlogistic03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='30%'}
+knitr::include_graphics("pic/mltlogstic03.png")
+```
+
+\newpage
+\vfill
+
+#### 多変量ロジスティクス回帰モデルを作る
+
+1. 
+```{r mltlogistic04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='80%'}
+knitr::include_graphics("pic/mltlogstic04.png")
+```
+
+2. `agegrp` が因子になったことが確認できる．\newline `died` (死亡) を目的変数へ，`vimp` (視覚障害) を説明変数へ
+```{r mltlogistic05, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='50%'}
+knitr::include_graphics("pic/mltlogstic05.png")
+```
+
+\newpage
+\vfill
+
+3. `agegrp` も目的変数へ移動すると自動的に `+` が入れられる．OKをクリックする．
+
+```{r mltlogistic06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='50%'}
+knitr::include_graphics("pic/mltlogstic06.png")
+```
+
+4. 視覚障害と死亡の関係を評価する年齢調整オッズ比が計算される．
+
+```{r mltlogistic07, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='50%'}
+knitr::include_graphics("pic/mltlogstic07.png")
+```
+
+#### 単変量ロジスティクス回帰モデルで評価した粗オッズ比 (crude odds ratio) と比べ，年齢調整オッズ比はどう変わったかを説明せよ．
 
 
+#### 答え 
+
+
+年齢を考慮していない場合，視覚障害者は視力正常者と比べ，三年間の間死亡したオッズが5.57倍高い，95%信頼区間が 3.78 - 8.20 と推定される．
+
+多変量ロジスティクス回帰モデルを用いて，視覚障害と死亡の関係に年齢の交絡考慮した後，オッズ比が 2.20 になり，95%信頼区間が 1.41 - 3.44 と推定される．このオッズ比が大きく変化した（小さくなった）ことは，年齢がこの関連の強い交絡因子であることを示唆される．また，年齢調整したオッズ比の95%信頼区間は 1 を跨いでいない．以上の結果を踏まえて，「視覚障害者は視力正常者と比べ，観察期間中に死亡するオッズが有意に高いこと」を支持するために，非常に強い証拠を提供した．
+
+(なお，この解析は，「各年齢層内の視覚障害と死亡の関係が等しい」という前提が仮定される．つまり，2.20は各年齢層の視覚障害と死亡の関係を評価する共通オッズ比 [common odds ratio] である．)
 
 \newpage
 \vfill
@@ -872,5 +936,6 @@ knitr::include_graphics("pic/logstic09.png")
 \vfill
 
 # 参考図書：
-1.「Rによる保健医療データ解析演習」，中澤　港，（http://minato.sip21c.org/msb/medstatbookx.pdf）
-2.「みんなの医療統計 12日間で基礎理論とEZRを完全マスター!」，新谷　歩．
+1. 中澤　港，「Rによる保健医療データ解析演習」，（http://minato.sip21c.org/msb/medstatbookx.pdf）
+2. 新谷　歩，「みんなの医療統計 12日間で基礎理論とEZRを完全マスター!」．
+3. 
