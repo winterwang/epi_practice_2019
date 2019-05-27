@@ -5,6 +5,8 @@ author: ""
 date: ""
 output:
   pdf_document:
+    toc: true
+    toc_depth: 1
     fig_caption: yes
     # includes:
     #   in_header: preamble-latex.tex

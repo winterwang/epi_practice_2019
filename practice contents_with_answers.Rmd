@@ -5,6 +5,8 @@ author: ""
 date: ""
 output:
   pdf_document:
+    toc: true
+    toc_depth: 1
     fig_caption: yes
     # includes:
     #   in_header: preamble-latex.tex
@@ -94,9 +96,6 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 ```
 
 
-\newpage
-\vfill
-
 ## 答え
 
 両群の標準偏差は 9.0 と推定され，分散が等しいと仮定できるから，Student の t 検定を行う：
@@ -126,10 +125,6 @@ $$
 ```{r pvalue00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='90%'}
 knitr::include_graphics("pic/tvaluepvalue00.png")
 ```
-\bigskip
-
-\newpage
-\vfill
 
 
 <!-- \clearpage -->
@@ -157,8 +152,6 @@ knitr::include_graphics("pic/myttest01.png")
 
 There is strong evidence against the null hypothesis that the means of COG are the same in the two groups.
 
-\newpage
-\vfill
 
 2. この患者データから，遺伝子変異ありとなしの群の間に脳萎縮度 (atrophy) の比較を 1. と同じ方法で検定してもよいか？どの検定方法を使えば 1. と同じ検定方法を使えるかどうかを判断できるを説明せよ．実際にこの検定方法を行ってください．
 
@@ -566,8 +559,6 @@ $$
 - $-0.519:$ 子供年齢が同じ時に，女の子は男の子と比べ，体重が平均的に 0.519 kg低い．
 
 
-\newpage
-\vfill
 
 
 ## 上記の重回帰線形モデルを用いて，年齢が34ヶ月の女の子の体重の予測値を計算せよ．
@@ -626,7 +617,8 @@ knitr::include_graphics("pic/scatter06.png")
 knitr::include_graphics("pic/scatter07.png")
 ```
 
-
+\newpage
+\vfill
 # 問題３：$\chi^2$ 検定，オッズ比，ロジスティクス回帰モデル
 <!-- (SME lecture9) -->
 
@@ -905,7 +897,7 @@ knitr::include_graphics("pic/mltlogstic05.png")
 ```
 
 
-3. `agegrp` も目的変数へ移動すると自動的に `+` が入れられる．OKをクリックする．
+3. `agegrp` も説明変数変数へ移動すると自動的に `+` が入れられる．OKをクリックする．
 
 ```{r mltlogistic06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='50%'}
 knitr::include_graphics("pic/mltlogstic06.png")
@@ -1084,6 +1076,10 @@ knitr::include_graphics("pic/survival16.png")
 knitr::include_graphics("pic/survival17.png")
 ```
 
+#### 答え
+
+三年間の追跡の間に，視覚障害者の死亡ハザードは視力正常者の 5.197 倍，このハザード比の95% 信頼区間は 3.56 - 7.51 と推定される．
+
 \newpage
 6. 年齢調整ハザード比を求めよ．
 ```{r survival21, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
@@ -1096,6 +1092,11 @@ knitr::include_graphics("pic/survival18.png")
 ```{r survival22, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
 knitr::include_graphics("pic/survival19.png")
 ```
+
+### 答え
+
+三年間の追跡の間に，視覚障害者の年齢調整死亡ハザードは視力正常者の 2.10 倍，このハザード比の 95% 信頼区間は 1.37 - 3.21 と推定される．
+
 \newpage
 \vfill
 
