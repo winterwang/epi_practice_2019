@@ -955,6 +955,176 @@ knitr::include_graphics("pic/mltlogstic07.png")
 # 問題４：生存分析
 
 
+問題３の研究で，実は対象者が研究に参加した時点と研究終了時点（死亡，打ち切り，または研究期間が終了した）の時間も記録されている：
+
+```{r showtime, echo=FALSE, cache=TRUE, message=FALSE}
+library(haven)
+library(tidyverse)
+# Dataset <- read_dta("~/ドキュメント/githubprojects/LSHTMlearningnote/backupfiles/growgam1.dta")
+Dataset <- read_dta("dataset/mortality.dta")
+Dataset %>% 
+  mutate(agegrp = factor(Dataset$agegrp, labels = c("15-34", 
+                                                    "35-54",
+                                                    "55-64",
+                                                    "65+")))  %>% 
+  select(id, agegrp, enter, exit, vimp, died) %>% 
+  print(n = 35)
+```
+
+\newpage
+\vfill
+### EZRでは，追跡期間を計算するために，日付の差を取る必要がある
+
+1. 
+```{r survival00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='70%'}
+knitr::include_graphics("pic/survival00.png")
+```
+
+2. 追跡期間の変数名を `followup` とする
+```{r survival01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='50%'}
+knitr::include_graphics("pic/survival01.png")
+```
+
+
+3. `followup` を作成したと確認メッセージが出る．追跡期間の要約を調べる：
+
+```{r survival02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='70%'}
+knitr::include_graphics("pic/survival02.png")
+```
+
+4. イベント別（死亡，打ち切り）により追跡期間を計算する
+```{r survival03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='55%'}
+knitr::include_graphics("pic/survival03.png")
+```
+
+\newpage
+5. 
+```{r survival04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='25%'}
+knitr::include_graphics("pic/survival04.png")
+```
+
+
+6. 
+```{r survival05, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='45%'}
+knitr::include_graphics("pic/survival05.png")
+```
+
+
+7. 単純要約を見ると，死亡者と生存者の追跡期間（日数）の平均値(と中央値)はどっちが長い？
+```{r survival06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='55%'}
+knitr::include_graphics("pic/survival06.png")
+```
+
+
+\newpage
+8. 層別変数を `vimp` (視覚障害) に変更し，追跡期間の要約を比較してみる
+```{r survival07, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='25%'}
+knitr::include_graphics("pic/survival0901.png")
+```
+
+
+
+9. 
+```{r survival08, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='45%'}
+knitr::include_graphics("pic/survival0902.png")
+```
+
+
+10. 視覚障害者と視力正常者と比べ，追跡期間の違いはあるか？
+```{r survival09, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='55%'}
+knitr::include_graphics("pic/survival0903.png")
+```
+
+
+
+### 生存表とカプランマイヤーグラフを作成する
+
+1. 
+```{r survival10, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='70%'}
+knitr::include_graphics("pic/survival07.png")
+```
+
+2. 
+```{r survival11, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='100%'}
+knitr::include_graphics("pic/survival08.png")
+```
+
+
+\newpage
+3. 視覚障害者（赤線）と視力正常者（黒線）のカプランマイヤー生存曲線：（点線は95%信頼区間を示す）
+```{r survival12, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='70%'}
+knitr::include_graphics("pic/survival09.png")
+```
+
+視覚障害者の生存率は視力正常者より低いことが分かる．
+
+4. log-rank 検定の結果も同時に示される．$p = <2e-16 < 0.00001$の結果から，「視覚障害者と視力正常者の生存曲線が等しい」という帰無仮説を棄却するために非常に強い証拠を提供した．
+
+```{r survival13, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
+knitr::include_graphics("pic/survival10.png")
+```
+
+\newpage
+
+5. 生存曲線を作成するための両群の生存率表も確認できる：
+
+```{r survival14, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
+knitr::include_graphics("pic/survival11.png")
+```
+
+
+```{r survival15, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
+knitr::include_graphics("pic/survival12.png")
+```
+
+### Cox比例ハザードモデルを作る．
+
+```{r survival16, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
+knitr::include_graphics("pic/survival13.png")
+```
+
+2. `followup`を時間へ
+```{r survival17, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
+knitr::include_graphics("pic/survival14.png")
+```
+
+
+3. `died`をイベントへ
+```{r survival18, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
+knitr::include_graphics("pic/survival15.png")
+```
+\newpage
+
+4. `vimp` (視覚障害)を説明変数へ，OKをクリックする
+```{r survival19, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
+knitr::include_graphics("pic/survival16.png")
+```
+
+5. 単変量ハザード比，及び信頼区間の意味を説明せよ．
+```{r survival20, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
+knitr::include_graphics("pic/survival17.png")
+```
+
+#### 答え
+
+
+\newpage
+6. 年齢調整ハザード比を求めよ．
+```{r survival21, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
+knitr::include_graphics("pic/survival18.png")
+```
+
+
+7.年齢調整ハザード比，及び信頼区間の意味を説明せよ．
+
+```{r survival22, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
+knitr::include_graphics("pic/survival19.png")
+```
+
+### 答え
+
+
+
 \newpage
 \vfill
 

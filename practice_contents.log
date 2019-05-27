@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.10.12)  27 MAY 2019 17:46
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.10.12)  27 MAY 2019 18:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2116,23 +2116,79 @@ File: pic/mltlogstic06.png Graphic file (type bmp)
 [32]
 File: pic/mltlogstic07.png Graphic file (type bmp)
 <pic/mltlogstic07.png>
-[33] [34] [35]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 986.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 986.
+[33] [34]
+File: pic/survival00.png Graphic file (type bmp)
+<pic/survival00.png>
+File: pic/survival01.png Graphic file (type bmp)
+<pic/survival01.png>
+[35]
+File: pic/survival02.png Graphic file (type bmp)
+<pic/survival02.png>
+File: pic/survival03.png Graphic file (type bmp)
+<pic/survival03.png>
+[36]
+File: pic/survival04.png Graphic file (type bmp)
+<pic/survival04.png>
+File: pic/survival05.png Graphic file (type bmp)
+<pic/survival05.png>
+File: pic/survival06.png Graphic file (type bmp)
+<pic/survival06.png>
+[37]
+File: pic/survival0901.png Graphic file (type bmp)
+<pic/survival0901.png>
+File: pic/survival0902.png Graphic file (type bmp)
+<pic/survival0902.png>
+File: pic/survival0903.png Graphic file (type bmp)
+<pic/survival0903.png>
+[38]
+File: pic/survival07.png Graphic file (type bmp)
+<pic/survival07.png>
+File: pic/survival08.png Graphic file (type bmp)
+<pic/survival08.png>
+[39]
+File: pic/survival09.png Graphic file (type bmp)
+<pic/survival09.png>
+File: pic/survival10.png Graphic file (type bmp)
+<pic/survival10.png>
+[40]
+File: pic/survival11.png Graphic file (type bmp)
+<pic/survival11.png>
+File: pic/survival12.png Graphic file (type bmp)
+<pic/survival12.png>
+File: pic/survival13.png Graphic file (type bmp)
+<pic/survival13.png>
+[41]
+File: pic/survival14.png Graphic file (type bmp)
+<pic/survival14.png>
+File: pic/survival15.png Graphic file (type bmp)
+<pic/survival15.png>
+[42]
+File: pic/survival16.png Graphic file (type bmp)
+<pic/survival16.png>
+File: pic/survival17.png Graphic file (type bmp)
+<pic/survival17.png>
+[43]
+File: pic/survival18.png Graphic file (type bmp)
+<pic/survival18.png>
+File: pic/survival19.png Graphic file (type bmp)
+<pic/survival19.png>
+[44] [45]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1258.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1258.
 (./practice_contents.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 986.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 986.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1258.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1258.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 37476 strings out of 493007
- 703496 string characters out of 6136718
- 859095 words of memory out of 5000000
- 40775 multiletter control sequences out of 15000+600000
+ 37573 strings out of 493007
+ 705431 string characters out of 6136718
+ 864606 words of memory out of 5000000
+ 40849 multiletter control sequences out of 15000+600000
  575814 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 55i,12n,121p,10458b,411s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,121p,10458b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on practice_contents.pdf (35 pages).
+Output written on practice_contents.pdf (45 pages).

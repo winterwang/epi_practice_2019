@@ -967,11 +967,283 @@ odds ratio)
 \hypertarget{section-45}{%
 \section{問題４：生存分析}\label{section-45}}
 
+問題３の研究で，実は対象者が研究に参加した時点と研究終了時点（死亡，打ち切り，または研究期間が終了した）の時間も記録されている：
+
+\begin{verbatim}
+## # A tibble: 4,298 x 6
+##       id agegrp enter      exit                        vimp  died
+##    <dbl> <fct>  <date>     <date>                 <dbl+lbl> <dbl>
+##  1     1 55-64  1989-05-09 1992-02-05 0 [Normal]                0
+##  2     2 35-54  1989-05-09 1992-02-05 0 [Normal]                0
+##  3     3 35-54  1989-05-09 1992-02-05 1 [Visually impaired]     0
+##  4     4 15-34  1989-05-09 1992-02-05 0 [Normal]                0
+##  5     5 15-34  1989-05-09 1992-02-05 0 [Normal]                0
+##  6     6 15-34  1989-05-09 1989-08-12 0 [Normal]                0
+##  7    14 65+    1989-05-09 1992-02-05 0 [Normal]                0
+##  8    15 55-64  1989-05-11 1992-02-05 1 [Visually impaired]     0
+##  9    16 35-54  1989-05-12 1992-02-05 1 [Visually impaired]     0
+## 10    17 35-54  1989-05-09 1992-02-05 0 [Normal]                0
+## 11    18 15-34  1989-05-09 1992-02-05 0 [Normal]                0
+## 12    19 15-34  1989-05-12 1992-02-05 0 [Normal]                0
+## 13    22 15-34  1989-05-09 1992-02-05 0 [Normal]                0
+## 14    23 15-34  1989-05-09 1992-02-05 0 [Normal]                0
+## 15    24 15-34  1989-05-09 1992-02-05 0 [Normal]                0
+## 16    29 15-34  1989-05-10 1992-02-06 0 [Normal]                0
+## 17    30 15-34  1989-05-11 1992-02-06 0 [Normal]                0
+## 18    31 15-34  1989-05-09 1992-02-05 0 [Normal]                0
+## 19    33 65+    1989-05-09 1992-02-05 0 [Normal]                0
+## 20    34 15-34  1989-05-09 1992-02-06 0 [Normal]                0
+## 21    35 15-34  1989-05-11 1992-02-05 0 [Normal]                0
+## 22    38 15-34  1989-05-15 1991-09-05 0 [Normal]                1
+## 23    39 15-34  1989-05-10 1992-02-06 0 [Normal]                0
+## 24    42 15-34  1989-05-10 1992-02-05 0 [Normal]                0
+## 25    43 15-34  1989-05-09 1992-02-06 0 [Normal]                0
+## 26    44 65+    1989-05-14 1992-02-05 1 [Visually impaired]     0
+## 27    45 65+    1989-05-14 1992-02-05 0 [Normal]                0
+## 28    46 35-54  1989-05-14 1992-02-08 0 [Normal]                0
+## 29    47 35-54  1989-05-18 1992-02-05 0 [Normal]                0
+## 30    48 15-34  1989-05-16 1992-02-08 0 [Normal]                0
+## 31    55 55-64  1989-05-14 1992-02-08 1 [Visually impaired]     0
+## 32    56 15-34  1989-05-14 1992-02-06 0 [Normal]                0
+## 33    59 15-34  1989-05-14 1992-02-08 0 [Normal]                0
+## 34    62 15-34  1989-05-14 1992-02-08 0 [Normal]                0
+## 35    63 15-34  1989-05-14 1992-02-05 0 [Normal]                0
+## # ... with 4,263 more rows
+\end{verbatim}
+
 \newpage
 \vfill
 
+\hypertarget{ezr-3}{%
+\subsubsection{EZRでは，追跡期間を計算するために，日付の差を取る必要がある}\label{ezr-3}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.7\linewidth,height=0.5\textheight]{pic/survival00} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  追跡期間の変数名を \texttt{followup} とする
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.5\linewidth,height=0.35\textheight]{pic/survival01} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \texttt{followup}
+  を作成したと確認メッセージが出る．追跡期間の要約を調べる：
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.7\linewidth,height=0.35\textheight]{pic/survival02} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  イベント別（死亡，打ち切り）により追跡期間を計算する
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.55\linewidth,height=0.35\textheight]{pic/survival03} \end{center}
+
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.25\linewidth,height=0.35\textheight]{pic/survival04} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.45\linewidth,height=0.35\textheight]{pic/survival05} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  単純要約を見ると，死亡者と生存者の追跡期間（日数）の平均値(と中央値)はどっちが長い？
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.55\linewidth,height=0.35\textheight]{pic/survival06} \end{center}
+
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  層別変数を \texttt{vimp} (視覚障害)
+  に変更し，追跡期間の要約を比較してみる
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.25\linewidth,height=0.35\textheight]{pic/survival0901} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.45\linewidth,height=0.35\textheight]{pic/survival0902} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  視覚障害者と視力正常者と比べ，追跡期間の違いはあるか？
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.55\linewidth,height=0.35\textheight]{pic/survival0903} \end{center}
+
 \hypertarget{section-46}{%
-\section{参考図書：}\label{section-46}}
+\subsubsection{生存表とカプランマイヤーグラフを作成する}\label{section-46}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.7\linewidth,height=0.35\textheight]{pic/survival07} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+\end{enumerate}
+
+\begin{center}\includegraphics[width=1\linewidth,height=0.5\textheight]{pic/survival08} \end{center}
+
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  視覚障害者（赤線）と視力正常者（黒線）のカプランマイヤー生存曲線：（点線は95\%信頼区間を示す）
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.7\linewidth,height=0.5\textheight]{pic/survival09} \end{center}
+
+視覚障害者の生存率は視力正常者より低いことが分かる．
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  log-rank
+  検定の結果も同時に示される．\(p = <2e-16 < 0.00001\)の結果から，「視覚障害者と視力正常者の生存曲線が等しい」という帰無仮説を棄却するために非常に強い証拠を提供した．
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival10} \end{center}
+
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  生存曲線を作成するための両群の生存率表も確認できる：
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival11} \end{center}
+
+\begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival12} \end{center}
+
+\hypertarget{cox}{%
+\subsubsection{Cox比例ハザードモデルを作る．}\label{cox}}
+
+\begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival13} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \texttt{followup}を時間へ
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival14} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \texttt{died}をイベントへ
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival15} \end{center}
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \texttt{vimp} (視覚障害)を説明変数へ，OKをクリックする
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival16} \end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  単変量ハザード比，及び信頼区間の意味を説明せよ．
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival17} \end{center}
+
+\hypertarget{section-47}{%
+\paragraph{答え}\label{section-47}}
+
+\newpage
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  年齢調整ハザード比を求めよ．
+\end{enumerate}
+
+\begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival18} \end{center}
+
+7.年齢調整ハザード比，及び信頼区間の意味を説明せよ．
+
+\begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival19} \end{center}
+
+\hypertarget{section-48}{%
+\subsubsection{答え}\label{section-48}}
+
+\newpage
+\vfill
+
+\hypertarget{section-49}{%
+\section{参考図書：}\label{section-49}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
