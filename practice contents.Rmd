@@ -96,8 +96,6 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 ```
 
 
-\newpage
-\vfill
 
 ## 答え
 
@@ -402,7 +400,7 @@ boxplot(Dataset$wt ~ Dataset$sex, ylim = c(0, 18),
 
 
 
-## 年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の相関係数を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド `mean(変数名)` を使う；共分散を計算したい時に，コマンド `cor(変数1, 変数2)` を利用する．
+## 年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の相関係数を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド `mean(変数名)` を使う；共分散を計算したい時に，コマンド `cov(変数1, 変数2)` を利用する．
 
 以下のコードをRスクリプトに入力して,実行をクリックしてください．(結果を下の余白に記入すること)
 
@@ -524,6 +522,7 @@ knitr::include_graphics("pic/sexfactor02.png")
 
 \newpage
 \vfill
+
 #### ステップ４--水準名に男性，女性を入力する
 
 ```{r sexfactor03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='25%'}
@@ -584,15 +583,6 @@ knitr::include_graphics("pic/lm05.png")
 <!-- - $X_2 = 1$; -->
 \bigskip\bigskip\bigskip\bigskip\bigskip
 \bigskip\bigskip\bigskip\bigskip\bigskip
-<!-- \bigskip\bigskip\bigskip\bigskip\bigskip -->
-
-
-<!-- $$ -->
-<!-- \begin{aligned} -->
-<!-- Y & = 7.152 + 0.164 \times 34 -0.519\times 1 \\ -->
-<!--   & = 12.209\; \mathbf{(kg)} -->
-<!-- \end{aligned} -->
-<!-- $$ -->
 
 ## 男女別の年齢と体重の散布図を描く
 
@@ -673,13 +663,8 @@ knitr::include_graphics("pic/scatter07.png")
 
 ### 答え
 \bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
-<!-- \bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip -->
-<!-- $$ -->
-<!-- \begin{aligned} -->
-<!-- \chi^2 & = \frac{(3874 - 3844.4232)^2}{3844.4232} + \frac{(287 - 316.5768)^2}{316.5768} + \frac{(97 - 126.5768)^2}{126.5768} + \frac{(40 - 10.4232)^2}{10.4232} \\ -->
-<!--        & = 93.829 -->
-<!-- \end{aligned} -->
-<!-- $$ -->
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
 
 ### 2 $\times$ 2 の分割表では，自由度は $\rule{3cm}{0.2mm}$
 
@@ -687,6 +672,7 @@ knitr::include_graphics("pic/scatter07.png")
 
 \newpage
 \vfill
+
 EZRで，$\chi^2$統計量と自由度(df)を使って P 値を計算したい場合，以下のコマンドが利用できる：
 
 ```{r eval=FALSE}
@@ -902,6 +888,7 @@ knitr::include_graphics("pic/mltlogstic02.png")
 
 \newpage
 \vfill
+
 4. 水準名に各年齢グループの名前を入力する
 ```{r mltlogistic03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='30%'}
 knitr::include_graphics("pic/mltlogstic03.png")
@@ -916,8 +903,10 @@ knitr::include_graphics("pic/mltlogstic03.png")
 ```{r mltlogistic04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='80%'}
 knitr::include_graphics("pic/mltlogstic04.png")
 ```
+
 \newpage
 \vfill
+
 2. `agegrp` が因子になったことが確認できる．\newline `died` (死亡) を目的変数へ，`vimp` (視覚障害) を説明変数へ
 ```{r mltlogistic05, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='50%'}
 knitr::include_graphics("pic/mltlogstic05.png")
@@ -925,7 +914,7 @@ knitr::include_graphics("pic/mltlogstic05.png")
 
 
 
-3. `agegrp` も目的変数へ移動すると自動的に `+` が入れられる．OKをクリックする．
+3. `agegrp` も説明変数へ移動すると自動的に `+` が入れられる．OKをクリックする．
 
 ```{r mltlogistic06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='50%'}
 knitr::include_graphics("pic/mltlogstic06.png")
@@ -973,6 +962,7 @@ Dataset %>%
 
 \newpage
 \vfill
+
 ### EZRでは，追跡期間を計算するために，日付の差を取る必要がある
 
 1. 

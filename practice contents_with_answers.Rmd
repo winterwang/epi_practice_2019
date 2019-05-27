@@ -390,7 +390,7 @@ boxplot(Dataset$wt ~ Dataset$sex, ylim = c(0, 18),
 
 
 
-## 年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の相関係数を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド `mean(変数名)` を使う；共分散を計算したい時に，コマンド `cor(変数1, 変数2)` を利用する．
+## 年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の相関係数を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド `mean(変数名)` を使う；共分散を計算したい時に，コマンド `cov(変数1, 変数2)` を利用する．
 
 以下のコードをRスクリプトに入力して,実行をクリックしてください．(結果を下の余白に記入すること)
 
@@ -619,10 +619,11 @@ knitr::include_graphics("pic/scatter07.png")
 
 \newpage
 \vfill
+
 # 問題３：$\chi^2$ 検定，オッズ比，ロジスティクス回帰モデル
 <!-- (SME lecture9) -->
 
-1990年代，アフリカナイジェリア北部でオンコセルカ症 (回旋糸状虫症, onchocerciasis; river blindness とも呼ばれる) が流行していた．ある研究チームが流行していた地域の34個の村に住む15歳以上の全住民に目の検査を行った．目の検査受けた住民はWHOの診断基準を元に，「視覚障害 (visually impaired)」と「視力正常 (normal vision」に分類された．対象者は年間観察され，その期間中に死亡者を登録された．
+1990年代，アフリカナイジェリア北部でオンコセルカ症 (回旋糸状虫症, onchocerciasis; river blindness とも呼ばれる) が流行していた．ある研究チームが流行していた地域の34個の村に住む15歳以上の全住民に目の検査を行った．目の検査受けた住民はWHOの診断基準を元に，「視覚障害 (visually impaired)」と「視力正常 (normal vision」に分類された．対象者は3年間観察され，その期間中に死亡者を登録された．
 
 <!-- ．また，住民の皮膚検体からマイクロフィラリアの負荷 (microfilarial load)を測定し，糸状虫感染症の強度指標として評価した。 -->
 
@@ -897,7 +898,7 @@ knitr::include_graphics("pic/mltlogstic05.png")
 ```
 
 
-3. `agegrp` も説明変数変数へ移動すると自動的に `+` が入れられる．OKをクリックする．
+3. `agegrp` も説明変数へ移動すると自動的に `+` が入れられる．OKをクリックする．
 
 ```{r mltlogistic06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='50%'}
 knitr::include_graphics("pic/mltlogstic06.png")
@@ -944,6 +945,7 @@ Dataset %>%
 
 \newpage
 \vfill
+
 ### EZRでは，追跡期間を計算するために，日付の差を取る必要がある
 
 1. 
