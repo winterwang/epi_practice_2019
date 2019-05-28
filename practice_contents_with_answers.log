@@ -1,16 +1,17 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2020/dev/Debian) (preloaded format=xelatex 2019.5.10)  27 MAY 2019 21:28
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2018.9.25)  28 MAY 2019 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **practice_contents_with_answers.tex
 (./practice_contents_with_answers.tex
-LaTeX2e <2018-12-01>
+LaTeX2e <2018-04-01> patch level 4
+Babel <3.20> and hyphenation patterns for 84 language(s) loaded.
 (./problemset.cls
 Document Class: problemset 2016/09/15- v1.0 My class for MIT homework
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@section=\count81
@@ -45,7 +46,7 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2018/12/01 v2.17b AMS math features
+Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip43
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -61,20 +62,20 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count88
-LaTeX Info: Redefining \frac on input line 223.
+LaTeX Info: Redefining \frac on input line 213.
 \uproot@=\count89
 \leftroot@=\count90
-LaTeX Info: Redefining \overline on input line 385.
+LaTeX Info: Redefining \overline on input line 375.
 \classnum@=\count91
 \DOTSCASE@=\count92
-LaTeX Info: Redefining \ldots on input line 482.
-LaTeX Info: Redefining \dots on input line 485.
-LaTeX Info: Redefining \cdots on input line 606.
-\Mathstrutbox@=\box27
-\strutbox@=\box28
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
 \big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count93
 \c@MaxMatrixCols=\count94
 \dotsspace@=\muskip11
@@ -95,8 +96,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks19
-LaTeX Info: Redefining \[ on input line 2844.
-LaTeX Info: Redefining \] on input line 2845.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks20
@@ -108,7 +109,7 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 )
 \lst@mode=\count100
-\lst@gtempboxa=\box29
+\lst@gtempboxa=\box28
 \lst@token=\toks23
 \lst@length=\count101
 \lst@currlwidth=\dimen112
@@ -120,30 +121,30 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \lst@lineno=\count105
 \lst@maxwidth=\dimen115
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count106
 \lst@skipnumbers=\count107
-\lst@framebox=\box30
+\lst@framebox=\box29
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2019/02/27 1.8b listings configuration
+File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
-Package: listings 2019/02/27 1.8b (Carsten Heinz)
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
 LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 18.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 18.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 18.
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \col@sep=\dimen116
-\ar@mcellbox=\box31
+\ar@mcellbox=\box30
 \extrarowheight=\dimen117
 \NC@list=\toks24
 \extratabsurround=\skip46
 \backup@length=\skip47
-\ar@cellbox=\box32
+\ar@cellbox=\box31
 ) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip48
 \multirow@cntb=\count108
 \multirow@dima=\skip49
@@ -170,16 +171,16 @@ Package graphics Info: Driver file: xetex.def on input line 99.
 \c@codelinenumber=\count109
 \c@indent=\count110
 \digitwidth=\skip50
-\savecode=\box33
+\savecode=\box32
 \codeboxwidth=\skip51
 \c@linenumberwidth=\count111
 \c@thisindent=\count112
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
+Package: multicol 2018/04/20 v1.8s multicolumn formatting (FMi)
 \c@tracingmulticols=\count113
-\mult@box=\box34
+\mult@box=\box33
 \multicol@leftmargin=\dimen119
 \c@unbalance=\count114
 \c@collectmore=\count115
@@ -192,13 +193,14 @@ Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \postmulticols=\dimen123
 \multicolsep=\skip52
 \multicolbaselineskip=\skip53
-\partial@page=\box35
-\last@line=\box36
+\partial@page=\box34
+\last@line=\box35
 \maxbalancingoverflow=\dimen124
-\mult@rightbox=\box37
-\mult@grightbox=\box38
-\mult@gfirstbox=\box39
-\mult@firstbox=\box40
+\mult@rightbox=\box36
+\mult@grightbox=\box37
+\mult@gfirstbox=\box38
+\mult@firstbox=\box39
+\@tempa=\box40
 \@tempa=\box41
 \@tempa=\box42
 \@tempa=\box43
@@ -215,21 +217,20 @@ Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \@tempa=\box54
 \@tempa=\box55
 \@tempa=\box56
-\@tempa=\box57
 \c@columnbadness=\count119
 \c@finalcolumnbadness=\count120
 \last@try=\dimen125
 \multicolovershoot=\dimen126
 \multicolundershoot=\dimen127
-\mult@nat@firstbox=\box58
-\colbreak@box=\box59
+\mult@nat@firstbox=\box57
+\colbreak@box=\box58
 \mc@col@check@num=\count121
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 \Gin@req@height=\dimen128
 \Gin@req@width=\dimen129
 ) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
 \f@nch@headwidth=\skip54
 \f@nch@O@elh=\skip55
@@ -297,26 +298,25 @@ Already applied: [0000/00/00] Old fixltx2e package on input line 53.
 Package: mathspec 2016/12/22 v0.2b LaTeX Package (Mathematics font selection fo
 r XeLaTeX)
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count125
 ) (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/share/te
 xlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texlive/tex
 mf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2019-05-07 L3 programming layer (loader) 
+Package: expl3 2018-04-30 L3 programming layer (loader) 
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2019-05-07 L3 programming layer (code)
+Package: expl3 2018-04-30 L3 programming layer (code)
 \c_max_int=\count126
 \l_tmpa_int=\count127
 \l_tmpb_int=\count128
 \g_tmpa_int=\count129
 \g_tmpb_int=\count130
 \g__kernel_prg_map_int=\count131
-\c__ior_term_ior=\count132
-\c_log_iow=\count133
-\l_iow_line_count_int=\count134
-\l__iow_line_target_int=\count135
-\l__iow_one_indent_int=\count136
-\l__iow_indent_int=\count137
+\c_log_iow=\count132
+\l_iow_line_count_int=\count133
+\l__iow_line_target_int=\count134
+\l__iow_one_indent_int=\count135
+\l__iow_indent_int=\count136
 \c_zero_dim=\dimen130
 \c_max_dim=\dimen131
 \l_tmpa_dim=\dimen132
@@ -335,80 +335,77 @@ Package: expl3 2019-05-07 L3 programming layer (code)
 \l_tmpb_muskip=\muskip15
 \g_tmpa_muskip=\muskip16
 \g_tmpb_muskip=\muskip17
-\l_keys_choice_int=\count138
-\l__intarray_loop_int=\count139
+\l_keys_choice_int=\count137
+\c__fp_leading_shift_int=\count138
+\c__fp_middle_shift_int=\count139
+\c__fp_trailing_shift_int=\count140
+\c__fp_big_leading_shift_int=\count141
+\c__fp_big_middle_shift_int=\count142
+\c__fp_big_trailing_shift_int=\count143
+\c__fp_Bigg_leading_shift_int=\count144
+\c__fp_Bigg_middle_shift_int=\count145
+\c__fp_Bigg_trailing_shift_int=\count146
 \c__intarray_sp_dim=\dimen136
-\g__intarray_font_int=\count140
-\c__fp_leading_shift_int=\count141
-\c__fp_middle_shift_int=\count142
-\c__fp_trailing_shift_int=\count143
-\c__fp_big_leading_shift_int=\count144
-\c__fp_big_middle_shift_int=\count145
-\c__fp_big_trailing_shift_int=\count146
-\c__fp_Bigg_leading_shift_int=\count147
-\c__fp_Bigg_middle_shift_int=\count148
-\c__fp_Bigg_trailing_shift_int=\count149
-\g__fp_array_int=\count150
-\l__fp_array_loop_int=\count151
-\l__sort_length_int=\count152
-\l__sort_min_int=\count153
-\l__sort_top_int=\count154
-\l__sort_max_int=\count155
-\l__sort_true_max_int=\count156
-\l__sort_block_int=\count157
-\l__sort_begin_int=\count158
-\l__sort_end_int=\count159
-\l__sort_A_int=\count160
-\l__sort_B_int=\count161
-\l__sort_C_int=\count162
-\l__tl_analysis_normal_int=\count163
-\l__tl_analysis_index_int=\count164
-\l__tl_analysis_nesting_int=\count165
-\l__tl_analysis_type_int=\count166
-\l__regex_internal_a_int=\count167
-\l__regex_internal_b_int=\count168
-\l__regex_internal_c_int=\count169
-\l__regex_balance_int=\count170
-\l__regex_group_level_int=\count171
-\l__regex_mode_int=\count172
-\c__regex_cs_in_class_mode_int=\count173
-\c__regex_cs_mode_int=\count174
-\l__regex_catcodes_int=\count175
-\l__regex_default_catcodes_int=\count176
-\c__regex_catcode_L_int=\count177
-\c__regex_catcode_O_int=\count178
-\c__regex_catcode_A_int=\count179
-\c__regex_all_catcodes_int=\count180
-\l__regex_show_lines_int=\count181
-\l__regex_min_state_int=\count182
-\l__regex_max_state_int=\count183
-\l__regex_left_state_int=\count184
-\l__regex_right_state_int=\count185
-\l__regex_capturing_group_int=\count186
-\l__regex_min_pos_int=\count187
-\l__regex_max_pos_int=\count188
-\l__regex_curr_pos_int=\count189
-\l__regex_start_pos_int=\count190
-\l__regex_success_pos_int=\count191
-\l__regex_curr_char_int=\count192
-\l__regex_curr_catcode_int=\count193
-\l__regex_last_char_int=\count194
-\l__regex_case_changed_char_int=\count195
-\l__regex_curr_state_int=\count196
-\l__regex_step_int=\count197
-\l__regex_min_active_int=\count198
-\l__regex_max_active_int=\count199
-\l__regex_replacement_csnames_int=\count266
-\l__regex_match_count_int=\count267
-\l__regex_min_submatch_int=\count268
-\l__regex_submatch_int=\count269
-\l__regex_zeroth_submatch_int=\count270
-\g__regex_trace_regex_int=\count271
-\c_empty_box=\box60
-\l_tmpa_box=\box61
-\l_tmpb_box=\box62
-\g_tmpa_box=\box63
-\g_tmpb_box=\box64
+\g__intarray_font_int=\count147
+\l__sort_length_int=\count148
+\l__sort_min_int=\count149
+\l__sort_top_int=\count150
+\l__sort_max_int=\count151
+\l__sort_true_max_int=\count152
+\l__sort_block_int=\count153
+\l__sort_begin_int=\count154
+\l__sort_end_int=\count155
+\l__sort_A_int=\count156
+\l__sort_B_int=\count157
+\l__sort_C_int=\count158
+\l__tl_analysis_normal_int=\count159
+\l__tl_analysis_index_int=\count160
+\l__tl_analysis_nesting_int=\count161
+\l__tl_analysis_type_int=\count162
+\l__regex_internal_a_int=\count163
+\l__regex_internal_b_int=\count164
+\l__regex_internal_c_int=\count165
+\l__regex_balance_int=\count166
+\l__regex_group_level_int=\count167
+\l__regex_mode_int=\count168
+\c__regex_cs_in_class_mode_int=\count169
+\c__regex_cs_mode_int=\count170
+\l__regex_catcodes_int=\count171
+\l__regex_default_catcodes_int=\count172
+\c__regex_catcode_L_int=\count173
+\c__regex_catcode_O_int=\count174
+\c__regex_catcode_A_int=\count175
+\c__regex_all_catcodes_int=\count176
+\l__regex_show_lines_int=\count177
+\l__regex_min_state_int=\count178
+\l__regex_max_state_int=\count179
+\l__regex_left_state_int=\count180
+\l__regex_right_state_int=\count181
+\l__regex_capturing_group_int=\count182
+\l__regex_min_pos_int=\count183
+\l__regex_max_pos_int=\count184
+\l__regex_curr_pos_int=\count185
+\l__regex_start_pos_int=\count186
+\l__regex_success_pos_int=\count187
+\l__regex_curr_char_int=\count188
+\l__regex_curr_catcode_int=\count189
+\l__regex_last_char_int=\count190
+\l__regex_case_changed_char_int=\count191
+\l__regex_curr_state_int=\count192
+\l__regex_step_int=\count193
+\l__regex_min_active_int=\count194
+\l__regex_max_active_int=\count195
+\l__regex_replacement_csnames_int=\count196
+\l__regex_match_count_int=\count197
+\l__regex_min_submatch_int=\count198
+\l__regex_submatch_int=\count199
+\l__regex_zeroth_submatch_int=\count266
+\g__regex_trace_regex_int=\count267
+\c_empty_box=\box59
+\l_tmpa_box=\box60
+\l_tmpb_box=\box61
+\g_tmpa_box=\box62
+\g_tmpb_box=\box63
 \l__box_top_dim=\dimen137
 \l__box_bottom_dim=\dimen138
 \l__box_left_dim=\dimen139
@@ -417,8 +414,8 @@ Package: expl3 2019-05-07 L3 programming layer (code)
 \l__box_bottom_new_dim=\dimen142
 \l__box_left_new_dim=\dimen143
 \l__box_right_new_dim=\dimen144
-\l__box_internal_box=\box65
-\l__coffin_internal_box=\box66
+\l__box_internal_box=\box64
+\l__coffin_internal_box=\box65
 \l__coffin_internal_dim=\dimen145
 \l__coffin_offset_x_dim=\dimen146
 \l__coffin_offset_y_dim=\dimen147
@@ -426,74 +423,245 @@ Package: expl3 2019-05-07 L3 programming layer (code)
 \l__coffin_y_dim=\dimen149
 \l__coffin_x_prime_dim=\dimen150
 \l__coffin_y_prime_dim=\dimen151
-\c_empty_coffin=\box67
-\l__coffin_aligned_coffin=\box68
-\l__coffin_aligned_internal_coffin=\box69
-\l_tmpa_coffin=\box70
-\l_tmpb_coffin=\box71
-\g_tmpa_coffin=\box72
-\g_tmpb_coffin=\box73
-\l__coffin_bounding_shift_dim=\dimen152
-\l__coffin_left_corner_dim=\dimen153
-\l__coffin_right_corner_dim=\dimen154
-\l__coffin_bottom_corner_dim=\dimen155
-\l__coffin_top_corner_dim=\dimen156
-\l__coffin_scaled_total_height_dim=\dimen157
-\l__coffin_scaled_width_dim=\dimen158
-\c__coffin_empty_coffin=\box74
-\l__coffin_display_coffin=\box75
-\l__coffin_display_coord_coffin=\box76
-\l__coffin_display_pole_coffin=\box77
-\l__coffin_display_offset_dim=\dimen159
-\l__coffin_display_x_dim=\dimen160
-\l__coffin_display_y_dim=\dimen161
+\c_empty_coffin=\box66
+\l__coffin_aligned_coffin=\box67
+\l__coffin_aligned_internal_coffin=\box68
+\l_tmpa_coffin=\box69
+\l_tmpb_coffin=\box70
+\l__coffin_display_coffin=\box71
+\l__coffin_display_coord_coffin=\box72
+\l__coffin_display_pole_coffin=\box73
+\l__coffin_display_offset_dim=\dimen152
+\l__coffin_display_x_dim=\dimen153
+\l__coffin_display_y_dim=\dimen154
 \g__file_internal_ior=\read2
-\l__seq_internal_a_int=\count272
-\l__seq_internal_b_int=\count273
-\c__deprecation_minus_one=\count274
+\l__coffin_bounding_shift_dim=\dimen155
+\l__coffin_left_corner_dim=\dimen156
+\l__coffin_right_corner_dim=\dimen157
+\l__coffin_bottom_corner_dim=\dimen158
+\l__coffin_top_corner_dim=\dimen159
+\l__coffin_scaled_total_height_dim=\dimen160
+\l__coffin_scaled_width_dim=\dimen161
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
-File: l3xdvipdfmx.def 2019-04-06 v L3 Experimental driver: xdvipdfmx
-\g__driver_image_int=\count275
-\l__driver_pdf_tmp_box=\box78
-\g__driver_pdf_object_int=\count276
-\g__driver_pdf_annotation_int=\count277
+File: l3xdvidpfmx.def 2018-04-30 v L3 Experimental driver: xdvipdfmx
+\g__driver_image_int=\count268
 ))
-Package: xparse 2019-05-03 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count278
-\g__xparse_grabber_int=\count279
-\l__xparse_m_args_int=\count280
-\l__xparse_v_nesting_int=\count281
+Package: xparse 2018-04-30 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count269
+\g__xparse_grabber_int=\count270
+\l__xparse_m_args_int=\count271
+\l__xparse_mandatory_args_int=\count272
+\l__xparse_v_nesting_int=\count273
 )
-Package: fontspec 2019/03/15 v2.7c Font selection for XeLaTeX and LuaLaTeX
+Package: fontspec 2017/11/09 v2.6g Font selection for XeLaTeX and LuaLaTeX
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2019/03/15 v2.7c Font selection for XeLaTeX and LuaLaTe
+Package: fontspec-xetex 2017/11/09 v2.6g Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count282
-\l__fontspec_language_int=\count283
-\l__fontspec_strnum_int=\count284
-\l__fontspec_tmp_int=\count285
-\l__fontspec_tmpa_int=\count286
-\l__fontspec_tmpb_int=\count287
-\l__fontspec_tmpc_int=\count288
-\l__fontspec_em_int=\count289
-\l__fontspec_emdef_int=\count290
-\l__fontspec_strong_int=\count291
-\l__fontspec_strongdef_int=\count292
+\l__fontspec_script_int=\count274
+\l__fontspec_language_int=\count275
+\l__fontspec_strnum_int=\count276
+\l__fontspec_tmp_int=\count277
+\l__fontspec_em_int=\count278
+\l__fontspec_emdef_int=\count279
+\l__fontspec_strong_int=\count280
+\l__fontspec_strongdef_int=\count281
 \l__fontspec_tmpa_dim=\dimen162
 \l__fontspec_tmpb_dim=\dimen163
 \l__fontspec_tmpc_dim=\dimen164
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 (/usr/share/texlive/texmf-dist/tex/latex/base/tuenc.def
-File: tuenc.def 2018/08/11 v2.0j Standard LaTeX file
+File: tuenc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
-)) (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)
-LaTeX Info: Redefining \itshape on input line 4051.
-LaTeX Info: Redefining \slshape on input line 4056.
-LaTeX Info: Redefining \scshape on input line 4061.
-LaTeX Info: Redefining \upshape on input line 4066.
-LaTeX Info: Redefining \em on input line 4096.
-LaTeX Info: Redefining \emph on input line 4121.
+))
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \fontspec with sig. 'O{}mO{}' on line 542.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmainfont with sig. 'O{}mO{}' on line 546.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setsansfont with sig. 'O{}mO{}' on line 550.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmonofont with sig. 'O{}mO{}' on line 554.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmathrm with sig. 'O{}mO{}' on line 558.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setboldmathrm with sig. 'O{}mO{}' on line 562.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmathsf with sig. 'O{}mO{}' on line 566.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmathtt with sig. 'O{}mO{}' on line 570.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setromanfont with sig. 'O{}mO{}' on line 574.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontfamily with sig. 'mO{}mO{}' on line 578.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontface with sig. 'mO{}mO{}' on line 582.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \defaultfontfeatures with sig. 't+om' on line 586.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \addfontfeatures with sig. 'm' on line 590.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \addfontfeature with sig. 'm' on line 594.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontfeature with sig. 'mm' on line 598.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newAATfeature with sig. 'mmmm' on line 602.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newopentypefeature with sig. 'mmm' on line 606.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newICUfeature with sig. 'mmm' on line 610.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \aliasfontfeature with sig. 'mm' on line 614.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \aliasfontfeatureoption with sig. 'mmm' on line 618.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontscript with sig. 'mm' on line 622.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontlanguage with sig. 'mm' on line 626.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareFontsExtensions with sig. 'm' on line 630.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \IfFontFeatureActiveTF with sig. 'mmm' on line 634.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \EncodingCommand with sig. 'mO{}m' on line 3632.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \EncodingAccent with sig. 'mm' on line 3638.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \EncodingSymbol with sig. 'mm' on line 3644.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \EncodingComposite with sig. 'mmm' on line 3650.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \EncodingCompositeCommand with sig. 'mmm' on line 3656.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareUnicodeEncoding with sig. 'mm' on line 3681.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \UndeclareSymbol with sig. 'm' on line 3687.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \UndeclareAccent with sig. 'm' on line 3693.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \UndeclareCommand with sig. 'm' on line 3699.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \UndeclareComposite with sig. 'mm' on line 3706.
+.................................................
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)
+LaTeX Info: Redefining \itshape on input line 3891.
+LaTeX Info: Redefining \slshape on input line 3896.
+LaTeX Info: Redefining \scshape on input line 3901.
+LaTeX Info: Redefining \upshape on input line 3906.
+LaTeX Info: Redefining \em on input line 3936.
+LaTeX Info: Redefining \emph on input line 3961.
+LaTeX Info: Redefining \- on input line 4015.
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \oldstylenums with sig. 'm' on line 4110.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \liningnums with sig. 'm' on line 4114.
+.................................................
 )) (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texl
@@ -501,84 +669,100 @@ ive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks25
 \XKV@tempa@toks=\toks26
 )
-\XKV@depth=\count293
+\XKV@depth=\count282
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\c@eu@=\count294
-\c@eu@i=\count295
-\c@mkern=\count296
+\c@eu@=\count283
+\c@eu@i=\count284
+\c@mkern=\count285
 )
-
-Package fontspec Info: IPAPMincho scale = 0.8756820436507937.
-
-
-Package fontspec Info: Could not resolve font "IPAPMincho/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "IPAPMincho/B" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "IPAPMincho/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: IPAPMincho scale = 0.8756820436507937.
-
-
-Package fontspec Info: Font family 'IPAPMincho(0)' created for font
-(fontspec)             'IPAPMincho' with options
-(fontspec)             [Ligatures=TeX,Scale=MatchLowercase,Ligatures=TeX].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.8756820436507937]"IPAPMincho/OT:script=latn;lang
-uage=DFLT;mapping=tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-
+.................................................
+. fontspec info: "set-scale"
+. 
+. IPAPMincho scale = 0.8756820436507937.
+.................................................
+\g__fontspec_family_IPAPMincho_int=\count286
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAPMincho/BI" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAPMincho/B" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAPMincho/I" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. IPAPMincho scale = 0.8756820436507937.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'IPAPMincho(0)' created for font 'IPAPMincho' with options
+. [Ligatures=TeX,Scale=MatchLowercase,Ligatures=TeX].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.:
+. <->s*[0.8756820436507937]"IPAPMincho/OT:script=latn;language=DFLT;mapping=tex
+-text;"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+.................................................
 LaTeX Info: Redefining \rmfamily on input line 17.
 LaTeX Font Info:    Font shape `TU/IPAPMincho(0)/m/n' will be
 (Font)              scaled to size 10.50824pt on input line 17.
-
-Package fontspec Info: IPAPGothic scale = 0.8487429887820513.
-
-
-Package fontspec Info: Could not resolve font "IPAPGothic/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "IPAPGothic/B" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "IPAPGothic/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: IPAPGothic scale = 0.8487429887820513.
-
-
-Package fontspec Info: Font family 'IPAPGothic(0)' created for font
-(fontspec)             'IPAPGothic' with options
-(fontspec)             [Ligatures=TeX,Scale=MatchLowercase,Ligatures=TeX].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.8487429887820513]"IPAPGothic/OT:script=latn;lang
-uage=DFLT;mapping=tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-
+.................................................
+. fontspec info: "set-scale"
+. 
+. IPAPGothic scale = 0.8487429887820513.
+.................................................
+\g__fontspec_family_IPAPGothic_int=\count287
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAPGothic/BI" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAPGothic/B" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAPGothic/I" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. IPAPGothic scale = 0.8487429887820513.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'IPAPGothic(0)' created for font 'IPAPGothic' with options
+. [Ligatures=TeX,Scale=MatchLowercase,Ligatures=TeX].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.:
+. <->s*[0.8487429887820513]"IPAPGothic/OT:script=latn;language=DFLT;mapping=tex
+-text;"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+.................................................
 LaTeX Info: Redefining \sffamily on input line 18.
 (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
+Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
 (textcomp)               4 = 5 + \texteuro
@@ -658,22 +842,22 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )) (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
-Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
+Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
 \MT@toks=\toks27
-\MT@count=\count297
-LaTeX Info: Redefining \textls on input line 790.
+\MT@count=\count288
+LaTeX Info: Redefining \textls on input line 793.
 \MT@outer@kern=\dimen165
-LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
-\MT@listname@count=\count298
+LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
+\MT@listname@count=\count289
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-xetex.def
-File: microtype-xetex.def 2019/02/28 v2.7b Definitions specific to xetex (RS)
-LaTeX Info: Redefining \lsstyle on input line 258.
+File: microtype-xetex.def 2018/01/14 v2.7a Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 256.
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
-File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
+File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
 )) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
@@ -686,11 +870,15 @@ Package hobsub Info: Skipping package `ifluatex' (already loaded).
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
@@ -717,55 +905,55 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen166
-\Hy@linkcounter=\count299
-\Hy@pagecounter=\count300
+\Hy@linkcounter=\count290
+\Hy@pagecounter=\count291
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count301
+\Hy@SavedSpaceFactor=\count292
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4519.
-Package hyperref Info: Link nesting OFF on input line 4524.
-Package hyperref Info: Hyper index ON on input line 4527.
-Package hyperref Info: Plain pages OFF on input line 4534.
-Package hyperref Info: Backreferencing OFF on input line 4539.
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4772.
-\c@Hy@tempcnt=\count302
-LaTeX Info: Redefining \url on input line 5125.
+Package hyperref Info: Bookmarks ON on input line 4762.
+\c@Hy@tempcnt=\count293
+LaTeX Info: Redefining \url on input line 5115.
 \XeTeXLinkMargin=\dimen167
-\Fld@menulength=\count303
+\Fld@menulength=\count294
 \Field@Width=\dimen168
 \Fld@charsize=\dimen169
-Package hyperref Info: Hyper figures OFF on input line 6380.
-Package hyperref Info: Link nesting OFF on input line 6385.
-Package hyperref Info: Hyper index ON on input line 6388.
-Package hyperref Info: backreferencing OFF on input line 6395.
-Package hyperref Info: Link coloring OFF on input line 6400.
-Package hyperref Info: Link coloring with OCG OFF on input line 6405.
-Package hyperref Info: PDF/A mode OFF on input line 6410.
-LaTeX Info: Redefining \ref on input line 6450.
-LaTeX Info: Redefining \pageref on input line 6454.
-\Hy@abspage=\count304
-\c@Item=\count305
-\c@Hfootnote=\count306
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count295
+\c@Item=\count296
+\c@Hfootnote=\count297
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2018/11/30 v6.88e Hyperref driver for XeTeX
+File: hxetex.def 2018/02/06 v6.86b Hyperref driver for XeTeX
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2018/11/30 v6.88e Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2018/02/06 v6.86b Hyperref: PDF Unicode definition (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/stringenc.sty
 Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box79
-\c@Hy@AnnotLevel=\count307
-\HyField@AnnotCount=\count308
-\Fld@listcount=\count309
-\c@bookmark@seq@number=\count310
+\pdfm@box=\box74
+\c@Hy@AnnotLevel=\count298
+\HyField@AnnotCount=\count299
+\Fld@listcount=\count300
+\c@bookmark@seq@number=\count301
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -776,15 +964,17 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package hyperref Info: Option `unicode' set `true' on input line 29.
 Package hyperref Info: Option `breaklinks' set `true' on input line 29.
 (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2019/01/15
-Style option: `fancyvrb' v3.2a <2019/01/15> (tvz)
-\FV@CodeLineNo=\count311
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count302
 \FV@InFile=\read3
-\FV@TabBox=\box80
-\c@FancyVerbLine=\count312
-\FV@StepNumber=\count313
+\FV@TabBox=\box75
+\c@FancyVerbLine=\count303
+\FV@StepNumber=\count304
 \FV@OutFile=\write3
-) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+) (/home/takeshi/texmf/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip71
 \fb@frw=\dimen170
@@ -798,7 +988,7 @@ Package grffile Info: Option `extendedchars' is set to `false'.
 Package grffile Info: Option `space' is set to `true'.
 Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
 ) (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
-Package: parskip 2019-01-16 v2.0c non-zero parskip adjustments
+Package: parskip 2001/04/09 non-zero parskip adjustments
 ) (/usr/share/texlive/texmf-dist/tex/latex/titling/titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip72
@@ -806,118 +996,137 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \droptitle=\skip74
 ) (/usr/share/texlive/texmf-dist/tex/latex/zxjafont/zxjafont.sty
 Package: zxjafont 2018/05/03 v0.4-pre
-
-Package fontspec Info: IPAMincho scale = 0.8226399891270581.
-
-
-Package fontspec Info: Could not resolve font "IPAGothic/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "IPAMincho/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "IPAMincho/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: IPAMincho scale = 0.8226399891270581.
-
-
-Package fontspec Info: IPAGothic scale = 0.8195846874032807.
-
-
-Package fontspec Info: Font family 'IPAMincho(0)' created for font 'IPAMincho'
-(fontspec)             with options
-(fontspec)             [Ligatures=TeX,Scale=MatchLowercase,Ligatures=TeX,Scale=
-1,BoldFont=IPAGothic].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"IPAMincho/OT:script=latn;language=DFLT;mapping=
-tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (bx/n) with NFSS spec.:
-(fontspec)             <->s*[1]"IPAGothic/OT:script=latn;language=DFLT;mapping=
-tex-text;"
-(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.: 
-
+.................................................
+. fontspec info: "set-scale"
+. 
+. IPAMincho scale = 0.8226399891270581.
+.................................................
+\g__fontspec_family_IPAMincho_int=\count305
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAGothic/I" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAMincho/BI" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAMincho/I" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. IPAMincho scale = 0.8226399891270581.
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. IPAGothic scale = 0.8195846874032807.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'IPAMincho(0)' created for font 'IPAMincho' with options
+. [Ligatures=TeX,Scale=MatchLowercase,Ligatures=TeX,Scale=1,BoldFont=IPAGothic]
+.
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.:
+. <->s*[1]"IPAMincho/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+. - 'bold' (bx/n) with NFSS spec.:
+. <->s*[1]"IPAGothic/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: 
+.................................................
 LaTeX Info: Redefining \rmfamily on input line 439.
 LaTeX Font Info:    Font shape `TU/IPAMincho(0)/m/n' will be
 (Font)              scaled to size 12.0pt on input line 439.
-
-Package fontspec Info: IPAGothic scale = 0.9962859795728877.
-
-
-Package fontspec Info: Could not resolve font "IPAGothic/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "IPAGothic/B" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "IPAGothic/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: IPAGothic scale = 0.9962859795728877.
-
-
-Package fontspec Info: Font family 'IPAGothic(0)' created for font 'IPAGothic'
-(fontspec)             with options
-(fontspec)             [Ligatures=TeX,Scale=MatchLowercase,Ligatures=TeX,Scale=
-1].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"IPAGothic/OT:script=latn;language=DFLT;mapping=
-tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-
+.................................................
+. fontspec info: "set-scale"
+. 
+. IPAGothic scale = 0.9962859795728877.
+.................................................
+\g__fontspec_family_IPAGothic_int=\count306
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAGothic/BI" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAGothic/B" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAGothic/I" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. IPAGothic scale = 0.9962859795728877.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'IPAGothic(0)' created for font 'IPAGothic' with options
+. [Ligatures=TeX,Scale=MatchLowercase,Ligatures=TeX,Scale=1].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.:
+. <->s*[1]"IPAGothic/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+.................................................
 LaTeX Info: Redefining \sffamily on input line 439.
-
-Package fontspec Info: IPAGothic scale = 0.9962859795728877.
-
-
-Package fontspec Info: Could not resolve font "IPAGothic/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "IPAGothic/B" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "IPAGothic/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: IPAGothic scale = 0.9962859795728877.
-
-
-Package fontspec Info: Font family 'IPAGothic(1)' created for font 'IPAGothic'
-(fontspec)             with options
-(fontspec)             [Ligatures=TeX,Scale=MatchLowercase,WordSpace={1,0,0},Hy
-phenChar=None,PunctuationSpace=WordSpace,Scale=1].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"IPAGothic/OT:script=latn;language=DFLT;mapping=
-tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
-(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
-(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
-(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
-
+.................................................
+. fontspec info: "set-scale"
+. 
+. IPAGothic scale = 0.9962859795728877.
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAGothic/BI" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAGothic/B" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "IPAGothic/I" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. IPAGothic scale = 0.9962859795728877.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'IPAGothic(1)' created for font 'IPAGothic' with options
+. [Ligatures=TeX,Scale=MatchLowercase,WordSpace={1,0,0},HyphenChar=None,Punctua
+tionSpace=WordSpace,Scale=1].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.:
+. <->s*[1]"IPAGothic/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+. and font adjustment code:
+. \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
+. \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
+. \tex_hyphenchar:D \font =-1\scan_stop: 
+.................................................
 LaTeX Info: Redefining \ttfamily on input line 440.
 ) (/usr/share/texlive/texmf-dist/tex/latex/sectsty/sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
@@ -932,18 +1141,17 @@ neric/pgf/utilities/pgfutil-common.tex
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box81
+\pgfutil@abb=\box76
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/u
-sr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2019/04/04 v3.1.2 (3.1.2)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 ))
-Package: pgf 2019/04/04 v3.1.2 (3.1.2)
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share
 /texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/te
 xmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2019/04/04 v3.1.2 (3.1.2)
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks29
 \pgfkeys@temptoks=\toks30
@@ -962,38 +1170,37 @@ ex
 \pgf@yc=\dimen183
 \w@pgf@writea=\write4
 \r@pgf@reada=\read4
-\c@pgf@counta=\count314
-\c@pgf@countb=\count315
-\c@pgf@countc=\count316
-\c@pgf@countd=\count317
+\c@pgf@counta=\count307
+\c@pgf@countb=\count308
+\c@pgf@countc=\count309
+\c@pgf@countd=\count310
 \t@pgf@toka=\toks32
 \t@pgf@tokb=\toks33
 \t@pgf@tokc=\toks34
-\pgf@sys@id@count=\count318
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2019/04/04 v3.1.2 (3.1.2)
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-xetex.def
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
-File: pgfsys-xetex.def 2019/04/04 v3.1.2 (3.1.2)
+File: pgfsys-xetex.def 2014/07/09  (rcs-revision 1.11)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
-File: pgfsys-dvipdfmx.def 2019/04/04 v3.1.2 (3.1.2)
+File: pgfsys-dvipdfmx.def 2014/07/09  (rcs-revision 1.14)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
 f
-File: pgfsys-common-pdf.def 2019/04/04 v3.1.2 (3.1.2)
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )
-\pgfsys@objnum=\count319
+\pgfsys@objnum=\count311
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
-File: pgfsyssoftpath.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgfsyssoftpath@smallbuffer@items=\count320
-\pgfsyssoftpath@bigbuffer@items=\count321
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count312
+\pgfsyssoftpath@bigbuffer@items=\count313
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
-File: pgfsysprotocol.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
 )) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -1010,14 +1217,14 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2019/04/04 v3.1.2 (3.1.2)
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/shar
 e/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texl
 ive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/t
 exmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen184
-\pgfmath@count=\count322
-\pgfmath@box=\box82
+\pgfmath@count=\count314
+\pgfmath@box=\box77
 \pgfmath@toks=\toks35
 \pgfmath@stack@operand=\toks36
 \pgfmath@stack@operation=\toks37
@@ -1040,11 +1247,11 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmat
 hfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count323
+\c@pgfmathroundto@lastzeros=\count315
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
-File: pgfcorepoints.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen185
 \pgf@picmaxx=\dimen186
 \pgf@picminy=\dimen187
@@ -1062,102 +1269,99 @@ File: pgfcorepoints.code.tex 2019/04/04 v3.1.2 (3.1.2)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
-File: pgfcorepathconstruct.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen199
 \pgf@path@lasty=\dimen256
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
-File: pgfcorepathusage.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen257
 \pgf@shorten@start@additional=\dimen258
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
-File: pgfcorescopes.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgfpic=\box83
-\pgf@hbox=\box84
-\pgf@layerbox@main=\box85
-\pgf@picture@serial@count=\count324
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box78
+\pgf@hbox=\box79
+\pgf@layerbox@main=\box80
+\pgf@picture@serial@count=\count316
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
-File: pgfcoregraphicstate.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 \pgflinewidth=\dimen259
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
-File: pgfcoretransformations.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen260
 \pgf@pt@y=\dimen261
 \pgf@pt@temp=\dimen262
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
 ex
-File: pgfcoreobjects.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
 .code.tex
-File: pgfcorepathprocessing.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
-File: pgfcorearrows.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 \pgfarrowsep=\dimen263
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen264
-\pgf@sys@shading@range@num=\count325
-\pgf@shadingcount=\count326
+\pgf@sys@shading@range@num=\count317
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
-File: pgfcoreexternal.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgfexternal@startupbox=\box86
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box81
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
-File: pgfcorelayers.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
 ode.tex
-File: pgfcoretransparency.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
 tex
-File: pgfcorepatterns.code.tex 2019/04/04 v3.1.2 (3.1.2)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgfnodeparttextbox=\box87
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box82
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
-Package: pgfcomp-version-0-65 2019/04/04 v3.1.2 (3.1.2)
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen265
 \pgf@nodesepend=\dimen266
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
-Package: pgfcomp-version-1-18 2019/04/04 v3.1.2 (3.1.2)
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 )) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/shar
 e/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/te
 xmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf
 -dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic
 /pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/uti
 lities/pgffor.code.tex
-Package: pgffor 2019/04/04 v3.1.2 (3.1.2)
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen267
 \pgffor@skip=\dimen268
@@ -1165,12 +1369,12 @@ Package: pgffor 2019/04/04 v3.1.2 (3.1.2)
 \pgffor@toks=\toks39
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2019/04/04 v3.1.2 (3.1.2)
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
-File: pgflibraryplothandlers.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgf@plot@mark@count=\count327
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count318
 \pgfplotmarksize=\dimen269
 )
 \tikz@lastx=\dimen270
@@ -1179,30 +1383,30 @@ File: pgflibraryplothandlers.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \tikz@lastysaved=\dimen273
 \tikzleveldistance=\dimen274
 \tikzsiblingdistance=\dimen275
-\tikz@figbox=\box88
-\tikz@figbox@bg=\box89
-\tikz@tempbox=\box90
-\tikz@tempbox@bg=\box91
-\tikztreelevel=\count328
-\tikznumberofchildren=\count329
-\tikznumberofcurrentchild=\count330
-\tikz@fig@count=\count331
+\tikz@figbox=\box83
+\tikz@figbox@bg=\box84
+\tikz@tempbox=\box85
+\tikz@tempbox@bg=\box86
+\tikztreelevel=\count319
+\tikznumberofchildren=\count320
+\tikznumberofcurrentchild=\count321
+\tikz@fig@count=\count322
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgfmatrixcurrentrow=\count332
-\pgfmatrixcurrentcolumn=\count333
-\pgf@matrix@numberofcolumns=\count334
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count323
+\pgfmatrixcurrentcolumn=\count324
+\pgf@matrix@numberofcolumns=\count325
 )
-\tikz@expandcount=\count335
+\tikz@expandcount=\count326
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytrees.code.tex
-File: tikzlibrarytrees.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: tikzlibrarytrees.code.tex 2008/02/24 v3.0.1a (rcs-revision 1.2)
 ) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks40
@@ -1249,24 +1453,24 @@ Loading kernel: messages; fonts; allocations: state,
 \Y@min=\dimen295
 \X@max=\dimen296
 \Y@max=\dimen297
-\lastobjectbox@=\box92
-\zerodotbox@=\box93
+\lastobjectbox@=\box87
+\zerodotbox@=\box88
 \almostz@=\dimen298
 direction,
 \d@X=\dimen299
 \d@Y=\dimen300
-\K@=\count336
-\KK@=\count337
-\Direction=\count338
+\K@=\count327
+\KK@=\count328
+\Direction=\count329
 \K@dXdY=\dimen301
 \K@dYdX=\dimen302
 \xyread@=\read5
 \xywrite@=\write5
-\csp@=\count339
+\csp@=\count330
 \quotPTK@=\dimen303
 utility macros; pictures: \xy, positions,
 \swaptoks@@=\toks48
-\connectobjectbox@@=\box94
+\connectobjectbox@@=\box89
 objects,
 \styletoks@=\toks49
 decorations; kernel objects: directionals, circles, text; options; algorithms: 
@@ -1275,9 +1479,9 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
 (/usr/share/texlive/texmf-dist/tex/generic/xypic/xyall.tex  Xy-pic option: All 
 features v.3.8 (/usr/share/texlive/texmf-dist/tex/generic/xypic/xycurve.tex  Xy
 -pic option: Curve and Spline extension v.3.12 curve,
-\crv@cnt@=\count340
+\crv@cnt@=\count331
 \crvpts@=\toks50
-\splinebox@=\box95
+\splinebox@=\box90
 \splineval@=\dimen304
 \splinedepth@=\dimen305
 \splinetol@=\dimen306
@@ -1296,13 +1500,13 @@ ption: Rotate and Scale extension v.3.8 loaded) (/usr/share/texlive/texmf-dist/
 tex/generic/xypic/xycolor.tex  Xy-pic option: Colour extension v.3.11 loaded) (
 /usr/share/texlive/texmf-dist/tex/generic/xypic/xymatrix.tex  Xy-pic option: Ma
 trix feature v.3.14
-\Row=\count341
-\Col=\count342
+\Row=\count332
+\Col=\count333
 \queue@=\toks51
 \queue@@=\toks52
-\qcount@=\count343
-\qcount@@=\count344
-\matrixsize@=\count345
+\qcount@=\count334
+\qcount@@=\count335
+\matrixsize@=\count336
 loaded) (/usr/share/texlive/texmf-dist/tex/generic/xypic/xyarrow.tex  Xy-pic op
 tion: Arrow and Path feature v.3.9 path, \ar, loaded) (/usr/share/texlive/texmf
 -dist/tex/generic/xypic/xygraph.tex  Xy-pic option: Graph feature v.3.11 loaded
@@ -1315,10 +1519,10 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup7
 ) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2018/04/16 v5.8 Page Geometry
-\Gm@cnth=\count346
-\Gm@cntv=\count347
-\c@Gm@tempcnt=\count348
+Package: geometry 2018/03/24 v5.7 Page Geometry
+\Gm@cnth=\count337
+\Gm@cntv=\count338
+\c@Gm@tempcnt=\count339
 \Gm@bindingoffset=\dimen310
 \Gm@wd@mp=\dimen311
 \Gm@odd@mp=\dimen312
@@ -1331,7 +1535,7 @@ Package: geometry 2018/04/16 v5.8 Page Geometry
 ) (/usr/share/texlive/texmf-dist/tex/latex/thmtools/thmtools.sty
 Package: thmtools 2014/04/21 v66
 \thmt@toks=\toks55
-\c@thmt@dummyctr=\count349
+\c@thmt@dummyctr=\count340
 (/usr/share/texlive/texmf-dist/tex/latex/thmtools/thm-patch.sty
 Package: thm-patch 2014/04/21 v66
 (/usr/share/texlive/texmf-dist/tex/latex/thmtools/parseargs.sty
@@ -1345,23 +1549,59 @@ Package thm-kv Info: kvsetkeys patch (v1.16 or later) on input line 156.
 Package: thm-autoref 2014/04/21 v66
 (/usr/share/texlive/texmf-dist/tex/latex/thmtools/aliasctr.sty
 Package: aliasctr 2014/04/21 v66
-(/usr/share/texlive/texmf-dist/tex/latex/carlisle/remreset.sty
-
-Package remreset Warning: The remreset package is obsolete:
-(remreset)                \@removefomresset is defined.
-
-))) (/usr/share/texlive/texmf-dist/tex/latex/thmtools/thm-listof.sty
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/remreset.sty))) (/usr/share/t
+exlive/texmf-dist/tex/latex/thmtools/thm-listof.sty
 Package: thm-listof 2014/04/21 v66
 ) (/usr/share/texlive/texmf-dist/tex/latex/thmtools/thm-restate.sty
 Package: thm-restate 2014/04/21 v66
 ) (/usr/share/texlive/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
 Package: thm-amsthm 2014/04/21 v66
 \thmt@style@headstyle=\toks57
-)) (/usr/share/texlive/texmf-dist/tex/xelatex/xltxtra/xltxtra.sty
-Package: xltxtra 2018/12/31 v0.7 Improvements for the "XeLaTeX" format
+)) (/usr/share/texlive/texmf-dist/tex/latex/xltxtra/xltxtra.sty
+Package: xltxtra 2016/01/21 v0.6 Improvements for the "XeLaTeX" format
 (/usr/share/texlive/texmf-dist/tex/latex/realscripts/realscripts.sty
 Package: realscripts 2016/02/13 v0.3d Access OpenType subscripts and superscrip
 ts
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \fakesubscript with sig. 'm' on line 19.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \fakesuperscript with sig. 'm' on line 22.
+.................................................
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \textsubscript with sig. 's' on line 25.
+.................................................
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \textsuperscript with sig. 's' on line 28.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \realsubscript with sig. 'm' on line 45.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \realsuperscript with sig. 'm' on line 60.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \textsubsuperscript with sig. 'sO{l}mm' on line 138.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \textsupersubscript with sig. 'sO{l}mm' on line 143.
+.................................................
 \subsupersep=\dimen318
 ) (/usr/share/texlive/texmf-dist/tex/latex/metalogo/metalogo.sty
 Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
@@ -1371,24 +1611,28 @@ LaTeX Info: Redefining \TeX on input line 193.
 LaTeX Info: Redefining \LaTeX on input line 202.
 LaTeX Info: Redefining \LaTeXe on input line 219.
 )
-\l__xetex_show_hyphens_wrapping_box=\box96
-\l__xetex_show_hyphens_temp_box=\box97
-\l__xetex_show_hyphens_final_box=\box98
-\g__xetex_show_hyphens_word_box=\box99
+\l__xetex_show_hyphens_wrapping_box=\box91
+\l__xetex_show_hyphens_temp_box=\box92
+\l__xetex_show_hyphens_final_box=\box93
+\g__xetex_show_hyphens_word_box=\box94
 )
-
-Package fontspec Info: IPAPMincho scale = 1.064484126984127.
-
+.................................................
+. fontspec info: "set-scale"
+. 
+. IPAPMincho scale = 1.064484126984127.
+.................................................
 LaTeX Info: Redefining \rmfamily on input line 142.
-
-Package fontspec Info: IPAPGothic scale = 0.8487429887820513.
-
+.................................................
+. fontspec info: "set-scale"
+. 
+. IPAPGothic scale = 0.8487429887820513.
+.................................................
 LaTeX Info: Redefining \sffamily on input line 143.
 (/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
 \AP@output=\toks60
-\AP@partial=\box100
-\AP@footins=\box101
+\AP@partial=\box95
+\AP@footins=\box96
 ) (./practice_contents_with_answers.aux
 
 LaTeX Warning: Label `-1' multiply defined.
@@ -1457,7 +1701,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 151.
 LaTeX Font Info:    ... okay on input line 151.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 151.
 LaTeX Font Info:    ... okay on input line 151.
-\c@lstlisting=\count350
+\c@lstlisting=\count341
 
 LaTeX Font Warning: Font shape `TU/IPAPMincho(0)/bx/n' undefined
 (Font)              using `TU/IPAPMincho(0)/m/n' instead on input line 151.
@@ -1487,19 +1731,19 @@ Package microtype Info: Loading generic protrusion settings for font family
 Package microtype Warning: Unknown slot number of character
 (microtype)                `\u G'
 (microtype)                in font encoding `TU' in inheritance list
-(microtype)                `microtype.cfg/376(protrusion)'.
+(microtype)                `microtype.cfg/375(protrusion)'.
 
 
 Package microtype Warning: Unknown slot number of character
 (microtype)                `\u g'
 (microtype)                in font encoding `TU' in inheritance list
-(microtype)                `microtype.cfg/376(protrusion)'.
+(microtype)                `microtype.cfg/375(protrusion)'.
 
 
 Package microtype Warning: Unknown slot number of character
 (microtype)                `\.I'
 (microtype)                in font encoding `TU' in inheritance list
-(microtype)                `microtype.cfg/376(protrusion)'.
+(microtype)                `microtype.cfg/375(protrusion)'.
 
 Package microtype Info: Character `\i ' is missing
 (microtype)             in font `\TU/IPAPMincho(0)/m/n/12'.
@@ -1508,7 +1752,7 @@ Package microtype Info: Character `\i ' is missing
 Package microtype Warning: Unknown slot number of character
 (microtype)                `\"Y'
 (microtype)                in font encoding `TU' in inheritance list
-(microtype)                `microtype.cfg/376(protrusion)'.
+(microtype)                `microtype.cfg/375(protrusion)'.
 
 Package microtype Info: Character `\quotesinglbase ' is missing
 (microtype)             in font `\TU/IPAPMincho(0)/m/n/12'.
@@ -1522,14 +1766,14 @@ Package microtype Info: Character `\guilsinglleft ' is missing
 Package microtype Info: Character `\guilsinglright ' is missing
 (microtype)             in font `\TU/IPAPMincho(0)/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
-\AtBeginShipoutBox=\box102
+\AtBeginShipoutBox=\box97
 Package hyperref Info: Link coloring OFF on input line 151.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count351
+\c@section@level=\count342
 )
 LaTeX Info: Redefining \ref on input line 151.
 LaTeX Info: Redefining \pageref on input line 151.
@@ -1629,29 +1873,28 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
-)
-
-Package xcolor Warning: Incompatible color definition on input line 208.
-
-[1
+) [1
 
 ]
+
+Package xcolor Warning: Incompatible color definition on input line 206.
+
 LaTeX Font Info:    Font shape `TU/IPAGothic(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 209.
+(Font)              scaled to size 12.0pt on input line 207.
 
 LaTeX Font Warning: Font shape `TU/IPAGothic(1)/bx/n' undefined
-(Font)              using `TU/IPAGothic(1)/m/n' instead on input line 210.
+(Font)              using `TU/IPAGothic(1)/m/n' instead on input line 208.
 
 LaTeX Font Info:    Font shape `TU/IPAGothic(1)/bx/n' will be
-(Font)              scaled to size 12.0pt on input line 210.
+(Font)              scaled to size 12.0pt on input line 208.
 
-Package xcolor Warning: Incompatible color definition on input line 212.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 212.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 LaTeX Font Info:    Font shape `TU/IPAPMincho(0)/m/n' will be
-(Font)              scaled to size 12.60988pt on input line 214.
+(Font)              scaled to size 12.60988pt on input line 212.
 Package microtype Info: Character `\quotesinglbase ' is missing
 (microtype)             in font `\TU/IPAPMincho(0)/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1665,97 +1908,97 @@ Package microtype Info: Character `\guilsinglright ' is missing
 (microtype)             in font `\TU/IPAPMincho(0)/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
 
-Package xcolor Warning: Incompatible color definition on input line 236.
+Package xcolor Warning: Incompatible color definition on input line 234.
 
 
-Package xcolor Warning: Incompatible color definition on input line 240.
+Package xcolor Warning: Incompatible color definition on input line 238.
 
 
-Package xcolor Warning: Incompatible color definition on input line 240.
+Package xcolor Warning: Incompatible color definition on input line 238.
 
 File: pic/tvaluepvalue00.png Graphic file (type bmp)
 <pic/tvaluepvalue00.png>
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
-Make it at least 14.49998pt.
-We now make it that large for the rest of the document.
-This may cause the page layout to be inconsistent, however.
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
 [2]
 
-Package xcolor Warning: Incompatible color definition on input line 250.
+Package xcolor Warning: Incompatible color definition on input line 248.
 
 
-Package xcolor Warning: Incompatible color definition on input line 255.
+Package xcolor Warning: Incompatible color definition on input line 253.
 
 
-Package xcolor Warning: Incompatible color definition on input line 255.
+Package xcolor Warning: Incompatible color definition on input line 253.
 
 File: pic/myttest01.png Graphic file (type bmp)
 <pic/myttest01.png>
 [3]
 
-Package xcolor Warning: Incompatible color definition on input line 291.
+Package xcolor Warning: Incompatible color definition on input line 288.
 
 
-Package xcolor Warning: Incompatible color definition on input line 295.
+Package xcolor Warning: Incompatible color definition on input line 292.
 
 
-Package xcolor Warning: Incompatible color definition on input line 295.
+Package xcolor Warning: Incompatible color definition on input line 292.
 
 [4]
 
-Package xcolor Warning: Incompatible color definition on input line 317.
+Package xcolor Warning: Incompatible color definition on input line 315.
 
 
-Package xcolor Warning: Incompatible color definition on input line 321.
+Package xcolor Warning: Incompatible color definition on input line 319.
 
 
-Package xcolor Warning: Incompatible color definition on input line 321.
+Package xcolor Warning: Incompatible color definition on input line 319.
 
 File: pic/ftest.png Graphic file (type bmp)
 <pic/ftest.png>
 
-Package xcolor Warning: Incompatible color definition on input line 333.
+Package xcolor Warning: Incompatible color definition on input line 330.
 
 
-Package xcolor Warning: Incompatible color definition on input line 338.
+Package xcolor Warning: Incompatible color definition on input line 335.
 
 
-Package xcolor Warning: Incompatible color definition on input line 338.
+Package xcolor Warning: Incompatible color definition on input line 335.
 
 File: pic/ftest01.png Graphic file (type bmp)
 <pic/ftest01.png>
 [5] [6]
 
-Package xcolor Warning: Incompatible color definition on input line 379.
+Package xcolor Warning: Incompatible color definition on input line 374.
 
 
-Package xcolor Warning: Incompatible color definition on input line 383.
+Package xcolor Warning: Incompatible color definition on input line 378.
 
 
-Package xcolor Warning: Incompatible color definition on input line 383.
+Package xcolor Warning: Incompatible color definition on input line 378.
+
+
+Package xcolor Warning: Incompatible color definition on input line 404.
 
 
 Package xcolor Warning: Incompatible color definition on input line 408.
 
 
-Package xcolor Warning: Incompatible color definition on input line 412.
-
-
-Package xcolor Warning: Incompatible color definition on input line 412.
+Package xcolor Warning: Incompatible color definition on input line 408.
 
 File: pic/tvaluepvalue01.png Graphic file (type bmp)
 <pic/tvaluepvalue01.png>
 [7]
 
+Package xcolor Warning: Incompatible color definition on input line 419.
+
+
 Package xcolor Warning: Incompatible color definition on input line 424.
 
 
-Package xcolor Warning: Incompatible color definition on input line 429.
-
-
-Package xcolor Warning: Incompatible color definition on input line 429.
+Package xcolor Warning: Incompatible color definition on input line 424.
 
 File: pic/myttest02.png Graphic file (type bmp)
 <pic/myttest02.png>
@@ -1776,105 +2019,105 @@ File: pic/scatter00.png Graphic file (type bmp)
 <pic/scatter00.png>
 [12]
 
-Package xcolor Warning: Incompatible color definition on input line 496.
+Package xcolor Warning: Incompatible color definition on input line 493.
 
 
-Package xcolor Warning: Incompatible color definition on input line 503.
+Package xcolor Warning: Incompatible color definition on input line 500.
 
 
-Package xcolor Warning: Incompatible color definition on input line 503.
+Package xcolor Warning: Incompatible color definition on input line 500.
 
 File: pic/scatter01.png Graphic file (type bmp)
 <pic/scatter01.png>
 [13]
 
-Package xcolor Warning: Incompatible color definition on input line 515.
+Package xcolor Warning: Incompatible color definition on input line 511.
 
 
-Package xcolor Warning: Incompatible color definition on input line 521.
+Package xcolor Warning: Incompatible color definition on input line 517.
 
 
-Package xcolor Warning: Incompatible color definition on input line 521.
+Package xcolor Warning: Incompatible color definition on input line 517.
 
 File: pic/box01.png Graphic file (type bmp)
 <pic/box01.png>
 LaTeX Font Info:    Font shape `TU/IPAGothic(1)/bx/n' will be
-(Font)              scaled to size 14.4pt on input line 528.
+(Font)              scaled to size 14.4pt on input line 525.
 
-Package xcolor Warning: Incompatible color definition on input line 532.
+Package xcolor Warning: Incompatible color definition on input line 529.
 
 
 LaTeX Font Warning: Font shape `TU/IPAGothic(1)/m/it' undefined
-(Font)              using `TU/IPAGothic(1)/m/n' instead on input line 534.
+(Font)              using `TU/IPAGothic(1)/m/n' instead on input line 531.
 
 
-Package xcolor Warning: Incompatible color definition on input line 537.
+Package xcolor Warning: Incompatible color definition on input line 534.
 
 
-Package xcolor Warning: Incompatible color definition on input line 537.
+Package xcolor Warning: Incompatible color definition on input line 534.
 
 
-Package xcolor Warning: Incompatible color definition on input line 543.
+Package xcolor Warning: Incompatible color definition on input line 540.
 
 LaTeX Font Info:    Font shape `TU/IPAGothic(1)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 545.
+(Font)              scaled to size 12.0pt on input line 542.
 
-Package xcolor Warning: Incompatible color definition on input line 548.
-
-
-Package xcolor Warning: Incompatible color definition on input line 548.
+Package xcolor Warning: Incompatible color definition on input line 545.
 
 
-Package xcolor Warning: Incompatible color definition on input line 554.
+Package xcolor Warning: Incompatible color definition on input line 545.
 
 
-Package xcolor Warning: Incompatible color definition on input line 559.
+Package xcolor Warning: Incompatible color definition on input line 551.
 
 
-Package xcolor Warning: Incompatible color definition on input line 559.
+Package xcolor Warning: Incompatible color definition on input line 556.
 
 
-Package xcolor Warning: Incompatible color definition on input line 565.
+Package xcolor Warning: Incompatible color definition on input line 556.
 
 
-Package xcolor Warning: Incompatible color definition on input line 570.
+Package xcolor Warning: Incompatible color definition on input line 562.
 
 
-Package xcolor Warning: Incompatible color definition on input line 570.
+Package xcolor Warning: Incompatible color definition on input line 567.
 
 
-Package xcolor Warning: Incompatible color definition on input line 576.
+Package xcolor Warning: Incompatible color definition on input line 567.
+
+
+Package xcolor Warning: Incompatible color definition on input line 573.
 
 [14]
 
-Package xcolor Warning: Incompatible color definition on input line 581.
+Package xcolor Warning: Incompatible color definition on input line 578.
 
 
-Package xcolor Warning: Incompatible color definition on input line 581.
+Package xcolor Warning: Incompatible color definition on input line 578.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 589.
+(Font)              <14.4> on input line 587.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 589.
+(Font)              <10> on input line 587.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 589.
+(Font)              <7> on input line 587.
 
-Package xcolor Warning: Incompatible color definition on input line 619.
-
-
-Package xcolor Warning: Incompatible color definition on input line 625.
+Package xcolor Warning: Incompatible color definition on input line 617.
 
 
-Package xcolor Warning: Incompatible color definition on input line 625.
+Package xcolor Warning: Incompatible color definition on input line 623.
 
 
-Package xcolor Warning: Incompatible color definition on input line 631.
+Package xcolor Warning: Incompatible color definition on input line 623.
 
 
-Package xcolor Warning: Incompatible color definition on input line 637.
+Package xcolor Warning: Incompatible color definition on input line 629.
 
 
-Package xcolor Warning: Incompatible color definition on input line 637.
+Package xcolor Warning: Incompatible color definition on input line 635.
+
+
+Package xcolor Warning: Incompatible color definition on input line 635.
 
 File: pic/betaalpha.png Graphic file (type bmp)
 <pic/betaalpha.png>
@@ -1891,9 +2134,9 @@ File: pic/sexfactor00.png Graphic file (type bmp)
 <pic/sexfactor00.png>
 File: pic/sexfactor01.png Graphic file (type bmp)
 <pic/sexfactor01.png>
+[18]
 File: pic/sexfactor02.png Graphic file (type bmp)
 <pic/sexfactor02.png>
-[18]
 File: pic/sexfactor03.png Graphic file (type bmp)
 <pic/sexfactor03.png>
 File: pic/lm00.png Graphic file (type bmp)
@@ -1921,43 +2164,43 @@ File: pic/scatter07.png Graphic file (type bmp)
 <pic/scatter07.png>
 [24]
 
-Package xcolor Warning: Incompatible color definition on input line 858.
+Package xcolor Warning: Incompatible color definition on input line 876.
 
 
-Package xcolor Warning: Incompatible color definition on input line 862.
+Package xcolor Warning: Incompatible color definition on input line 880.
 
 
-Package xcolor Warning: Incompatible color definition on input line 862.
+Package xcolor Warning: Incompatible color definition on input line 880.
 
 
-Package xcolor Warning: Incompatible color definition on input line 864.
+Package xcolor Warning: Incompatible color definition on input line 882.
 
 
-Package xcolor Warning: Incompatible color definition on input line 868.
+Package xcolor Warning: Incompatible color definition on input line 886.
 
 
-Package xcolor Warning: Incompatible color definition on input line 868.
+Package xcolor Warning: Incompatible color definition on input line 886.
 
 File: pic/mychisqtest02.png Graphic file (type bmp)
 <pic/mychisqtest02.png>
 [25]
 
-Package xcolor Warning: Incompatible color definition on input line 879.
-
-
-Package xcolor Warning: Incompatible color definition on input line 885.
-
-
-Package xcolor Warning: Incompatible color definition on input line 885.
-
-
-Package xcolor Warning: Incompatible color definition on input line 893.
-
-
 Package xcolor Warning: Incompatible color definition on input line 897.
 
 
-Package xcolor Warning: Incompatible color definition on input line 897.
+Package xcolor Warning: Incompatible color definition on input line 903.
+
+
+Package xcolor Warning: Incompatible color definition on input line 903.
+
+
+Package xcolor Warning: Incompatible color definition on input line 911.
+
+
+Package xcolor Warning: Incompatible color definition on input line 915.
+
+
+Package xcolor Warning: Incompatible color definition on input line 915.
 
 File: pic/mychisqtest01.png Graphic file (type bmp)
 <pic/mychisqtest01.png>
@@ -2011,9 +2254,9 @@ File: pic/survival00.png Graphic file (type bmp)
 <pic/survival00.png>
 File: pic/survival01.png Graphic file (type bmp)
 <pic/survival01.png>
+[39]
 File: pic/survival02.png Graphic file (type bmp)
 <pic/survival02.png>
-[39]
 File: pic/survival03.png Graphic file (type bmp)
 <pic/survival03.png>
 [40]
@@ -2047,9 +2290,9 @@ File: pic/survival12.png Graphic file (type bmp)
 <pic/survival12.png>
 File: pic/survival13.png Graphic file (type bmp)
 <pic/survival13.png>
+[45]
 File: pic/survival14.png Graphic file (type bmp)
 <pic/survival14.png>
-[45]
 File: pic/survival15.png Graphic file (type bmp)
 <pic/survival15.png>
 [46]
@@ -2063,15 +2306,15 @@ File: pic/survival18.png Graphic file (type bmp)
 File: pic/survival19.png Graphic file (type bmp)
 <pic/survival19.png>
 [48] [49]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1472.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1472.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1521.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1521.
 (./practice_contents_with_answers.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1472.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1472.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1521.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1521.
 
 Package rerunfilecheck Info: File `practice_contents_with_answers.out' has not 
 changed.
-(rerunfilecheck)             Checksum: EA8E4317378B3639E84855C010EDFE17.
+(rerunfilecheck)             Checksum: 0150C85B89C8D128C92CD2ED58BB7585.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2080,12 +2323,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 39426 strings out of 492916
- 741874 string characters out of 6135449
- 899047 words of memory out of 5000000
- 42770 multiletter control sequences out of 15000+600000
- 577912 words of font info for 104 fonts, out of 8000000 for 9000
+ 37686 strings out of 492970
+ 709000 string characters out of 6136052
+ 870237 words of memory out of 5000000
+ 40996 multiletter control sequences out of 15000+600000
+ 575814 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 55i,12n,121p,827b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,121p,10472b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on practice_contents_with_answers.pdf (49 pages).
