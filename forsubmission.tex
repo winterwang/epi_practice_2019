@@ -1,0 +1,424 @@
+\documentclass[11pt,]{problemset}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+    \setmainfont[]{IPAPMincho}
+    \setsansfont[]{IPAPGothic}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\providecommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{}
+    \pretitle{\vspace{\droptitle}}
+  \posttitle{}
+    \author{}
+    \preauthor{}\postauthor{}
+    \date{}
+    \predate{}\postdate{}
+  
+\usepackage[ipa]{zxjafont}
+\usepackage{sectsty}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\usepackage{mathspec}
+\usepackage{amsmath,amsthm}
+\usepackage{amssymb,amsfonts}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage[margin=1in]{geometry}
+\usepackage{thmtools}
+\usepackage{verbatim}
+\usepackage{xltxtra}
+\XeTeXlinebreaklocale ``ja''
+\XeTeXlinebreakskip=0pt plus 1pt
+\XeTeXlinebreakpenalty=0
+\setmainfont[]{IPAPMincho}
+\setsansfont[]{IPAPGothic}
+\usepackage{afterpage}
+\sectionfont{\fontsize{12}{15}\selectfont}
+\author{学籍番号:}
+\course{疫学演習 (2019) 回答用紙}
+\problemset{ }
+\problem{ }
+\collab{氏名:}
+
+\begin{document}
+
+\section{問題１：両群間計量データの平均値を比較する}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  帰無仮説を「遺伝子変異ありと変異なし両群の間で，COGの平均値は等しい」とする．上記のデータ及び適切な方法を使って検定し，検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：
+\end{enumerate}
+
+\begin{equation}
+  \label{eq:1}
+S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
+\end{equation}
+
+\begin{itemize}
+\tightlist
+\item
+  \(S_A:\) A群の標準偏差；
+\item
+  \(n_A:\) A群の人数；
+\item
+  \(S_B:\) B群の標準偏差；
+\item
+  \(n_B:\) B群の人数；
+\item
+  \(S:\) A群及びB群の共通標準偏差；
+\item
+  \(n_A + n_B -2:\) 分散が等しい時の自由度．
+\end{itemize}
+
+\newpage 
+\vfill
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  遺伝子変異ありとなしの群の間の脳萎縮度 (atrophy) を比較する場合， 1.
+  と同じ検定方法を用いてよいか？
+  それを判断するにはどの検定方法を使えばよいかを説明し，実際にこの検定方法を実施せよ．
+\end{enumerate}
+
+\newpage
+\vfill
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  2.の結果を踏まえて，帰無仮説「両群の脳萎縮度の平均値が等しい」を検定せよ．なお，両群の分散が等しいという前提が満たされていない時に，自由度(df)の計算式は以下となる：
+\end{enumerate}
+
+\begin{equation}
+\label{eq:2}
+\mathbf{df} = \frac{(S^2_A/n_A + S^2_B/n_B)^2}{(S_A^2/n_A)^2/(n_A-1)+(S_B^2/n_B)^2/(n_B-1)}
+\end{equation}
+
+\newpage
+
+\section{問題２：線形回帰モデル}
+
+2.3
+年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の相関係数を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド
+\texttt{mean(変数名)} を使う；共分散を計算したい時には，コマンド
+\texttt{cov(変数1,\ 変数2)} を利用する．
+
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# 年齢の平均値}
+\KeywordTok{mean}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{age)}
+\CommentTok{# 年齢の分散}
+\KeywordTok{var}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{age)}
+\CommentTok{# 体重の平均値}
+\KeywordTok{mean}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt)}
+\CommentTok{# 体重の分散}
+\KeywordTok{var}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt)}
+\CommentTok{# 体重と年齢の共分散 covariance}
+\KeywordTok{cov}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt, Dataset}\OperatorTok{$}\NormalTok{age)}
+\end{Highlighting}
+\end{Shaded}
+
+\newpage
+
+2.4
+年齢を説明変数，体重を目的変数とする場合，年齢の傾き(回帰係数)，と切片を求めよ．なお，分散と共分散の定義は以下とする，\(\bar{X}\)
+は \(X\) の平均値を示す：
+
+\begin{itemize}
+\tightlist
+\item
+  分散 variance:
+\end{itemize}
+
+\[
+\begin{aligned}
+\mathbf{Var}(X) & = \frac{(X_1-\bar{X})^2+(X_2-\bar{X})^2+\cdots+(X_n-\bar{X})^2}{n - 1} \\
+                & = \frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n -1}
+\end{aligned}
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  共分散 covariance:
+\end{itemize}
+
+\[
+\begin{aligned}
+\mathbf{Cov}(X, Y) & = \frac{(X_1 - \bar{X})(Y_1-\bar{Y}) + (X_2 - \bar{X})(Y_2-\bar{Y}) + \cdots + (X_n - \bar{X})(Y_n-\bar{Y})}{n - 1} \\
+                   & = \frac{\sum_{i = 1}^n(X_i - \bar{X})(Y_i-\bar{Y})}{n - 1}
+\end{aligned}
+\]
+
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# 傾き (slope)}
+\NormalTok{beta <-}\StringTok{ }\KeywordTok{cov}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt, Dataset}\OperatorTok{$}\NormalTok{age) }\OperatorTok{/}\StringTok{ }\KeywordTok{var}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{age)}
+\NormalTok{beta}
+\CommentTok{# 切片 (intercept)}
+\NormalTok{alpha <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{wt) }\OperatorTok{-}\StringTok{ }\KeywordTok{mean}\NormalTok{(Dataset}\OperatorTok{$}\NormalTok{age)}\OperatorTok{*}\NormalTok{beta}
+\NormalTok{alpha}
+\end{Highlighting}
+\end{Shaded}
+
+\newpage
+
+2.6
+今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．
+
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+
+2.8
+重回帰線形モデルの計算結果を用いて，体重の平均値を年齢と性別の線形モデルで表示せよ．各回帰係数の意味を説明せよ．
+
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+
+2.9
+上記の重回帰線形モデルを用いて，年齢が34ヶ月の女の子の体重の予測値を計算せよ．
+
+\newpage
+
+\hypertarget{chi2-}{%
+\section{\texorpdfstring{問題３：\(\chi^2\)
+検定，オッズ比，ロジスティック回帰モデル}{問題３：\textbackslash{}chi\^{}2 検定，オッズ比，ロジスティック回帰モデル}}\label{chi2-}}
+
+3.1
+もし，視覚障害と対象者の死亡リスクに関連がない場合，下の表（各セルの期待値の人数）を答えよ：
+\bigskip\bigskip
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+死亡 & 視力正常                      & 視覚障害                   & 合計             \\ \hline
+0  &                                 &                            &   4161 (96.81\%)        \\ \hline
+1  &                                 &                            &  137 (3.19\%)    \\ \hline
+合計 & 3971 (100\%)             & 327 (100\%)            & 4298 (100\%)   \\ \hline
+\end{tabular}
+\end{center}
+\bigskip\bigskip\bigskip\bigskip\bigskip
+
+3.1.2 上記の２つの表の数字を使って \(\chi^2\) 統計量を計算せよ
+
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+
+3.1.4 2 \(\times\) 2 の分割表では，自由度は \(\rule{3cm}{0.2mm}\)
+
+\newpage
+
+3.1.5
+視覚障害と死亡の関係を示すテーブルのデータをもとに，下表を完成せよ：
+
+\bigskip\bigskip
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+                 & 視力正常   & 視覚障害    & 合計   \\ \hline
+リスク (risk)       &  &   & 0.0319 \\ \hline
+オッズ (odds)       &  &   & 0.0329 \\ \hline
+対数オッズ (log-odds) &  &  & -3.414 \\ \hline
+\end{tabular}
+\end{center}
+
+\bigskip
+
+視覚障害と死亡の関連を示すオッズ比を算出せよ： \[
+\mathbf{OR} = 
+\]
+
+このオッズ比の対数を取った値 \(\mathbf{log(OR)}\) は：
+
+\[
+\mathbf{log(OR)} = 
+\]
+
+3.2 年齢の影響を考慮する
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+       & \multicolumn{10}{c|}{視覚障害 (0 = no, 1 = yes)}                                                                                                  \\ \hline
+死亡     & 0             & 1          & 0            & 1           & 0            & 1           & 0           & 1           & 0            & 1           \\ \hline
+1 = yes & 29            & 2          & 38           & 10          & 15           & 11          & 15          & 17          & 97           & 40          \\ \hline
+0 = no & 2301          & 22         & 1271         & 124         & 212          & 69          & 90          & 72          & 3874         & 287         \\ \hline
+  n     &           &           &          &          &           &           &           &           &          &          \\ \hline
+年齢     & \multicolumn{2}{c|}{15-34} & \multicolumn{2}{c|}{35-54} & \multicolumn{2}{c|}{55-64} & \multicolumn{2}{c|}{65 +} & \multicolumn{2}{c|}{Total} \\ \hline
+\end{tabular}
+\end{center}
+
+上記のデータをよく見ると，視覚障害のオッズは年齢と共に上昇している
+(年齢が15-34歳群の\((2 + 22) / (29 + 2301) = 0.010\)から年齢が65歳以上群の\((17+72)/(15+90) = 0.848\)に上がっている)．しかし，年齢の上昇と共に，死亡のオッズも上がる．年齢はここで，\underline{交絡因子 (confounder) }と定義される．
+
+3.2.1 以上のデータと解説をよく理解した上で，下表を完成せよ：
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+      & \multicolumn{2}{c|}{オッズ}    &        \\ \hline
+年齢    & 視力正常              & 視覚障害    & オッズ比   \\ \hline
+15-34 & 29/2301 = 0.01260 &   &   \\ \hline
+35-54 & 0.02990           &  &  \\ \hline
+55-64 & 0.07075           &  &  \\ \hline
+65+   & 0.16667           &  &  \\ \hline
+\end{tabular}
+\end{center}
+
+各年齢層では視覚障害と死亡との関連はどう変化しているか？
+
+\newpage
+
+3.2.2.3 単変量ロジスティック回帰モデルで評価した粗オッズ比 (crude odds
+ratio) と比べ，年齢調整オッズ比はどう変わったかを説明せよ．
+
+3.2.2.4 答え \bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+
+\section{問題４：生存分析}
+
+\begin{itemize}
+\tightlist
+\item
+  単変量ハザード比，及び信頼区間の意味を説明せよ．
+\end{itemize}
+
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+
+\begin{itemize}
+\tightlist
+\item
+  年齢調整ハザード比，及び信頼区間の意味を説明せよ．
+\end{itemize}
+
+
+\end{document}

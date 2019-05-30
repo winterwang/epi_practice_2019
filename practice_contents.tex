@@ -143,7 +143,7 @@
 \usepackage{afterpage}
 \sectionfont{\fontsize{12}{15}\selectfont}
 \author{学籍番号:}
-\course{疫学演習 2019-6-5 \& 2019-6-12}
+\course{疫学演習 (2019) 問題}
 \problemset{ }
 \problem{ }
 \collab{氏名:}
@@ -156,10 +156,9 @@
 }
 \section{問題１：両群間計量データの平均値を比較する}
 
-２００名の認知症患者を募集し，認知能力テスト(cognitive test,
-COG)，及び脳萎縮の進行度 (brain atrophy,
-脳体積の平均年間減少率，単位は\%)
-の検査を全員に行った．COG，及び脳萎縮のデータは値が大きいほど認知症の進行度がより進んでいる．また，この２００名の参加者から採取した血液検体を利用して，ある遺伝子の変異の有無を検査した．このデータを以下の表にまとめた：
+２００名の認知症患者に，認知機能テスト(cognitive test,
+COG)と脳萎縮の進行度 (brain atrophy, 脳体積の平均年間減少率，\%)
+の検査を行った．COG，と脳萎縮のデータは値が大きいほど認知症の進行を示している．また，すべての参加者から採取した血液検体を利用して，ある遺伝子の変異の有無の検査も行った．これらデータを以下の表にまとめた：
 
 \bigskip
 \begin{center}
@@ -176,7 +175,7 @@ COG)，及び脳萎縮の進行度 (brain atrophy,
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  帰無仮説を「遺伝子変異ありと変異なし両群の間で，COGの平均値は等しい」とする．上記のデータ及び適切な方法を使って検定せよ．検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：
+  帰無仮説を「遺伝子変異ありと変異なし両群の間で，COGの平均値は等しい」とする．上記のデータ及び適切な方法を使って検定し，検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：
 \end{enumerate}
 
 \begin{equation}
@@ -201,7 +200,7 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \end{itemize}
 
 また，EZR で t 値，自由度 (degree of freedom)を使って P
-値を計算する時，以下のコマンドを利用してください：
+値を計算する時は，以下のコマンドを利用してください：
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -209,12 +208,10 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{答え}
+\hypertarget{-}{%
+\subsection{答え (回答用紙へ)}\label{-}}
 
-\newpage
-\vfill
-
-以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
+以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果と一致するかを確認してください．
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -223,26 +220,20 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \end{Highlighting}
 \end{Shaded}
 
-\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
-
 \begin{center}\includegraphics[width=0.9\linewidth]{pic/myttest01cut} \end{center}
-\bigskip
-
-\newpage
-\vfill
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{1}
 \tightlist
 \item
-  この患者データから，遺伝子変異ありとなしの群の間に脳萎縮度 (atrophy)
-  の比較を 1. と同じ方法で検定してもよいか？ 1.
-  と同じ検定方法を使えるかどうかを判断するにはどの検定方法を使えばよいかを説明せよ．実際にこの検定方法を行ってください．
+  遺伝子変異ありとなしの群の間の脳萎縮度 (atrophy) を比較する場合， 1.
+  と同じ検定方法を用いてよいか？
+  それを判断するにはどの検定方法を使えばよいかを説明し，実際にこの検定方法を実施せよ．
 \end{enumerate}
 
 なお，EZR で F 値，両群の分散，両群それぞれの自由度 (df) を使って P
-値を計算する時に，以下のコマンドを利用してください：
+値を計算する時は，以下のコマンドを利用してください：
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -250,14 +241,10 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{-1}{%
-\subsection{答え}\label{-1}}
+\hypertarget{--1}{%
+\subsection{答え (回答用紙へ)}\label{--1}}
 
-\bigskip
-\newpage
-\vfill
-
-以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
+以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果と一致するかを確認してください．
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -269,9 +256,6 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \bigskip\bigskip\bigskip\bigskip\bigskip
 
 \begin{center}\includegraphics[width=0.9\linewidth]{pic/ftest01cut} \end{center}
-
-\newpage
-\vfill
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -287,7 +271,7 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \end{equation}
 
 また，EZR で t 値，自由度 (df)を使って P
-値を計算する時，以下のコマンドを利用してください：
+値を計算する時は，以下のコマンドを利用してください：
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -295,13 +279,10 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{-2}{%
-\subsection{答え}\label{-2}}
+\hypertarget{--2}{%
+\subsection{答え (回答用紙へ)}\label{--2}}
 
-\newpage
-\vfill
-
-以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
+以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果と一致するかを確認してください．
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -310,13 +291,9 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \end{Highlighting}
 \end{Shaded}
 
-\bigskip\bigskip\bigskip\bigskip\bigskip
-
 \begin{center}\includegraphics[width=0.9\linewidth]{pic/myttest02cut} \end{center}
-\bigskip
 
-\newpage
-\vfill
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
 
 \section{問題２：線形回帰モデル}
 
@@ -327,7 +304,7 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 \item
   子供の年齢が一ヶ月の上がると，体重はどれぐらい増えているか？
 \item
-  男の子は女の子と比べて，平均的に体重はどれぐらい多い/少ない？
+  男の子は女の子と比べて，平均的に体重はどれぐらい多い/少ないか？
 \end{itemize}
 
 \subsection{データのインポート}
@@ -375,9 +352,6 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/scatter01} \end{center}
 
-\newpage
-\vfill
-
 男女別に体重の箱ひげ図を描くため，以下のコードをRスクリプトに入力して，実行をクリックしてください．
 
 \begin{Shaded}
@@ -396,7 +370,7 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 \texttt{cov(変数1,\ 変数2)}
 を利用する．}{年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の相関係数を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド mean(変数名) を使う；共分散を計算したい時には，コマンド cov(変数1, 変数2) を利用する．}}\label{ezr-mean--cov1-2-}}
 
-以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を回答用紙に記入すること)}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -414,12 +388,11 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 \end{Shaded}
 
 \newpage
-\vfill
 
 \hypertarget{barx--x-}{%
-\subsection{\texorpdfstring{年齢を説明変数，体重を目的変数とする場合，年齢の傾き(回帰係数)，と切片を求めよ．なお，分散と共分散の定義を以下とする，\(\bar{X}\)
+\subsection{\texorpdfstring{年齢を説明変数，体重を目的変数とする場合，年齢の傾き(回帰係数)，と切片を求めよ．なお，分散と共分散の定義は以下とする，\(\bar{X}\)
 は \(X\)
-の平均値を示す：}{年齢を説明変数，体重を目的変数とする場合，年齢の傾き(回帰係数)，と切片を求めよ．なお，分散と共分散の定義を以下とする，\textbackslash{}bar\{X\} は X の平均値を示す：}}\label{barx--x-}}
+の平均値を示す：}{年齢を説明変数，体重を目的変数とする場合，年齢の傾き(回帰係数)，と切片を求めよ．なお，分散と共分散の定義は以下とする，\textbackslash{}bar\{X\} は X の平均値を示す：}}\label{barx--x-}}
 
 \begin{itemize}
 \tightlist
@@ -447,7 +420,7 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 \end{aligned}
 \]
 
-以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を回答用紙記入すること)}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -480,20 +453,21 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/lm02cut} \end{center}
 
-推定された回帰係数自分の計算結果とは一致するかを確認してください．
+推定された回帰係数が自分の計算結果と一致するかを確認してください．
 
 \subsection{今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．}
 
-\hypertarget{-3}{%
-\subsubsection{答え}\label{-3}}
+\hypertarget{--3}{%
+\subsubsection{答え (回答用紙へ)}\label{--3}}
 
-\newpage
-\vfill
+\bigskip\bigskip\bigskip\bigskip\bigskip
 
 \subsection{性別を説明変数に入れたモデルを作る}
 
 \hypertarget{-factor-}{%
 \subsubsection{性別変数を因子 (factor) に変換する}\label{-factor-}}
+
+\newpage
 
 \hypertarget{-8}{%
 \paragraph{ステップ１}\label{-8}}
@@ -509,9 +483,6 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 \paragraph{ステップ３}\label{-10}}
 
 \begin{center}\includegraphics[width=0.25\linewidth]{pic/sexfactor02} \end{center}
-
-\newpage
-\vfill
 
 \paragraph{ステップ４--水準名に男性，女性を入力する}
 
@@ -530,29 +501,20 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 
 \begin{center}\includegraphics[width=0.5\linewidth]{pic/lm04} \end{center}
 
-\newpage
-\vfill
-
 \subsubsection{重回帰線形モデルの結果を確認する}
 
-\begin{center}\includegraphics[width=0.8\linewidth]{pic/lm05cut} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth,height=0.4\textheight]{pic/lm05cut} \end{center}
 
 \subsection{重回帰線形モデルの計算結果を用いて，体重の平均値を年齢と性別の線形モデルで表示せよ．各回帰係数の意味を説明せよ．}
 
-\hypertarget{-4}{%
-\subsection{答え}\label{-4}}
-
-\newpage
-\vfill
+\hypertarget{--4}{%
+\subsection{答え (回答用紙へ)}\label{--4}}
 
 \hypertarget{34}{%
 \subsection{上記の重回帰線形モデルを用いて，年齢が34ヶ月の女の子の体重の予測値を計算せよ．}\label{34}}
 
-\hypertarget{-5}{%
-\subsection{答え}\label{-5}}
-
-\bigskip\bigskip\bigskip\bigskip\bigskip
-\bigskip\bigskip\bigskip\bigskip\bigskip
+\hypertarget{--5}{%
+\subsection{答え (回答用紙へ)}\label{--5}}
 
 \subsection{男女別の年齢と体重の散布図を描く}
 
@@ -589,9 +551,9 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 
 1990年代，アフリカのナイジェリア北部でオンコセルカ症 (回旋糸状虫症,
 onchocerciasis; river blindness とも呼ばれる)
-が流行していた．ある研究チームは流行地域にある34個の村に住む15歳以上の全住民に目の検査を行った．目の検査受けた住民はWHOの診断基準を元に，「視覚障害
+が流行していた．ある研究チームは流行地域にある34個の村に住む15歳以上の全住民に目の検査を行った．目の検査受けた住民はWHOの診断基準をもとに，「視覚障害
 (visually impaired)」と「視力正常 (normal vision」に分類された．対象者は
-3 間観察され，その期間中に死亡者が登録された．
+3 年間観察され，その期間中に死亡者が登録された．
 
 \subsection{視覚障害と死亡の関係}
 
@@ -623,20 +585,15 @@ onchocerciasis; river blindness とも呼ばれる)
 \subsubsection{\texorpdfstring{上記の２つの表の数字を使って \(\chi^2\)
 統計量を計算せよ}{上記の２つの表の数字を使って \textbackslash{}chi\^{}2 統計量を計算せよ}}\label{-chi2-}}
 
-\hypertarget{-6}{%
-\subsubsection{答え}\label{-6}}
-
-\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
-\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+\hypertarget{--6}{%
+\subsubsection{答え (回答用紙へ)}\label{--6}}
 
 \hypertarget{times-2--rule3cm0.2mm}{%
 \subsubsection{\texorpdfstring{2 \(\times\) 2 の分割表では，自由度は
 \(\rule{3cm}{0.2mm}\)}{2 \textbackslash{}times 2 の分割表では，自由度は \textbackslash{}rule\{3cm\}\{0.2mm\}}}\label{times-2--rule3cm0.2mm}}
 
-\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
-
 EZRで，\(\chi^2\)統計量と自由度(df)を使って P
-値を計算したい場合，以下のコマンドを利用してください：
+値を計算したい場合は，以下のコマンドを利用してください：
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -645,9 +602,6 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 \end{Shaded}
 
 \begin{center}\includegraphics[width=0.7\linewidth]{pic/mychisqtest02cut} \end{center}
-
-\newpage
-\vfill
 
 以下のコードをRスクリプトに入力して,実行をクリックしてください.自分の検定結果とは一致するかを確認し
 てください.
@@ -663,10 +617,7 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/mychisqtest01cut} \end{center}
 
-\newpage
-\vfill
-
-\subsubsection{視覚障害と死亡の関係を示すテーブルのデータを元に，下表を完成せよ：}
+\subsubsection{視覚障害と死亡の関係を示すテーブルのデータをもとに，下表を完成せよ：}
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
@@ -680,7 +631,7 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 
 \bigskip
 
-では，視覚障害と死亡の関連を示すオッズ比を算出せよ：
+視覚障害と死亡の関連を示すオッズ比を算出せよ：
 
 \[
 \mathbf{OR} = 
@@ -705,9 +656,6 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 
 \begin{center}\includegraphics[width=0.5\linewidth]{pic/import00} \end{center}
 
-\newpage
-\vfill
-
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{1}
@@ -715,6 +663,8 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 \end{enumerate}
 
 \begin{center}\includegraphics[width=0.3\linewidth]{pic/logstic01} \end{center}
+
+\newpage
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -733,7 +683,6 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 \begin{center}\includegraphics[width=0.7\linewidth]{pic/logstic03} \end{center}
 
 \newpage
-\vfill
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -755,7 +704,6 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 \begin{center}\includegraphics[width=0.8\textwidth,height=0.9\textwidth]{pic/logstic05} \end{center}
 
 \newpage
-\vfill
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -774,7 +722,6 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 \begin{center}\includegraphics[width=0.5\linewidth]{pic/logstic07} \end{center}
 
 \newpage
-\vfill
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -784,7 +731,7 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 
 \begin{center}\includegraphics[width=0.55\linewidth]{pic/logstic08cut} \end{center}
 
-計算したオッズ比はこの結果と一致しているかを確認してください．
+計算したオッズ比がこの結果と一致しているかを確認してください．
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -800,7 +747,7 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 \begin{itemize}
 \tightlist
 \item
-  (intercept/切片) は''視力正常''群の対数オッズであることを確認できる；
+  (intercept/切片) は''視力正常''群の対数オッズであることが確認できる；
 \item
   \texttt{vimp}
   (視覚障害)の回帰係数は''視覚障害''と''視力正常''群に比べた\newline log(OR)
@@ -841,7 +788,6 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 各年齢層では視覚障害と死亡との関連はどう変化しているか？
 
 \newpage
-\vfill
 
 \hypertarget{ezr}{%
 \subsubsection{EZRで年齢グループを調整したロジスティック回帰モデルを作る}\label{ezr}}
@@ -874,9 +820,6 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 
 \begin{center}\includegraphics[width=0.3\linewidth,height=0.5\textheight]{pic/mltlogstic02} \end{center}
 
-\newpage
-\vfill
-
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{3}
@@ -887,9 +830,6 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 
 \begin{center}\includegraphics[width=0.3\linewidth,height=0.5\textheight]{pic/mltlogstic03} \end{center}
 
-\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
-\bigskip\bigskip
-
 \paragraph{多変量ロジスティック回帰モデルを作る}
 
 \begin{enumerate}
@@ -898,9 +838,6 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 \end{enumerate}
 
 \begin{center}\includegraphics[width=0.8\linewidth,height=0.5\textheight]{pic/mltlogstic04} \end{center}
-
-\newpage
-\vfill
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -919,10 +856,12 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 \tightlist
 \item
   \texttt{agegrp} も説明変数へ移動すると自動的に \texttt{+}
-  が入れられる．OKをクリックする．
+  が付加される．OKをクリックする．
 \end{enumerate}
 
 \begin{center}\includegraphics[width=0.5\linewidth,height=0.5\textheight]{pic/mltlogstic06} \end{center}
+
+\newpage
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -939,15 +878,14 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 odds ratio)
 と比べ，年齢調整オッズ比はどう変わったかを説明せよ．}\label{-crude-odds-ratio-}}
 
-\hypertarget{-7}{%
-\paragraph{答え}\label{-7}}
+\hypertarget{--7}{%
+\paragraph{答え (回答用紙へ)}\label{--7}}
 
 \newpage
-\vfill
 
 \section{問題４：生存分析}
 
-問題３の研究で，実は対象者が研究に参加した時点と研究終了時点（死亡，打ち切り，または研究期間が終了した）の日付も記録されている：
+問題３の研究では対象者が研究に参加した時点，研究終了時点（死亡，打ち切り，及び研究期間が終了した）の日付も記録されている：
 
 \begin{verbatim}
 ## # A tibble: 4,298 x 6
@@ -990,9 +928,6 @@ odds ratio)
 ## 35    63 15-34  1989-05-14 1992-02-05 0 [Normal]                0
 ## # ... with 4,263 more rows
 \end{verbatim}
-
-\newpage
-\vfill
 
 \hypertarget{ezr}{%
 \subsubsection{EZRでは，追跡期間を計算するために，日付の差を取る必要がある}\label{ezr}}
@@ -1058,7 +993,7 @@ odds ratio)
 \setcounter{enumi}{6}
 \tightlist
 \item
-  単純要約を見ると，死亡者と生存者の追跡期間（日数）の平均値(と中央値)はどっちが長い？
+  単純要約を見ると，死亡者と生存者の追跡期間（日数）の平均値(と中央値)はどちらが長いか？
 \end{enumerate}
 
 \begin{center}\includegraphics[width=0.55\linewidth,height=0.35\textheight]{pic/survival06} \end{center}
@@ -1070,8 +1005,7 @@ odds ratio)
 \setcounter{enumi}{7}
 \tightlist
 \item
-  層別変数を \texttt{vimp} (視覚障害)
-  に変更し，追跡期間の要約を比較してみる
+  層別変数を \texttt{vimp} (視覚障害) に変更し，追跡期間の要約を比較する
 \end{enumerate}
 
 \begin{center}\includegraphics[width=0.25\linewidth,height=0.35\textheight]{pic/survival0901} \end{center}
@@ -1089,7 +1023,7 @@ odds ratio)
 \setcounter{enumi}{9}
 \tightlist
 \item
-  視覚障害者と視力正常者と比べ，追跡期間の違いはあるか？
+  視覚障害者と視力正常者で，追跡期間の違いはあるか？
 \end{enumerate}
 
 \begin{center}\includegraphics[width=0.55\linewidth,height=0.35\textheight]{pic/survival0903} \end{center}
@@ -1118,7 +1052,7 @@ odds ratio)
 \setcounter{enumi}{2}
 \tightlist
 \item
-  視覚障害者（赤線）と視力正常者（黒線）のカプランマイヤー生存曲線：（点線は95\%信頼区間を示す）
+  視覚障害者（赤線）と視力正常者（黒線）のカプランマイヤー生存曲線：\newline（点線は95\%信頼区間を示す）
 \end{enumerate}
 
 \begin{center}\includegraphics[width=0.7\linewidth,height=0.5\textheight]{pic/survival09} \end{center}
@@ -1135,8 +1069,6 @@ odds ratio)
 \end{enumerate}
 
 \begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival10} \end{center}
-
-\newpage
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1174,7 +1106,6 @@ odds ratio)
 \end{enumerate}
 
 \begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival15} \end{center}
-\newpage
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1196,10 +1127,8 @@ odds ratio)
 
 \begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival17cut} \end{center}
 
-\hypertarget{-8}{%
-\paragraph{答え}\label{-8}}
-
-\newpage
+\hypertarget{--8}{%
+\paragraph{答え (回答用紙へ)}\label{--8}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1211,15 +1140,18 @@ odds ratio)
 
 \begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival18} \end{center}
 
-7.年齢調整ハザード比，及び信頼区間の意味を説明せよ．
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  年齢調整ハザード比，及び信頼区間の意味を説明せよ．
+\end{enumerate}
 
 \begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival19cut} \end{center}
 
-\hypertarget{-9}{%
-\subsubsection{答え}\label{-9}}
-
-\newpage
-\vfill
+\hypertarget{--9}{%
+\subsubsection{答え (回答用紙へ)}\label{--9}}
 
 \section{参考図書：}
 
@@ -1227,7 +1159,7 @@ odds ratio)
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  中澤　港，「Rによる保健医療データ解析演習」，（\url{http://minato.sip21c.org/msb/medstatbookx.pdf}）
+  中澤　港，「Rによる保健医療データ解析演習」，\newline（\url{http://minato.sip21c.org/msb/medstatbookx.pdf）から入手できる}
 \item
   新谷　歩，「みんなの医療統計 12日間で基礎理論とEZRを完全マスター!」．
 \end{enumerate}

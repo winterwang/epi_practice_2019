@@ -41,7 +41,7 @@ header-includes:
 - \usepackage{afterpage}
 - \sectionfont{\fontsize{12}{15}\selectfont}
 - \author{学籍番号:}
-- \course{疫学演習 2019-6-5 \& 2019-6-12}
+- \course{疫学演習 (2019) 正解}
 - \problemset{ }
 - \problem{ }
 - \collab{氏名:}
@@ -62,7 +62,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <!-- 近年の研究によると，ビタミンＥはがんの発症予防に有用かもしれないと言われている．ある研究者がこの仮説を検証したくて， -->
 
-２００名の認知症患者を募集し，認知能力テスト(cognitive test, COG)，及び脳萎縮の進行度 (brain atrophy, 脳体積の平均年間減少率，単位は%) の検査を全員に行った．COG，及び脳萎縮のデータは値が大きいほど認知症の進行度がより進んでいる．また，この２００名の参加者から採取した血液検体を利用して，ある遺伝子の変異の有無を検査した．このデータを以下の表にまとめた：
+２００名の認知症患者に，認知機能テスト(cognitive test, COG)と脳萎縮の進行度 (brain atrophy, 脳体積の平均年間減少率，%) の検査を行った．COG，と脳萎縮のデータは値が大きいほど認知症の進行を示している．また，すべての参加者から採取した血液検体を利用して，ある遺伝子の変異の有無の検査も行った．これらデータを以下の表にまとめた：
 
 \bigskip
 \begin{center}
@@ -75,7 +75,7 @@ knitr::opts_chunk$set(echo = TRUE)
 \end{center}
 \bigskip
 
-1. 帰無仮説を「遺伝子変異ありと変異なし両群の間で，COGの平均値は等しい」とする．上記のデータ及び適切な方法を使って検定せよ．検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：
+1. 帰無仮説を「遺伝子変異ありと変異なし両群の間で，COGの平均値は等しい」とする．上記のデータ及び適切な方法を使って検定し，検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：
 
 \begin{equation}
   \label{eq:1}
@@ -89,7 +89,7 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 - $S:$ A群及びB群の共通標準偏差；
 - $n_A + n_B -2:$ 分散が等しい時の自由度．
 
-また，EZR で t 値，自由度 (degree of freedom)を使って P 値を計算する時，以下のコマンドを利用してください：
+また，EZR で t 値，自由度 (degree of freedom)を使って P 値を計算する時は，以下のコマンドを利用してください：
 
 ```{r eval=FALSE}
 2*pt(t value, degree of freedom, lower=FALSE)
@@ -153,7 +153,7 @@ knitr::include_graphics("pic/myttest01.png")
 There is strong evidence against the null hypothesis that the means of COG are the same in the two groups.
 
 
-2. この患者データから，遺伝子変異ありとなしの群の間に脳萎縮度 (atrophy) の比較を 1. と同じ方法で検定してもよいか？ 1. と同じ検定方法を使えるかどうかを判断するにはどの検定方法を使えばよいかを説明せよ．実際にこの検定方法を行ってください．
+2. 遺伝子変異ありとなしの群の間の脳萎縮度 (atrophy) を比較する場合， 1. と同じ検定方法を用いてよいか？ それを判断するにはどの検定方法を使えばよいかを説明し，実際にこの検定方法を実施せよ．
 
 
 なお，EZR で F 値，両群の分散，両群それぞれの自由度 (df) を使って P 値を計算する時に，以下のコマンドを利用してください：
@@ -221,7 +221,7 @@ There is strong evidence against the null hypothesis that the variances of atrop
 \mathbf{df} = \frac{(S^2_A/n_A + S^2_B/n_B)^2}{(S_A^2/n_A)^2/(n_A-1)+(S_B^2/n_B)^2/(n_B-1)}
 \end{equation}
 
-また，EZR で t 値，自由度 (df) を使って P 値を計算する時，以下のコマンドを利用してください：
+また，EZR で t 値，自由度 (df)を使って P 値を計算する時は，以下のコマンドを利用してください：
 
 ```{r eval=FALSE}
 2*pt(t value, df, lower=FALSE)
@@ -297,7 +297,7 @@ There is strong evidence against the null hypothesis that the means of atrophy a
 
 - 子供の年齢が一ヶ月の上がると，体重はどれぐらい増えているか？
 
-- 男の子は女の子と比べて，平均的に体重はどれぐらい多い/少ない？
+- 男の子は女の子と比べて，平均的に体重はどれぐらい多い/少ないか？
 
 ## データのインポート
 
@@ -410,7 +410,7 @@ cov(Dataset$wt, Dataset$age)
 
 
 
-## 年齢を説明変数，体重を目的変数とする場合，年齢の傾き(回帰係数)，と切片を求めよ．なお，分散と共分散の定義を以下とする，$\bar{X}$ は $X$ の平均値を示す：
+## 年齢を説明変数，体重を目的変数とする場合，年齢の傾き(回帰係数)，と切片を求めよ．なお，分散と共分散の定義は以下とする，$\bar{X}$ は $X$ の平均値を示す：
 
 - 分散 variance:
 
@@ -466,7 +466,7 @@ knitr::include_graphics("pic/lm01.png")
 ```{r lm02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='80%'}
 knitr::include_graphics("pic/lm02.png")
 ```
-推定された回帰係数と自分の計算結果が一致するかを確認してください．
+推定された回帰係数が自分の計算結果と一致するかを確認してください．
 
 
 ## 今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．
@@ -623,7 +623,7 @@ knitr::include_graphics("pic/scatter07.png")
 # 問題３：$\chi^2$ 検定，オッズ比，ロジスティック回帰モデル
 <!-- (SME lecture9) -->
 
-1990年代，アフリカのナイジェリア北部でオンコセルカ症 (回旋糸状虫症, onchocerciasis; river blindness とも呼ばれる) が流行していた．ある研究チームは流行地域にある34個の村に住む15歳以上の全住民に目の検査を行った．目の検査受けた住民はWHOの診断基準を元に，「視覚障害 (visually impaired)」と「視力正常 (normal vision」に分類された．対象者は 3 間観察され，その期間中に死亡者が登録された．
+1990年代，アフリカのナイジェリア北部でオンコセルカ症 (回旋糸状虫症, onchocerciasis; river blindness とも呼ばれる) が流行していた．ある研究チームは流行地域にある34個の村に住む15歳以上の全住民に目の検査を行った．目の検査受けた住民はWHOの診断基準をもとに，「視覚障害 (visually impaired)」と「視力正常 (normal vision」に分類された．対象者は 3 年間観察され，その期間中に死亡者が登録された．
 
 
 <!-- ．また，住民の皮膚検体からマイクロフィラリアの負荷 (microfilarial load)を測定し，糸状虫感染症の強度指標として評価した。 -->
@@ -671,7 +671,7 @@ $$
 ### 2 $\times$ 2 の分割表では，自由度は $(2-1)\times(2-1) = 1$ ．
 
 
-EZRで，$\chi^2$統計量と自由度(df)を使って P 値を計算したい場合，以下のコマンドを利用してください：
+EZRで，$\chi^2$統計量と自由度(df)を使って P 値を計算したい場合は，以下のコマンドを利用してください：
 
 ```{r eval=FALSE}
 2*pchisq(chisquare統計量, df, lower = FALSE)
@@ -735,7 +735,7 @@ There is strong evidence against the null hypothesis that there is no associatio
 
 \bigskip
 
-では，視覚障害と死亡の関連を示すオッズ比は：
+視覚障害と死亡の関連を示すオッズ比は：
 
 $$
 \mathbf{OR} = 0.1394 \div 0.025 = 5.576
@@ -808,7 +808,7 @@ knitr::include_graphics("pic/logstic07.png")
 knitr::include_graphics("pic/logstic08.png")
 ```
 
-計算したオッズ比はこの結果と一致しているかを確認してください．
+計算したオッズ比がこの結果と一致しているかを確認してください．
 
 
 
@@ -817,7 +817,7 @@ knitr::include_graphics("pic/logstic08.png")
 knitr::include_graphics("pic/logstic09.png")
 ```
 
-- (intercept/切片) の `-3.689` は”視力正常”群の対数オッズであることを確認できる；
+- (intercept/切片) の `-3.689` は”視力正常”群の対数オッズであることが確認できる；
 - `vimp` (視覚障害)の回帰係数 `1.7167` は”視覚障害”群と”視力正常”群を比べた log(OR) = log(odds in 視覚障害) - log(odds in 視力正常) = -1.9704 - (-3.689)である．
 
 
@@ -937,7 +937,7 @@ knitr::include_graphics("pic/mltlogstic07.png")
 
 # 問題４：生存分析
 
-問題３の研究で，実は対象者が研究に参加した時点と研究終了時点（死亡，打ち切り，または研究期間が終了した）の日付も記録されている：
+問題３の研究では対象者が研究に参加した時点，研究終了時点（死亡，打ち切り，及び研究期間が終了した）の日付も記録されている：
 
 ```{r showtime, echo=FALSE, cache=TRUE, message=FALSE}
 library(haven)
@@ -993,14 +993,14 @@ knitr::include_graphics("pic/survival05.png")
 ```
 
 
-7. 単純要約を見ると，死亡者と生存者の追跡期間（日数）の平均値(と中央値)はどっちが長い？
+7. 単純要約を見ると，死亡者と生存者の追跡期間（日数）の平均値(と中央値)はどちらが長いか？
 ```{r survival06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='55%'}
 knitr::include_graphics("pic/survival06.png")
 ```
 
 
 \newpage
-8. 層別変数を `vimp` (視覚障害) に変更し，追跡期間の要約を比較してみる
+8. 層別変数を `vimp` (視覚障害) に変更し，追跡期間の要約を比較する
 ```{r survival07, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='25%'}
 knitr::include_graphics("pic/survival0901.png")
 ```
@@ -1013,7 +1013,7 @@ knitr::include_graphics("pic/survival0902.png")
 ```
 
 
-10. 視覚障害者と視力正常者と比べ，追跡期間の違いはあるか？
+10. 視覚障害者と視力正常者で，追跡期間の違いはあるか？
 ```{r survival09, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='55%'}
 knitr::include_graphics("pic/survival0903.png")
 ```

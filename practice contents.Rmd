@@ -41,7 +41,7 @@ header-includes:
 - \usepackage{afterpage}
 - \sectionfont{\fontsize{12}{15}\selectfont}
 - \author{学籍番号:}
-- \course{疫学演習 2019-6-5 \& 2019-6-12}
+- \course{疫学演習 (2019) 問題}
 - \problemset{ }
 - \problem{ }
 - \collab{氏名:}
@@ -61,7 +61,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # 問題１：両群間計量データの平均値を比較する
 
 <!-- 近年の研究によると，ビタミンＥはがんの発症予防に有用かもしれないと言われている．ある研究者がこの仮説を検証したくて， -->
-２００名の認知症患者を募集し，認知能力テスト(cognitive test, COG)，及び脳萎縮の進行度 (brain atrophy, 脳体積の平均年間減少率，単位は%) の検査を全員に行った．COG，及び脳萎縮のデータは値が大きいほど認知症の進行度がより進んでいる．また，この２００名の参加者から採取した血液検体を利用して，ある遺伝子の変異の有無を検査した．このデータを以下の表にまとめた：
+２００名の認知症患者に，認知機能テスト(cognitive test, COG)と脳萎縮の進行度 (brain atrophy, 脳体積の平均年間減少率，%) の検査を行った．COG，と脳萎縮のデータは値が大きいほど認知症の進行を示している．また，すべての参加者から採取した血液検体を利用して，ある遺伝子の変異の有無の検査も行った．これらデータを以下の表にまとめた：
 
 \bigskip
 \begin{center}
@@ -74,7 +74,7 @@ knitr::opts_chunk$set(echo = TRUE)
 \end{center}
 \bigskip
 
-1. 帰無仮説を「遺伝子変異ありと変異なし両群の間で，COGの平均値は等しい」とする．上記のデータ及び適切な方法を使って検定せよ．検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：
+1. 帰無仮説を「遺伝子変異ありと変異なし両群の間で，COGの平均値は等しい」とする．上記のデータ及び適切な方法を使って検定し，検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：
 
 \begin{equation}
   \label{eq:1}
@@ -88,7 +88,7 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 - $S:$ A群及びB群の共通標準偏差；
 - $n_A + n_B -2:$ 分散が等しい時の自由度．
 
-また，EZR で t 値，自由度 (degree of freedom)を使って P 値を計算する時，以下のコマンドを利用してください：
+また，EZR で t 値，自由度 (degree of freedom)を使って P 値を計算する時は，以下のコマンドを利用してください：
 
 ```{r eval=FALSE}
 2*pt(t value, degree of freedom, lower=FALSE)
@@ -96,7 +96,7 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 
 
 
-## 答え
+## 答え  (回答用紙へ)
 
 <!-- 両群の標準偏差は 9.0 と推定され，分散が等しいと仮定できるから，Student の t 検定を行う： -->
 
@@ -127,26 +127,23 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 <!-- ``` -->
 <!-- \bigskip -->
 
-\newpage
-\vfill
 
 
 <!-- \clearpage -->
 <!-- \thispagestyle{empty} -->
 <!-- \phantom{a} -->
-<!-- \vfill -->
+<!--   -->
 
-以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
+以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果と一致するかを確認してください．
 
 ```{r eval=FALSE}
 source("http://aoki2.si.gunma-u.ac.jp/R/src/my_t_test.R", encoding="euc-jp")
 my.t.test(50, 69.2, 9.0^2, 150, 60.2, 9.0^2, var.equal=TRUE)
 ```
-\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
 ```{r myttest00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='90%'}
 knitr::include_graphics("pic/myttest01cut.png")
 ```
-\bigskip
 
 
 
@@ -156,13 +153,13 @@ knitr::include_graphics("pic/myttest01cut.png")
 
 <!-- There is strong evidence against the null hypothesis that the means of COG are the same in the two groups. -->
 
-\newpage
-\vfill
+ 
+ 
 
-2.  この患者データから，遺伝子変異ありとなしの群の間に脳萎縮度 (atrophy) の比較を 1. と同じ方法で検定してもよいか？ 1. と同じ検定方法を使えるかどうかを判断するにはどの検定方法を使えばよいかを説明せよ．実際にこの検定方法を行ってください．
+2. 遺伝子変異ありとなしの群の間の脳萎縮度 (atrophy) を比較する場合， 1. と同じ検定方法を用いてよいか？ それを判断するにはどの検定方法を使えばよいかを説明し，実際にこの検定方法を実施せよ．
 
 
-なお，EZR で F 値，両群の分散，両群それぞれの自由度 (df) を使って P 値を計算する時に，以下のコマンドを利用してください：
+なお，EZR で F 値，両群の分散，両群それぞれの自由度 (df) を使って P 値を計算する時は，以下のコマンドを利用してください：
 
 ```{r eval=FALSE}
 2*pf(F value, df in group 1, df in group 2, lower=FALSE)
@@ -171,7 +168,7 @@ knitr::include_graphics("pic/myttest01cut.png")
 
 
 
-## 答え
+## 答え (回答用紙へ)
 
 <!-- テーブルから両群の標準偏差はそれぞれ 0.21, 0.10 だと推定され，分散 (variance) が等しいという前提が満たされていない．１．の検定方法を使う時には，両群の分散が等しいという前提条件が必須だから，同じ Student t 検定を行うことができない．「両群の分散」が等しいという帰無仮説を検定するには F 検定を利用する： -->
 
@@ -194,10 +191,8 @@ knitr::include_graphics("pic/myttest01cut.png")
 <!-- ```{r ftest, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='90%'} -->
 <!-- knitr::include_graphics("pic/ftest.png") -->
 <!-- ``` -->
-\bigskip
-\newpage
-\vfill
-以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
+
+以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果と一致するかを確認してください．
 
 ```{r eval=FALSE}
 source("http://aoki2.si.gunma-u.ac.jp/R/src/my_var_test.R", encoding="euc-jp")
@@ -217,8 +212,8 @@ knitr::include_graphics("pic/ftest01cut.png")
 
 <!-- There is strong evidence against the null hypothesis that the variances of atrophy are the same in the two groups. -->
 
-\newpage
-\vfill
+ 
+ 
 
 3.  2.の結果を踏まえて，帰無仮説「両群の脳萎縮度の平均値が等しい」を検定せよ．なお，両群の分散が等しいという前提が満たされていない時に，自由度(df)の計算式は以下となる：
 
@@ -228,14 +223,14 @@ knitr::include_graphics("pic/ftest01cut.png")
 \mathbf{df} = \frac{(S^2_A/n_A + S^2_B/n_B)^2}{(S_A^2/n_A)^2/(n_A-1)+(S_B^2/n_B)^2/(n_B-1)}
 \end{equation}
 
-また，EZR で t 値，自由度 (df)を使って P 値を計算する時，以下のコマンドを利用してください：
+また，EZR で t 値，自由度 (df)を使って P 値を計算する時は，以下のコマンドを利用してください：
 
 ```{r eval=FALSE}
 2*pt(t value, df, lower=FALSE)
 ```
 
 
-## 答え
+## 答え (回答用紙へ)
 
 <!-- 2.の検定結果から，「両群の脳萎縮度の分散が等しい」という帰無仮説を棄却されたため，Welch の t 検定を採用する． -->
 
@@ -268,22 +263,18 @@ knitr::include_graphics("pic/ftest01cut.png")
 <!-- \bigskip -->
 
 
-\newpage
-\vfill
-以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果とは一致するかを確認してください．
+以下のコードをRスクリプトに入力して，実行をクリックしてください．自分の検定結果と一致するかを確認してください．
 
 ```{r eval=FALSE}
 source("http://aoki2.si.gunma-u.ac.jp/R/src/my_t_test.R", encoding="euc-jp")
 my.t.test(50, 0.67, 0.21^2, 150, 0.23, 0.10^2, var.equal=FALSE)
 ```
 
-\bigskip\bigskip\bigskip\bigskip\bigskip
 
 
 ```{r myttest01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='90%'}
 knitr::include_graphics("pic/myttest02cut.png")
 ```
-\bigskip
 
 
 
@@ -294,10 +285,8 @@ knitr::include_graphics("pic/myttest02cut.png")
 
 <!-- There is strong evidence against the null hypothesis that the means of atrophy are the same in the two groups. -->
 
-
-\newpage
-\vfill
-
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+ 
 
 # 問題２：線形回帰モデル
 
@@ -306,7 +295,7 @@ knitr::include_graphics("pic/myttest02cut.png")
 
 - 子供の年齢が一ヶ月の上がると，体重はどれぐらい増えているか？
 
-- 男の子は女の子と比べて，平均的に体重はどれぐらい多い/少ない？
+- 男の子は女の子と比べて，平均的に体重はどれぐらい多い/少ないか？
 
 ## データのインポート
 
@@ -363,8 +352,8 @@ knitr::include_graphics("pic/scatter01.png")
 ```
 
 
-\newpage
-\vfill
+ 
+ 
 
 男女別に体重の箱ひげ図を描くため，以下のコードをRスクリプトに入力して，実行をクリックしてください．
 
@@ -401,7 +390,7 @@ boxplot(Dataset$wt ~ Dataset$sex, ylim = c(0, 18),
 
 ## 年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の相関係数を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド `mean(変数名)` を使う；共分散を計算したい時には，コマンド `cov(変数1, 変数2)` を利用する．
 
-以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を回答用紙に記入すること)}
 
 ```{r eval=FALSE}
 # 年齢の平均値
@@ -418,10 +407,10 @@ cov(Dataset$wt, Dataset$age)
 
 
 
+ 
+ 
 \newpage
-\vfill
-
-## 年齢を説明変数，体重を目的変数とする場合，年齢の傾き(回帰係数)，と切片を求めよ．なお，分散と共分散の定義を以下とする，$\bar{X}$ は $X$ の平均値を示す：
+## 年齢を説明変数，体重を目的変数とする場合，年齢の傾き(回帰係数)，と切片を求めよ．なお，分散と共分散の定義は以下とする，$\bar{X}$ は $X$ の平均値を示す：
 
 - 分散 variance:
 
@@ -442,7 +431,7 @@ $$
 $$
 
 
-以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を回答用紙記入すること)}
 
 ```{r eval=FALSE}
 # 傾き (slope)
@@ -477,12 +466,12 @@ knitr::include_graphics("pic/lm01.png")
 ```{r lm02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='80%'}
 knitr::include_graphics("pic/lm02cut.png")
 ```
-推定された回帰係数自分の計算結果とは一致するかを確認してください．
+推定された回帰係数が自分の計算結果と一致するかを確認してください．
 
 
 ## 今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．
 
-### 答え
+### 答え  (回答用紙へ)
 
 <!-- $$ -->
 <!-- Y = 6.838 + 0.165 X -->
@@ -493,14 +482,14 @@ knitr::include_graphics("pic/lm02cut.png")
 <!-- - $0.165:$ 子供の年齢が1ヶ月伸びると，体重が平均的 0.165 kg (165 g) 高くなる； -->
 <!-- - $6.838:$ 子供の年齢が0ヶ月の時に，体重の平均値は 6.838 kg． -->
 
+\bigskip\bigskip\bigskip\bigskip\bigskip
 
-\newpage
-\vfill
 
 ## 性別を説明変数に入れたモデルを作る
 
 ### 性別変数を因子 (factor) に変換する
 
+\newpage
 #### ステップ１
 
 ```{r sexfactor00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=8, fig.align='center', out.width='80%'}
@@ -519,8 +508,6 @@ knitr::include_graphics("pic/sexfactor01.png")
 knitr::include_graphics("pic/sexfactor02.png")
 ```
 
-\newpage
-\vfill
 
 #### ステップ４--水準名に男性，女性を入力する
 
@@ -542,46 +529,24 @@ knitr::include_graphics("pic/lm00.png")
 knitr::include_graphics("pic/lm04.png")
 ```
 
-\newpage
-\vfill
 
 ### 重回帰線形モデルの結果を確認する
 
-```{r lm05, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=10, fig.align='center', out.width='80%'}
+```{r lm05, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=10, fig.align='center', out.height= "40%", out.width='70%'}
 knitr::include_graphics("pic/lm05cut.png")
 ```
 
-
 ## 重回帰線形モデルの計算結果を用いて，体重の平均値を年齢と性別の線形モデルで表示せよ．各回帰係数の意味を説明せよ．
 
-## 答え
+## 答え (回答用紙へ)
 
-
-<!-- $$ -->
-<!-- Y = 7.152 + 0.164 X_1 - 0.519X_2 -->
-<!-- $$ -->
-
-<!-- - $Y:$ 体重(kg)； -->
-<!-- - $X_1:$ 年齢 (months)； -->
-<!-- - $X_2 = 1:$ 女性； -->
-<!-- - $X_2 = 0:$ 男性； -->
-<!-- - $7.152:$ 男の子が年齢 0 ヶ月の時の平均体重； -->
-<!-- - $0.164:$ 同じ性別の子供の年齢が1ヶ月高くなることによって，体重が平均的に 0.164 kg増える； -->
-<!-- - $-0.519:$ 子供年齢が同じ時に，女の子は男の子と比べ，体重が平均的に 0.519 kg低い． -->
-
-
-\newpage
-\vfill
 
 
 ## 上記の重回帰線形モデルを用いて，年齢が34ヶ月の女の子の体重の予測値を計算せよ．
 
-## 答え
+## 答え (回答用紙へ)
 
-<!-- - $X_1 = 34$； -->
-<!-- - $X_2 = 1$; -->
-\bigskip\bigskip\bigskip\bigskip\bigskip
-\bigskip\bigskip\bigskip\bigskip\bigskip
+
 
 ## 男女別の年齢と体重の散布図を描く
 
@@ -625,7 +590,7 @@ knitr::include_graphics("pic/scatter07.png")
 # 問題３：$\chi^2$ 検定，オッズ比，ロジスティック回帰モデル
 <!-- (SME lecture9) -->
 
-1990年代，アフリカのナイジェリア北部でオンコセルカ症 (回旋糸状虫症, onchocerciasis; river blindness とも呼ばれる) が流行していた．ある研究チームは流行地域にある34個の村に住む15歳以上の全住民に目の検査を行った．目の検査受けた住民はWHOの診断基準を元に，「視覚障害 (visually impaired)」と「視力正常 (normal vision」に分類された．対象者は 3 間観察され，その期間中に死亡者が登録された．
+1990年代，アフリカのナイジェリア北部でオンコセルカ症 (回旋糸状虫症, onchocerciasis; river blindness とも呼ばれる) が流行していた．ある研究チームは流行地域にある34個の村に住む15歳以上の全住民に目の検査を行った．目の検査受けた住民はWHOの診断基準をもとに，「視覚障害 (visually impaired)」と「視力正常 (normal vision」に分類された．対象者は 3 年間観察され，その期間中に死亡者が登録された．
 
 <!-- ．また，住民の皮膚検体からマイクロフィラリアの負荷 (microfilarial load)を測定し，糸状虫感染症の強度指標として評価した。 -->
 
@@ -660,27 +625,23 @@ knitr::include_graphics("pic/scatter07.png")
 
 ### 上記の２つの表の数字を使って $\chi^2$ 統計量を計算せよ
 
-### 答え
-\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
-\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+### 答え (回答用紙へ)
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip -->
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip -->
 
 
 ### 2 $\times$ 2 の分割表では，自由度は $\rule{3cm}{0.2mm}$
-\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip -->
 
 <!-- $(2-1)\times(2-1) = 1$ ． -->
 
 
-EZRで，$\chi^2$統計量と自由度(df)を使って P 値を計算したい場合，以下のコマンドを利用してください：
+EZRで，$\chi^2$統計量と自由度(df)を使って P 値を計算したい場合は，以下のコマンドを利用してください：
 
 ```{r eval=FALSE}
 2*pchisq(chisquare統計量, df, lower = FALSE)
 ```
 
-
-
-<!-- \newpage -->
-<!-- \vfill -->
 
 ```{r eval=FALSE, echo=FALSE}
 2*pchisq(93.829, 1, lower = FALSE)
@@ -691,8 +652,6 @@ EZRで，$\chi^2$統計量と自由度(df)を使って P 値を計算したい�
 knitr::include_graphics("pic/mychisqtest02cut.png")
 ```
 
-\newpage
-\vfill
 
 以下のコードをRスクリプトに入力して,実行をクリックしてください.自分の検定結果とは一致するかを確認し
 てください.
@@ -717,10 +676,8 @@ knitr::include_graphics("pic/mychisqtest01cut.png")
 
 <!-- この検定結果は「視覚障害と対象者の死亡リスクと関連がない」という帰無仮説を棄却するために非常に強い証拠を提供したと言える． (There is strong evidence against the null hypothesis that there is no association between visual impairment and risk of death.) -->
 
-\newpage
-\vfill
 
-### 視覚障害と死亡の関係を示すテーブルのデータを元に，下表を完成せよ：
+### 視覚障害と死亡の関係を示すテーブルのデータをもとに，下表を完成せよ：
 
 
 \begin{center}
@@ -736,7 +693,7 @@ knitr::include_graphics("pic/mychisqtest01cut.png")
 
 \bigskip
 
-では，視覚障害と死亡の関連を示すオッズ比を算出せよ：
+視覚障害と死亡の関連を示すオッズ比を算出せよ：
 
 <!-- $$ -->
 <!-- \mathbf{OR} = 0.1394 \div 0.025 = 5.576 -->
@@ -761,14 +718,15 @@ $$
 knitr::include_graphics("pic/import00.png")
 ```
 
-\newpage
-\vfill
+ 
+ 
 
 2. 
 ```{r logistic01, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='30%'}
 knitr::include_graphics("pic/logstic01.png")
 ```
 
+\newpage
 3. 
 ```{r logistic02, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='70%'}
 knitr::include_graphics("pic/logstic02.png")
@@ -780,8 +738,8 @@ knitr::include_graphics("pic/logstic02.png")
 knitr::include_graphics("pic/logstic03.png")
 ```
 
+ 
 \newpage
-\vfill
 5.
 ```{r logistic04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='70%'}
 knitr::include_graphics("pic/logstic04.png")
@@ -794,8 +752,8 @@ knitr::include_graphics("pic/logstic04.png")
 knitr::include_graphics("pic/logstic05.png")
 ```
 
+ 
 \newpage
-\vfill
 7. 
 ```{r logistic06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='50%'}
 knitr::include_graphics("pic/logstic06.png")
@@ -806,14 +764,14 @@ knitr::include_graphics("pic/logstic06.png")
 knitr::include_graphics("pic/logstic07.png")
 ```
 
+ 
 \newpage
-\vfill
 9.
 ```{r logistic08, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='55%'}
 knitr::include_graphics("pic/logstic08cut.png")
 ```
 
-計算したオッズ比はこの結果と一致しているかを確認してください．
+計算したオッズ比がこの結果と一致しているかを確認してください．
 
 
 
@@ -822,7 +780,7 @@ knitr::include_graphics("pic/logstic08cut.png")
 knitr::include_graphics("pic/logstic09cut.png")
 ```
 
-- (intercept/切片) は”視力正常”群の対数オッズであることを確認できる；
+- (intercept/切片) は”視力正常”群の対数オッズであることが確認できる；
 - `vimp` (視覚障害)の回帰係数は”視覚障害”と”視力正常”群に比べた\newline log(OR) = log(odds in 視覚障害) - log(odds in 視力正常) である．
 
 
@@ -861,9 +819,9 @@ knitr::include_graphics("pic/logstic09cut.png")
 各年齢層では視覚障害と死亡との関連はどう変化しているか？
 
 
+ 
+ 
 \newpage
-\vfill
-
 ### EZRで年齢グループを調整したロジスティック回帰モデルを作る
 
 #### 年齢グループ `agegrp` 変数を因子 (factor) に変換する
@@ -886,16 +844,14 @@ knitr::include_graphics("pic/mltlogstic02.png")
 
 
 
-\newpage
-\vfill
+ 
+ 
 
 4. 水準名に各年齢グループの名前を入力する
 ```{r mltlogistic03, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='30%'}
 knitr::include_graphics("pic/mltlogstic03.png")
 ```
 
-\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
-\bigskip\bigskip
 
 #### 多変量ロジスティック回帰モデルを作る
 
@@ -904,8 +860,8 @@ knitr::include_graphics("pic/mltlogstic03.png")
 knitr::include_graphics("pic/mltlogstic04.png")
 ```
 
-\newpage
-\vfill
+ 
+ 
 
 2. `agegrp` が因子になったことが確認できる．\newline `died` (死亡) を目的変数へ，`vimp` (視覚障害) を説明変数へ
 ```{r mltlogistic05, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='50%'}
@@ -914,12 +870,13 @@ knitr::include_graphics("pic/mltlogstic05.png")
 
 
 
-3. `agegrp` も説明変数へ移動すると自動的に `+` が入れられる．OKをクリックする．
+3. `agegrp` も説明変数へ移動すると自動的に `+` が付加される．OKをクリックする．
 
 ```{r mltlogistic06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='50%'}
 knitr::include_graphics("pic/mltlogstic06.png")
 ```
 
+\newpage
 4. 視覚障害と死亡の関係を評価する年齢調整オッズ比が計算される．
 
 ```{r mltlogistic07, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='50%'}
@@ -929,7 +886,7 @@ knitr::include_graphics("pic/mltlogstic07cut.png")
 #### 単変量ロジスティック回帰モデルで評価した粗オッズ比 (crude odds ratio) と比べ，年齢調整オッズ比はどう変わったかを説明せよ．
 
 
-#### 答え 
+#### 答え  (回答用紙へ)
 
 
 <!-- 年齢を考慮していない場合，視覚障害者は視力正常者と比べ，三年間の間に死亡するオッズが5.57倍であり，95%信頼区間が 3.78 - 8.20 と推定される． -->
@@ -938,13 +895,14 @@ knitr::include_graphics("pic/mltlogstic07cut.png")
 
 <!-- (なお，この解析は，「各年齢層内の視覚障害と死亡の関係が等しい」という前提が仮定される．つまり，2.20は各年齢層の視覚障害と死亡の関係を評価する共通オッズ比 [common odds ratio] である．) -->
 
+ 
+ 
 \newpage
-\vfill
 
 # 問題４：生存分析
 
 
-問題３の研究で，実は対象者が研究に参加した時点と研究終了時点（死亡，打ち切り，または研究期間が終了した）の日付も記録されている：
+問題３の研究では対象者が研究に参加した時点，研究終了時点（死亡，打ち切り，及び研究期間が終了した）の日付も記録されている：
 
 ```{r showtime, echo=FALSE, cache=TRUE, message=FALSE}
 library(haven)
@@ -960,8 +918,8 @@ Dataset %>%
   print(n = 35)
 ```
 
-\newpage
-\vfill
+ 
+ 
 
 ### EZRでは，追跡期間を計算するために，日付の差を取る必要がある
 
@@ -988,6 +946,7 @@ knitr::include_graphics("pic/survival03.png")
 ```
 
 \newpage
+
 5. 
 ```{r survival04, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='25%'}
 knitr::include_graphics("pic/survival04.png")
@@ -1000,14 +959,15 @@ knitr::include_graphics("pic/survival05.png")
 ```
 
 
-7. 単純要約を見ると，死亡者と生存者の追跡期間（日数）の平均値(と中央値)はどっちが長い？
+7. 単純要約を見ると，死亡者と生存者の追跡期間（日数）の平均値(と中央値)はどちらが長いか？
 ```{r survival06, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='55%'}
 knitr::include_graphics("pic/survival06.png")
 ```
 
 
 \newpage
-8. 層別変数を `vimp` (視覚障害) に変更し，追跡期間の要約を比較してみる
+
+8. 層別変数を `vimp` (視覚障害) に変更し，追跡期間の要約を比較する
 ```{r survival07, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='25%'}
 knitr::include_graphics("pic/survival0901.png")
 ```
@@ -1020,7 +980,7 @@ knitr::include_graphics("pic/survival0902.png")
 ```
 
 
-10. 視覚障害者と視力正常者と比べ，追跡期間の違いはあるか？
+10. 視覚障害者と視力正常者で，追跡期間の違いはあるか？
 ```{r survival09, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '35%', out.width='55%'}
 knitr::include_graphics("pic/survival0903.png")
 ```
@@ -1041,7 +1001,7 @@ knitr::include_graphics("pic/survival08.png")
 
 
 \newpage
-3. 視覚障害者（赤線）と視力正常者（黒線）のカプランマイヤー生存曲線：（点線は95%信頼区間を示す）
+3. 視覚障害者（赤線）と視力正常者（黒線）のカプランマイヤー生存曲線：\newline（点線は95%信頼区間を示す）
 ```{r survival12, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '50%', out.width='70%'}
 knitr::include_graphics("pic/survival09.png")
 ```
@@ -1054,7 +1014,7 @@ knitr::include_graphics("pic/survival09.png")
 knitr::include_graphics("pic/survival10.png")
 ```
 
-\newpage
+ 
 
 5. 生存曲線を作成するための両群の生存率表も確認できる：
 
@@ -1083,7 +1043,7 @@ knitr::include_graphics("pic/survival14.png")
 ```{r survival18, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
 knitr::include_graphics("pic/survival15.png")
 ```
-\newpage
+ 
 
 4. `vimp` (視覚障害)を説明変数へ，OKをクリックする
 ```{r survival19, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
@@ -1095,29 +1055,29 @@ knitr::include_graphics("pic/survival16.png")
 knitr::include_graphics("pic/survival17cut.png")
 ```
 
-#### 答え
+#### 答え (回答用紙へ)
 
 
-\newpage
+ 
 6. 年齢調整ハザード比を求めよ．
 ```{r survival21, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
 knitr::include_graphics("pic/survival18.png")
 ```
 
 
-7.年齢調整ハザード比，及び信頼区間の意味を説明せよ．
+7. 年齢調整ハザード比，及び信頼区間の意味を説明せよ．
 
 ```{r survival22, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
 knitr::include_graphics("pic/survival19cut.png")
 ```
 
-### 答え
+### 答え (回答用紙へ)
 
 
 
-\newpage
-\vfill
+
+ 
 
 # 参考図書：
-1. 中澤　港，「Rによる保健医療データ解析演習」，（http://minato.sip21c.org/msb/medstatbookx.pdf）
+1. 中澤　港，「Rによる保健医療データ解析演習」，\newline（http://minato.sip21c.org/msb/medstatbookx.pdf）から入手できる
 2. 新谷　歩，「みんなの医療統計 12日間で基礎理論とEZRを完全マスター!」．
