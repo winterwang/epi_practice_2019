@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2018.9.25)  28 MAY 2019 15:33
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2018.9.25)  30 MAY 2019 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2048,8 +2048,8 @@ File: pic/lm00.png Graphic file (type bmp)
 [13]
 File: pic/lm01.png Graphic file (type bmp)
 <pic/lm01.png>
-File: pic/lm02.png Graphic file (type bmp)
-<pic/lm02.png>
+File: pic/lm02cut.png Graphic file (type bmp)
+<pic/lm02cut.png>
 [14] [15]
 File: pic/sexfactor00.png Graphic file (type bmp)
 <pic/sexfactor00.png>
@@ -2065,8 +2065,8 @@ File: pic/lm00.png Graphic file (type bmp)
 File: pic/lm04.png Graphic file (type bmp)
 <pic/lm04.png>
 [17]
-File: pic/lm05.png Graphic file (type bmp)
-<pic/lm05.png>
+File: pic/lm05cut.png Graphic file (type bmp)
+<pic/lm05cut.png>
 [18]
 File: pic/scatter02.png Graphic file (type bmp)
 <pic/scatter02.png>
@@ -2082,26 +2082,27 @@ File: pic/scatter06.png Graphic file (type bmp)
 [20]
 File: pic/scatter07.png Graphic file (type bmp)
 <pic/scatter07.png>
-[21] [22]
 
-Package xcolor Warning: Incompatible color definition on input line 642.
+Package xcolor Warning: Incompatible color definition on input line 641.
+
+[21]
+
+Package xcolor Warning: Incompatible color definition on input line 645.
 
 
-Package xcolor Warning: Incompatible color definition on input line 646.
-
-
-Package xcolor Warning: Incompatible color definition on input line 646.
+Package xcolor Warning: Incompatible color definition on input line 645.
 
 File: pic/mychisqtest02cut.png Graphic file (type bmp)
 <pic/mychisqtest02cut.png>
+[22]
 
-Package xcolor Warning: Incompatible color definition on input line 653.
-
-
-Package xcolor Warning: Incompatible color definition on input line 660.
+Package xcolor Warning: Incompatible color definition on input line 655.
 
 
-Package xcolor Warning: Incompatible color definition on input line 660.
+Package xcolor Warning: Incompatible color definition on input line 662.
+
+
+Package xcolor Warning: Incompatible color definition on input line 662.
 
 File: pic/mychisqtest01cut.png Graphic file (type bmp)
 <pic/mychisqtest01cut.png>
@@ -2126,10 +2127,10 @@ File: pic/logstic06.png Graphic file (type bmp)
 File: pic/logstic07.png Graphic file (type bmp)
 <pic/logstic07.png>
 [27]
-File: pic/logstic08.png Graphic file (type bmp)
-<pic/logstic08.png>
-File: pic/logstic09.png Graphic file (type bmp)
-<pic/logstic09.png>
+File: pic/logstic08cut.png Graphic file (type bmp)
+<pic/logstic08cut.png>
+File: pic/logstic09cut.png Graphic file (type bmp)
+<pic/logstic09cut.png>
 [28] [29]
 File: pic/mltlogstic00.png Graphic file (type bmp)
 <pic/mltlogstic00.png>
@@ -2148,8 +2149,8 @@ File: pic/mltlogstic05.png Graphic file (type bmp)
 File: pic/mltlogstic06.png Graphic file (type bmp)
 <pic/mltlogstic06.png>
 [32]
-File: pic/mltlogstic07.png Graphic file (type bmp)
-<pic/mltlogstic07.png>
+File: pic/mltlogstic07cut.png Graphic file (type bmp)
+<pic/mltlogstic07cut.png>
 [33] [34]
 File: pic/survival00.png Graphic file (type bmp)
 <pic/survival00.png>
@@ -2199,19 +2200,19 @@ File: pic/survival15.png Graphic file (type bmp)
 [42]
 File: pic/survival16.png Graphic file (type bmp)
 <pic/survival16.png>
-File: pic/survival17.png Graphic file (type bmp)
-<pic/survival17.png>
+File: pic/survival17cut.png Graphic file (type bmp)
+<pic/survival17cut.png>
 [43]
 File: pic/survival18.png Graphic file (type bmp)
 <pic/survival18.png>
-File: pic/survival19.png Graphic file (type bmp)
-<pic/survival19.png>
+File: pic/survival19cut.png Graphic file (type bmp)
+<pic/survival19cut.png>
 [44] [45]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1235.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1235.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1236.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1236.
 (./practice_contents.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1235.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1235.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1236.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1236.
 
 Package rerunfilecheck Info: File `practice_contents.out' has not changed.
 (rerunfilecheck)             Checksum: 0150C85B89C8D128C92CD2ED58BB7585.
@@ -2224,8 +2225,8 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  37674 strings out of 492970
- 708609 string characters out of 6136052
- 869980 words of memory out of 5000000
+ 708693 string characters out of 6136052
+ 869982 words of memory out of 5000000
  40987 multiletter control sequences out of 15000+600000
  575814 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

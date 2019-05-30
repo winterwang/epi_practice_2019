@@ -392,7 +392,7 @@ boxplot(Dataset$wt ~ Dataset$sex, ylim = c(0, 18),
 
 ## 年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の相関係数を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド `mean(変数名)` を使う；共分散を計算したい時には，コマンド `cov(変数1, 変数2)` を利用する．
 
-以下のコードをRスクリプトに入力して,実行をクリックしてください．(結果を下の余白に記入すること)
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
 
 ```{r eval=TRUE}
 # 年齢の平均値
@@ -671,7 +671,7 @@ $$
 ### 2 $\times$ 2 の分割表では，自由度は $(2-1)\times(2-1) = 1$ ．
 
 
-EZRで，$\chi^2$統計量と自由度(df)を使って P 値を計算したい場合，以下のコマンドが利用できる：
+EZRで，$\chi^2$統計量と自由度(df)を使って P 値を計算したい場合，以下のコマンドを利用してください：
 
 ```{r eval=FALSE}
 2*pchisq(chisquare統計量, df, lower = FALSE)
@@ -1097,7 +1097,7 @@ knitr::include_graphics("pic/survival17.png")
 
 以上の結果から，「視覚障害者が視力正常者と比べ，観察期間中に死亡するハザード比は1と等しい」を棄却するために，非常に強い証拠を提供した．
 
-\newpage
+
 6. 年齢調整ハザード比を求めよ．
 ```{r survival21, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.height = '40%', out.width='60%'}
 knitr::include_graphics("pic/survival18.png")
@@ -1120,9 +1120,7 @@ knitr::include_graphics("pic/survival19.png")
 
 
 
-\newpage
-\vfill
 
 # 参考図書：
-1. 中澤　港，「Rによる保健医療データ解析演習」，（http://minato.sip21c.org/msb/medstatbookx.pdf）
+1. 中澤　港，「Rによる保健医療データ解析演習」，\newline（http://minato.sip21c.org/msb/medstatbookx.pdf）から入手できる
 2. 新谷　歩，「みんなの医療統計 12日間で基礎理論とEZRを完全マスター!」．

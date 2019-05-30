@@ -156,17 +156,17 @@
 }
 \section{問題１：両群間計量データの平均値を比較する}
 
-２００名の認知症患者を募集し，認識能力テスト(cognitive test,
+２００名の認知症患者を募集し，認知能力テスト(cognitive test,
 COG)，及び脳萎縮の進行度 (brain atrophy,
 脳体積の平均年間減少率，単位は\%)
-の検査を全員に行った．COG，及び脳萎縮のデータは大きいほど認知症の進行度がより進んでいる．また，この２００名の参加者から採取した血液検体を利用して，ある遺伝子の変異の有無を検査した．このデータは以下の表でまとめた：
+の検査を全員に行った．COG，及び脳萎縮のデータは値が大きいほど認知症の進行度がより進んでいる．また，この２００名の参加者から採取した血液検体を利用して，ある遺伝子の変異の有無を検査した．このデータを以下の表にまとめた：
 
 \bigskip
 \begin{center}
 \begin{tabular}{|l|l|l|l|l|}\hline
 変数                     & \multicolumn{2}{c|}{遺伝変異あり (n = 50)}     & \multicolumn{2}{c|}{遺伝変異なし (n = 150)}   \\\hline
                        & \vtop{\hbox{\strut 平均値}\hbox{\strut (mean)}}&\vtop{\hbox{\strut  標準偏差}\hbox{\strut (standard deviation) }} & \vtop{\hbox{\strut 平均値}\hbox{\strut (mean)}}&\vtop{\hbox{\strut  標準偏差}\hbox{\strut (standard deviation) }} \\\hline
-認識能力テスト，COG            & 69.2       & 9.0                       & 60.2       & 9.0                       \\
+認知能力テスト，COG            & 69.2       & 9.0                       & 60.2       & 9.0                       \\
 脳萎縮度, atrophy, \%/year & 0.67       & 0.21                      & 0.23       & 0.10                     \\\hline
 \end{tabular}
 \end{center}
@@ -176,7 +176,7 @@ COG)，及び脳萎縮の進行度 (brain atrophy,
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  帰無仮説を「遺伝子変異ありと変異なし両群の間に，COGの平均値は等しい」とする．上記のデータ及び適宜な方法を使って検定せよ．検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：
+  帰無仮説を「遺伝子変異ありと変異なし両群の間で，COGの平均値は等しい」とする．上記のデータ及び適切な方法を使って検定せよ．検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：
 \end{enumerate}
 
 \begin{equation}
@@ -237,8 +237,8 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \tightlist
 \item
   この患者データから，遺伝子変異ありとなしの群の間に脳萎縮度 (atrophy)
-  の比較を 1. と同じ方法で検定してもよいか？どの検定方法を使えば 1.
-  と同じ検定方法を使えるかどうかを判断できるを説明せよ．実際にこの検定方法を行ってください．
+  の比較を 1. と同じ方法で検定してもよいか？ 1.
+  と同じ検定方法を使えるかどうかを判断するにはどの検定方法を使えばよいかを説明せよ．実際にこの検定方法を行ってください．
 \end{enumerate}
 
 なお，EZR で F 値，両群の分散，両群それぞれの自由度 (df) を使って P
@@ -321,13 +321,13 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \section{問題２：線形回帰モデル}
 
 190名の乳幼児の性別（1 = 男，2 = 女），年齢 (月,
-months)，体重（kg）のデータを収集した．このデータを用いで，以下の問題を解答したい：
+months)，体重（kg）のデータを収集した．このデータを用いて，以下のことが知りたい：
 
 \begin{itemize}
 \item
-  子供の年齢が一ヶ月の増加によって，体重はどれぐらい増えているか？
+  子供の年齢が一ヶ月の上がると，体重はどれぐらい増えているか？
 \item
-  男の子は女の子と比べて，平均的に体重はどれぐらい大きい/小さい？
+  男の子は女の子と比べて，平均的に体重はどれぐらい多い/少ない？
 \end{itemize}
 
 \subsection{データのインポート}
@@ -356,7 +356,7 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 
 \begin{center}\includegraphics[width=0.2\linewidth]{pic/import05} \end{center}
 
-\subsection{体重と年齢の散布図，性別により体重の箱ひげ図}
+\subsection{体重と年齢の散布図，体重の男女別箱ひげ図}
 
 \begin{center}\includegraphics[width=0.85\linewidth]{pic/scatter00} \end{center}
 
@@ -378,7 +378,7 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 \newpage
 \vfill
 
-性別により体重の箱ひげ図を描くため，以下のコードをRスクリプトに入力して，実行をクリックしてください．
+男女別に体重の箱ひげ図を描くため，以下のコードをRスクリプトに入力して，実行をクリックしてください．
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -392,11 +392,11 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 
 \hypertarget{ezr-mean--cov1-2-}{%
 \subsection{\texorpdfstring{年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の相関係数を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド
-\texttt{mean(変数名)} を使う；共分散を計算したい時に，コマンド
+\texttt{mean(変数名)} を使う；共分散を計算したい時には，コマンド
 \texttt{cov(変数1,\ 変数2)}
-を利用する．}{年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の相関係数を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド mean(変数名) を使う；共分散を計算したい時に，コマンド cov(変数1, 変数2) を利用する．}}\label{ezr-mean--cov1-2-}}
+を利用する．}{年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の相関係数を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド mean(変数名) を使う；共分散を計算したい時には，コマンド cov(変数1, 変数2) を利用する．}}\label{ezr-mean--cov1-2-}}
 
-以下のコードをRスクリプトに入力して,実行をクリックしてください．(結果を下の余白に記入すること)
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -447,7 +447,7 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 \end{aligned}
 \]
 
-以下のコードをRスクリプトに入力して,実行をクリックしてください．（結果を下の余白に記入すること）
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -463,7 +463,7 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 \begin{center}\includegraphics[width=0.8\linewidth]{pic/betaalpha} \end{center}
 
 \hypertarget{ezr}{%
-\subsection{実際にEZRで線形モデルを作って見よう：}\label{ezr}}
+\subsection{実際にEZRで線形モデルを作ってみよう：}\label{ezr}}
 
 \hypertarget{-5}{%
 \subsubsection{ステップ１}\label{-5}}
@@ -478,7 +478,7 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 \hypertarget{-7}{%
 \subsubsection{ステップ３}\label{-7}}
 
-\begin{center}\includegraphics[width=0.8\linewidth]{pic/lm02} \end{center}
+\begin{center}\includegraphics[width=0.8\linewidth]{pic/lm02cut} \end{center}
 
 推定された回帰係数自分の計算結果とは一致するかを確認してください．
 
@@ -535,7 +535,7 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 
 \subsubsection{重回帰線形モデルの結果を確認する}
 
-\begin{center}\includegraphics[width=0.8\linewidth]{pic/lm05} \end{center}
+\begin{center}\includegraphics[width=0.8\linewidth]{pic/lm05cut} \end{center}
 
 \subsection{重回帰線形モデルの計算結果を用いて，体重の平均値を年齢と性別の線形モデルで表示せよ．各回帰係数の意味を説明せよ．}
 
@@ -587,11 +587,11 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 \section{\texorpdfstring{問題３：\(\chi^2\)
 検定，オッズ比，ロジスティック回帰モデル}{問題３：\textbackslash{}chi\^{}2 検定，オッズ比，ロジスティック回帰モデル}}\label{chi2-}}
 
-1990年代，アフリカナイジェリア北部でオンコセルカ症 (回旋糸状虫症,
+1990年代，アフリカのナイジェリア北部でオンコセルカ症 (回旋糸状虫症,
 onchocerciasis; river blindness とも呼ばれる)
-が流行していた．ある研究チームが流行していた地域の34個の村に住む15歳以上の全住民に目の検査を行った．目の検査受けた住民はWHOの診断基準を元に，「視覚障害
-(visually impaired)」と「視力正常 (normal
-vision」に分類された．対象者は三年間観察され，その期間中に死亡者を登録された．
+が流行していた．ある研究チームは流行地域にある34個の村に住む15歳以上の全住民に目の検査を行った．目の検査受けた住民はWHOの診断基準を元に，「視覚障害
+(visually impaired)」と「視力正常 (normal vision」に分類された．対象者は
+3 間観察され，その期間中に死亡者が登録された．
 
 \subsection{視覚障害と死亡の関係}
 
@@ -607,7 +607,7 @@ vision」に分類された．対象者は三年間観察され，その期間�
 \end{tabular}
 \end{center}
 
-\subsubsection{もし，視覚障害と対象者の死亡リスクと関連がない場合，下の表（各セルの期待者数）を入力せよ：}
+\subsubsection{もし，視覚障害と対象者の死亡リスクに関連がない場合，下の表（各セルの期待値の人数）を答えよ：}
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
@@ -633,11 +633,10 @@ vision」に分類された．対象者は三年間観察され，その期間�
 \subsubsection{\texorpdfstring{2 \(\times\) 2 の分割表では，自由度は
 \(\rule{3cm}{0.2mm}\)}{2 \textbackslash{}times 2 の分割表では，自由度は \textbackslash{}rule\{3cm\}\{0.2mm\}}}\label{times-2--rule3cm0.2mm}}
 
-\newpage
-\vfill
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
 
 EZRで，\(\chi^2\)統計量と自由度(df)を使って P
-値を計算したい場合，以下のコマンドが利用できる：
+値を計算したい場合，以下のコマンドを利用してください：
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -646,6 +645,9 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 \end{Shaded}
 
 \begin{center}\includegraphics[width=0.7\linewidth]{pic/mychisqtest02cut} \end{center}
+
+\newpage
+\vfill
 
 以下のコードをRスクリプトに入力して,実行をクリックしてください.自分の検定結果とは一致するかを確認し
 てください.
@@ -669,7 +671,7 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline
-                 & 視力正常   & 視覚障害    & トータル   \\ \hline
+                 & 視力正常   & 視覚障害    & 合計   \\ \hline
 リスク (risk)       &  &   & 0.0319 \\ \hline
 オッズ (odds)       &  &   & 0.0329 \\ \hline
 対数オッズ (log-odds) &  &  & -3.414 \\ \hline
@@ -780,9 +782,9 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 \item
 \end{enumerate}
 
-\begin{center}\includegraphics[width=0.55\linewidth]{pic/logstic08} \end{center}
+\begin{center}\includegraphics[width=0.55\linewidth]{pic/logstic08cut} \end{center}
 
-計算したオッズ比はここの結果とは一致しているかを確認してください．
+計算したオッズ比はこの結果と一致しているかを確認してください．
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -793,17 +795,16 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
   の結果が確認できる
 \end{enumerate}
 
-\begin{center}\includegraphics[width=0.52\linewidth]{pic/logstic09} \end{center}
+\begin{center}\includegraphics[width=0.52\linewidth]{pic/logstic09cut} \end{center}
 
 \begin{itemize}
 \tightlist
 \item
-  (intercept/切片) の \texttt{-3.689}
-  は''視力正常''群の対数オッズであることを確認できる；
+  (intercept/切片) は''視力正常''群の対数オッズであることを確認できる；
 \item
-  \texttt{vimp} (視覚障害)の回帰係数 \texttt{1.7167}
-  は''視覚障害''と''視力正常''群に比べた log(OR) = log(odds in 視覚障害)
-  - log(odds in 視力正常) = -1.9704 - (-3.689)である．
+  \texttt{vimp}
+  (視覚障害)の回帰係数は''視覚障害''と''視力正常''群に比べた\newline log(OR)
+  = log(odds in 視覚障害) - log(odds in 視力正常) である．
 \end{itemize}
 
 \subsection{年齢の影響を考慮する}
@@ -821,7 +822,7 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
 \end{center}
 
 上記のデータをよく見ると，視覚障害のオッズは年齢と共に上昇している
-(年齢が15-34歳群の\((2 + 22) / (29 + 2301) = 0.010\)から年齢が65歳以上群の\((17+72)/(15+90) = 0.848\)に上げた)．しかし，年齢の上昇と共に，死亡のオッズも上がる．年齢はここで，\underline{交絡因子 (confounder) }と定義される．
+(年齢が15-34歳群の\((2 + 22) / (29 + 2301) = 0.010\)から年齢が65歳以上群の\((17+72)/(15+90) = 0.848\)に上がっている)．しかし，年齢の上昇と共に，死亡のオッズも上がる．年齢はここで，\underline{交絡因子 (confounder) }と定義される．
 
 \subsubsection{以上のデータと解説をよく理解した上で，下表を完成せよ：}
 
@@ -931,7 +932,7 @@ EZRで，\(\chi^2\)統計量と自由度(df)を使って P
   視覚障害と死亡の関係を評価する年齢調整オッズ比が計算される．
 \end{enumerate}
 
-\begin{center}\includegraphics[width=0.5\linewidth,height=0.5\textheight]{pic/mltlogstic07} \end{center}
+\begin{center}\includegraphics[width=0.5\linewidth,height=0.5\textheight]{pic/mltlogstic07cut} \end{center}
 
 \hypertarget{-crude-odds-ratio-}{%
 \paragraph{単変量ロジスティック回帰モデルで評価した粗オッズ比 (crude
@@ -946,7 +947,7 @@ odds ratio)
 
 \section{問題４：生存分析}
 
-問題３の研究で，実は対象者が研究に参加した時点と研究終了時点（死亡，打ち切り，または研究期間が終了した）の時間も記録されている：
+問題３の研究で，実は対象者が研究に参加した時点と研究終了時点（死亡，打ち切り，または研究期間が終了した）の日付も記録されている：
 
 \begin{verbatim}
 ## # A tibble: 4,298 x 6
@@ -1193,7 +1194,7 @@ odds ratio)
   単変量ハザード比，及び信頼区間の意味を説明せよ．
 \end{enumerate}
 
-\begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival17} \end{center}
+\begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival17cut} \end{center}
 
 \hypertarget{-8}{%
 \paragraph{答え}\label{-8}}
@@ -1212,7 +1213,7 @@ odds ratio)
 
 7.年齢調整ハザード比，及び信頼区間の意味を説明せよ．
 
-\begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival19} \end{center}
+\begin{center}\includegraphics[width=0.6\linewidth,height=0.4\textheight]{pic/survival19cut} \end{center}
 
 \hypertarget{-9}{%
 \subsubsection{答え}\label{-9}}
