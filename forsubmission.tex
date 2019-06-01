@@ -150,13 +150,15 @@
 
 \begin{document}
 
-\section{問題１：両群間計量データの平均値を比較する}
+\hypertarget{section}{%
+\section{問題１：両群間計量データの平均値を比較する
+(20\%)}\label{section}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  帰無仮説を「遺伝子変異ありと変異なし両群の間で，COGの平均値は等しい」とする．上記のデータ及び適切な方法を使って検定し，検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：
+  帰無仮説を「遺伝子変異ありと変異なし両群の間で，COGの平均値は等しい」とする．上記のデータ及び適切な方法を使って検定し，検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：(6\%)
 \end{enumerate}
 
 \begin{equation}
@@ -190,7 +192,7 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \item
   遺伝子変異ありとなしの群の間の脳萎縮度 (atrophy) を比較する場合， 1.
   と同じ検定方法を用いてよいか？
-  それを判断するにはどの検定方法を使えばよいかを説明し，実際にこの検定方法を実施せよ．
+  それを判断するにはどの検定方法を使えばよいかを説明し，実際にこの検定方法を実施せよ．(6\%)
 \end{enumerate}
 
 \newpage
@@ -201,7 +203,7 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \setcounter{enumi}{2}
 \tightlist
 \item
-  2.の結果を踏まえて，帰無仮説「両群の脳萎縮度の平均値が等しい」を検定せよ．なお，両群の分散が等しいという前提が満たされていない時に，自由度(df)の計算式は以下となる：
+  2.の結果を踏まえて，帰無仮説「両群の脳萎縮度の平均値が等しい」を検定せよ．なお，両群の分散が等しいという前提が満たされていない時に，自由度(df)の計算式は以下となる：(8\%)
 \end{enumerate}
 
 \begin{equation}
@@ -211,14 +213,16 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 
 \newpage
 
-\section{問題２：線形回帰モデル}
+\hypertarget{section-1}{%
+\section{問題２：線形回帰モデル (30\%)}\label{section-1}}
 
 2.3
-年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の相関係数を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド
+年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の共分散を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド
 \texttt{mean(変数名)} を使う；共分散を計算したい時には，コマンド
 \texttt{cov(変数1,\ 変数2)} を利用する．
 
 以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
+(5\%)
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -268,6 +272,7 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \]
 
 以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
+(5\%)
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -283,14 +288,14 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \newpage
 
 2.6
-今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．
+今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．(10\%)
 
 \bigskip\bigskip\bigskip\bigskip\bigskip
 \bigskip\bigskip\bigskip\bigskip\bigskip
 \bigskip\bigskip\bigskip\bigskip\bigskip
 
 2.8
-重回帰線形モデルの計算結果を用いて，体重の平均値を年齢と性別の線形モデルで表示せよ．各回帰係数の意味を説明せよ．
+重回帰線形モデルの計算結果を用いて，体重の平均値を年齢と性別の線形モデルで表示せよ．各回帰係数の意味を説明せよ．(15\%)
 
 \bigskip\bigskip\bigskip\bigskip\bigskip
 \bigskip\bigskip\bigskip\bigskip\bigskip
@@ -298,16 +303,17 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \bigskip\bigskip\bigskip\bigskip\bigskip
 
 2.9
-上記の重回帰線形モデルを用いて，年齢が34ヶ月の女の子の体重の予測値を計算せよ．
+上記の重回帰線形モデルを用いて，年齢が34ヶ月の女の子の体重の予測値を計算せよ．(5\%)
 
 \newpage
 
-\hypertarget{chi2-}{%
+\hypertarget{chi2--40}{%
 \section{\texorpdfstring{問題３：\(\chi^2\)
-検定，オッズ比，ロジスティック回帰モデル}{問題３：\textbackslash{}chi\^{}2 検定，オッズ比，ロジスティック回帰モデル}}\label{chi2-}}
+検定，オッズ比，ロジスティック回帰モデル
+(40\%)}{問題３：\textbackslash{}chi\^{}2 検定，オッズ比，ロジスティック回帰モデル (40\%)}}\label{chi2--40}}
 
 3.1
-もし，視覚障害と対象者の死亡リスクに関連がない場合，下の表（各セルの期待値の人数）を答えよ：
+もし，視覚障害と対象者の死亡リスクに関連がない場合，下の表（各セルの期待値の人数）を答えよ：(4\%)
 \bigskip\bigskip
 
 \begin{center}
@@ -321,7 +327,7 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \end{center}
 \bigskip\bigskip\bigskip\bigskip\bigskip
 
-3.1.2 上記の２つの表の数字を使って \(\chi^2\) 統計量を計算せよ
+3.1.2 上記の２つの表の数字を使って \(\chi^2\) 統計量を計算せよ (4\%)
 
 \bigskip\bigskip\bigskip\bigskip\bigskip
 \bigskip\bigskip\bigskip\bigskip\bigskip
@@ -329,12 +335,12 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \bigskip\bigskip\bigskip\bigskip\bigskip
 \bigskip\bigskip\bigskip\bigskip\bigskip
 
-3.1.4 2 \(\times\) 2 の分割表では，自由度は \(\rule{3cm}{0.2mm}\)
+3.1.4 2 \(\times\) 2 の分割表では，自由度は \(\rule{3cm}{0.2mm}\) (2\%)
 
 \newpage
 
 3.1.5
-視覚障害と死亡の関係を示すテーブルのデータをもとに，下表を完成せよ：
+視覚障害と死亡の関係を示すテーブルのデータをもとに，下表を完成せよ：(6\%)
 
 \bigskip\bigskip
 
@@ -350,11 +356,11 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 
 \bigskip
 
-視覚障害と死亡の関連を示すオッズ比を算出せよ： \[
+視覚障害と死亡の関連を示すオッズ比を算出せよ：(2\%) \[
 \mathbf{OR} = 
 \]
 
-このオッズ比の対数を取った値 \(\mathbf{log(OR)}\) は：
+このオッズ比の対数を取った値 \(\mathbf{log(OR)}\) は：(2\%)
 
 \[
 \mathbf{log(OR)} = 
@@ -377,7 +383,7 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 上記のデータをよく見ると，視覚障害のオッズは年齢と共に上昇している
 (年齢が15-34歳群の\((2 + 22) / (29 + 2301) = 0.010\)から年齢が65歳以上群の\((17+72)/(15+90) = 0.848\)に上がっている)．しかし，年齢の上昇と共に，死亡のオッズも上がる．年齢はここで，\underline{交絡因子 (confounder) }と定義される．
 
-3.2.1 以上のデータと解説をよく理解した上で，下表を完成せよ：
+3.2.1 以上のデータと解説をよく理解した上で，下表を完成せよ：(8\%)
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
@@ -391,23 +397,24 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \end{tabular}
 \end{center}
 
-各年齢層では視覚障害と死亡との関連はどう変化しているか？
+各年齢層では視覚障害と死亡との関連はどう変化しているか？(2\%)
 
 \newpage
 
 3.2.2.3 単変量ロジスティック回帰モデルで評価した粗オッズ比 (crude odds
-ratio) と比べ，年齢調整オッズ比はどう変わったかを説明せよ．
+ratio) と比べ，年齢調整オッズ比はどう変わったかを説明せよ．(10\%)
 
-3.2.2.4 答え \bigskip\bigskip\bigskip\bigskip\bigskip
 \bigskip\bigskip\bigskip\bigskip\bigskip
 \bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
 
-\section{問題４：生存分析}
+\hypertarget{section-2}{%
+\section{問題４：生存分析 (10\%)}\label{section-2}}
 
 \begin{itemize}
 \tightlist
 \item
-  単変量ハザード比，及び信頼区間の意味を説明せよ．
+  単変量ハザード比，及び信頼区間の意味を説明せよ．(5\%)
 \end{itemize}
 
 \bigskip\bigskip\bigskip\bigskip\bigskip
@@ -417,7 +424,7 @@ ratio) と比べ，年齢調整オッズ比はどう変わったかを説明せ�
 \begin{itemize}
 \tightlist
 \item
-  年齢調整ハザード比，及び信頼区間の意味を説明せよ．
+  年齢調整ハザード比，及び信頼区間の意味を説明せよ．(5\%)
 \end{itemize}
 
 

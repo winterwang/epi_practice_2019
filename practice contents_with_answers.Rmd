@@ -1,3 +1,4 @@
+---
 documentclass: problemset
 title: ""
 author: ""
@@ -57,7 +58,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-# 問題１：両群間計量データの平均値を比較する
+# 問題１：両群間計量データの平均値を比較する (30%)
 
 <!-- 近年の研究によると，ビタミンＥはがんの発症予防に有用かもしれないと言われている．ある研究者がこの仮説を検証したくて， -->
 
@@ -289,7 +290,7 @@ There is strong evidence against the null hypothesis that the means of atrophy a
 \vfill
 
 
-# 問題２：線形回帰モデル
+# 問題２：線形回帰モデル (30%)
 
 190名の乳幼児の性別（1 = 男，2 = 女），年齢 (月, months)，体重（kg）のデータを収集した．このデータを用いて，以下のことが知りたい：
 
