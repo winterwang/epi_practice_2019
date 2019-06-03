@@ -131,7 +131,7 @@ $$
 \end{aligned}
 $$
 
-以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)} (5%)
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)} (2%)
 
 ```{r eval=FALSE}
 # 傾き (slope)
@@ -145,14 +145,14 @@ alpha
 
 \newpage
 
-2.6 今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．(10%)
+2.6 今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．(4%)
 
 
 \bigskip\bigskip\bigskip\bigskip\bigskip
 \bigskip\bigskip\bigskip\bigskip\bigskip
 \bigskip\bigskip\bigskip\bigskip\bigskip
 
-2.8 重回帰線形モデルの計算結果を用いて，体重の平均値を年齢と性別の線形モデルで表示せよ．各回帰係数の意味を説明せよ．(15%)
+2.8 重回帰線形モデルの計算結果を用いて，体重の平均値を年齢と性別の線形モデルで表示せよ．各回帰係数の意味を説明せよ．(14%)
 
 \bigskip\bigskip\bigskip\bigskip\bigskip
 \bigskip\bigskip\bigskip\bigskip\bigskip
