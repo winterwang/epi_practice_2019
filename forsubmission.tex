@@ -13,8 +13,6 @@
     \usepackage{fontspec}
   \fi
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-    \setmainfont[]{IPAPMincho}
-    \setsansfont[]{IPAPGothic}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -121,7 +119,7 @@
     \date{}
     \predate{}\postdate{}
   
-\usepackage[ipa]{zxjafont}
+\usepackage[ipaex]{zxjafont}
 \usepackage{sectsty}
 \usepackage{tikz}
 \usetikzlibrary{trees}
@@ -138,8 +136,6 @@
 \XeTeXlinebreaklocale ``ja''
 \XeTeXlinebreakskip=0pt plus 1pt
 \XeTeXlinebreakpenalty=0
-\setmainfont[]{IPAPMincho}
-\setsansfont[]{IPAPGothic}
 \usepackage{afterpage}
 \sectionfont{\fontsize{12}{15}\selectfont}
 \author{学籍番号:}
@@ -220,8 +216,8 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \texttt{mean(変数名)} を使う；共分散を計算したい時には，コマンド
 \texttt{cov(変数1,\ 変数2)} を利用する．
 
-以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
-(5\%)
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\newline
+\underline{(結果を下の余白に記入すること)} (5\%)
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -270,8 +266,8 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 \end{aligned}
 \]
 
-以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
-(2\%)
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\newline
+\underline{(結果を下の余白に記入すること)} (2\%)
 
 \begin{Shaded}
 \begin{Highlighting}[]

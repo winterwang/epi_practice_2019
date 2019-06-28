@@ -17,9 +17,9 @@ output:
     df_print: paged
 # linkcolor: blue
 # classoption: xelatex,ja=standard
-mainfont: IPAPMincho
+# mainfont: IPAPMincho
 header-includes:
-- \usepackage[ipa]{zxjafont} 
+- \usepackage[ipaex]{zxjafont} 
 - \usepackage{sectsty}
 - \usepackage{tikz}
 - \usetikzlibrary{trees}
@@ -36,8 +36,8 @@ header-includes:
 - \XeTeXlinebreaklocale "ja"
 - \XeTeXlinebreakskip=0pt plus 1pt
 - \XeTeXlinebreakpenalty=0
-- \setmainfont[]{IPAPMincho}
-- \setsansfont[]{IPAPGothic}
+# - \setmainfont[]{IPAPMincho}
+# - \setsansfont[]{IPAPGothic}
 - \usepackage{afterpage}
 - \sectionfont{\fontsize{12}{15}\selectfont}
 - \author{学籍番号:}
@@ -45,7 +45,7 @@ header-includes:
 - \problemset{ }
 - \problem{ }
 - \collab{氏名:}
-sansfont: IPAPGothic
+# sansfont: IPAPGothic
 fontsize: 11pt
 ---
 
@@ -93,7 +93,8 @@ S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
 
 2.3 年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の共分散を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド `mean(変数名)` を使う；共分散を計算したい時には，コマンド `cov(変数1, 変数2)` を利用する．
 
-以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)} (5%)
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\newline
+\underline{(結果を下の余白に記入すること)} (5%)
 
 ```{r eval=FALSE}
 # 年齢の平均値
@@ -131,7 +132,8 @@ $$
 \end{aligned}
 $$
 
-以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)} (2%)
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\newline
+\underline{(結果を下の余白に記入すること)} (2%)
 
 ```{r eval=FALSE}
 # 傾き (slope)
