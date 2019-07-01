@@ -17,9 +17,9 @@ output:
     df_print: paged
 # linkcolor: blue
 # classoption: xelatex,ja=standard
-mainfont: IPAPMincho
+mainfont: IPAexMincho
 header-includes:
-- \usepackage[ipa]{zxjafont} 
+- \usepackage[ipaex]{zxjafont} 
 - \usepackage{sectsty}
 - \usepackage{tikz}
 - \usetikzlibrary{trees}
@@ -36,17 +36,17 @@ header-includes:
 - \XeTeXlinebreaklocale "ja"
 - \XeTeXlinebreakskip=0pt plus 1pt
 - \XeTeXlinebreakpenalty=0
-- \setmainfont[]{IPAPMincho}
-- \setsansfont[]{IPAPGothic}
+# - \setmainfont[]{IPAPMincho}
+# - \setsansfont[]{IPAPGothic}
 - \usepackage{afterpage}
-- \sectionfont{\fontsize{12}{15}\selectfont}
+- \sectionfont{\fontsize{10}{20}\selectfont}
 - \author{学籍番号:}
 - \course{疫学演習 (2019) 正解}
 - \problemset{ }
 - \problem{ }
 - \collab{氏名:}
-sansfont: IPAPGothic
-fontsize: 11pt
+sansfont: IPAexGothic
+fontsize: 10pt
 ---
 
 
@@ -69,7 +69,7 @@ knitr::opts_chunk$set(echo = TRUE)
 \begin{tabular}{|l|l|l|l|l|}\hline
 変数                     & \multicolumn{2}{c|}{遺伝変異あり (n = 50)}     & \multicolumn{2}{c|}{遺伝変異なし (n = 150)}   \\\hline
                        & \vtop{\hbox{\strut 平均値}\hbox{\strut (mean)}}&\vtop{\hbox{\strut  標準偏差}\hbox{\strut (standard deviation) }} & \vtop{\hbox{\strut 平均値}\hbox{\strut (mean)}}&\vtop{\hbox{\strut  標準偏差}\hbox{\strut (standard deviation) }} \\\hline
-認知能力テスト，COG            & 69.2       & 9.0                       & 60.2       & 9.0                       \\
+認知能力テスト, COG            & 69.2       & 9.0                       & 60.2       & 9.0                       \\
 脳萎縮度, atrophy, \%/year & 0.67       & 0.21                      & 0.23       & 0.10                     \\\hline
 \end{tabular}
 \end{center}
