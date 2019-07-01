@@ -32,24 +32,27 @@ header-includes:
 - \usepackage[margin=1in]{geometry}
 - \usepackage{thmtools}
 - \usepackage{verbatim}
+# - \usepackage[fontfamily = helvetica]{fancyvrb}
 - \usepackage{xltxtra}
 - \XeTeXlinebreaklocale "ja"
 - \XeTeXlinebreakskip=0pt plus 1pt
 - \XeTeXlinebreakpenalty=0
-# - \setmainfont[]{IPAPMincho}
-# - \setsansfont[]{IPAPGothic}
+- \setmainfont[Scale = 0.9]{IPAexMincho}
+# - \setsansfont[Scale = 0.8]{Microsoft Sans Serif}
 - \usepackage{afterpage}
-- \sectionfont{\fontsize{10}{20}\selectfont}
+# - \sectionfont{\fontsize{10}{12}\selectfont}
 - \author{学籍番号:}
 - \course{疫学演習 (2019) 正解}
 - \problemset{ }
 - \problem{ }
 - \collab{氏名:}
-sansfont: IPAexGothic
-fontsize: 10pt
+# sansfont: AppleGothic
+# fontsize: 10pt
 ---
 
-
+\makeatletter
+\def\verbatim@font{\normalfont\sffamily}
+\makeatother
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -115,12 +118,17 @@ $$
 \end{aligned}
 $$
 
+
+- \underline{共通分散とT統計量両方の計算過程がないと無得点}
+- \underline{片方だけ計算過程がある場合，得点＝１}
+
 自由度 (degree of freedom)は $n_A + n_B -2 = 198$，P値の計算は EZR を利用する：
 
 ```{r eval=TRUE}
 2*pt(6.1237, 198, lower=FALSE)
 ```
 
+- \underline{P 値の計算得点　＝２}
 
 ```{r pvalue00, cache=TRUE, echo=FALSE, fig.asp=.7, fig.width=6, fig.align='center', out.width='90%'}
 knitr::include_graphics("pic/tvaluepvalue00.png")
@@ -152,6 +160,9 @@ knitr::include_graphics("pic/myttest01.png")
 
 There is strong evidence against the null hypothesis that the means of COG are the same in the two groups.
 
+- \underline{検定結果の解釈得点　＝２}
+- \underline{「遺伝子変異ありの群のCOG平均値が有意に高い」でも可．}
+- \underline{「両群のCOG平均値が有意に異なる」でも可．}
 
 2. 遺伝子変異ありとなしの群の間の脳萎縮度 (atrophy) を比較する場合， 1. と同じ検定方法を用いてよいか？ それを判断するにはどの検定方法を使えばよいかを説明し，実際にこの検定方法を実施せよ．
 
@@ -392,7 +403,8 @@ boxplot(Dataset$wt ~ Dataset$sex, ylim = c(0, 18),
 
 ## 年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の共分散を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド `mean(変数名)` を使う；共分散を計算したい時には，コマンド `cov(変数1, 変数2)` を利用する．
 
-以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\newline
+\underline{(結果を下の余白に記入すること)}
 
 ```{r eval=TRUE}
 # 年齢の平均値

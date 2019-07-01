@@ -1,4 +1,4 @@
-\documentclass[10pt,]{problemset}
+\documentclass[]{problemset}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -14,7 +14,6 @@
   \fi
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
     \setmainfont[]{IPAexMincho}
-    \setsansfont[]{IPAexGothic}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -138,8 +137,8 @@
 \XeTeXlinebreaklocale ``ja''
 \XeTeXlinebreakskip=0pt plus 1pt
 \XeTeXlinebreakpenalty=0
+\setmainfont[Scale = 0.9]{IPAexMincho}
 \usepackage{afterpage}
-\sectionfont{\fontsize{10}{20}\selectfont}
 \author{学籍番号:}
 \course{疫学演習 (2019) 正解}
 \problemset{ }
@@ -152,6 +151,10 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
+\makeatletter
+\def\verbatim@font{\normalfont\sffamily}
+\makeatother
+
 \hypertarget{-20}{%
 \section{問題１：両群間計量データの平均値を比較する (20\%)}\label{-20}}
 
@@ -226,6 +229,13 @@ T = \frac{\bar{X}_A - \bar{X}_B}{S\sqrt{1/n_A + 1/n_B}}
 \end{aligned}
 \]
 
+\begin{itemize}
+\item
+  \underline{共通分散とT統計量両方の計算過程がないと無得点}
+\item
+  \underline{片方だけ計算過程がある場合，得点＝１}
+\end{itemize}
+
 自由度 (degree of freedom)は \(n_A + n_B -2 = 198\)，P値の計算は EZR
 を利用する：
 
@@ -238,6 +248,11 @@ T = \frac{\bar{X}_A - \bar{X}_B}{S\sqrt{1/n_A + 1/n_B}}
 \begin{verbatim}
 ## [1] 4.831141e-09
 \end{verbatim}
+
+\begin{itemize}
+\item
+  \underline{P 値の計算得点　＝２}
+\end{itemize}
 
 \begin{center}\includegraphics[width=0.9\linewidth]{pic/tvaluepvalue00} \end{center}
 
@@ -269,6 +284,15 @@ T = \frac{\bar{X}_A - \bar{X}_B}{S\sqrt{1/n_A + 1/n_B}}
 
 There is strong evidence against the null hypothesis that the means of
 COG are the same in the two groups.
+
+\begin{itemize}
+\item
+  \underline{検定結果の解釈得点　＝２}
+\item
+  \underline{「遺伝子変異ありの群のCOG平均値が有意に高い」でも可．}
+\item
+  \underline{「両群のCOG平均値が有意に異なる」でも可．}
+\end{itemize}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -524,7 +548,8 @@ months)，体重（kg）のデータを収集した．このデータを用い�
 \texttt{cov(変数1,\ 変数2)}
 を利用する．}{年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の共分散を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド mean(変数名) を使う；共分散を計算したい時には，コマンド cov(変数1, 変数2) を利用する．}}\label{ezr-mean--cov1-2-}}
 
-以下のコードをRスクリプトに入力して,実行をクリックしてください．\underline{(結果を下の余白に記入すること)}
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\newline
+\underline{(結果を下の余白に記入すること)}
 
 \begin{Shaded}
 \begin{Highlighting}[]
