@@ -1,0 +1,436 @@
+---
+documentclass: problemset
+title: ""
+author: ""
+date: ""
+output:
+  pdf_document:
+    # toc: true
+    # toc_depth: 1
+    fig_caption: yes
+    # includes:
+    #   in_header: preamble-latex.tex
+    keep_tex: yes
+    latex_engine: xelatex
+    number_sections: yes
+  html_document:
+    df_print: paged
+# linkcolor: blue
+# classoption: xelatex,ja=standard
+# mainfont: IPAPMincho
+header-includes:
+- \usepackage[ipaex]{zxjafont} 
+- \usepackage{sectsty}
+- \usepackage{tikz}
+- \usetikzlibrary{trees}
+- \usepackage{mathspec}
+- \usepackage{amsmath,amsthm}
+- \usepackage{amssymb,amsfonts}
+- \usepackage[all,arc]{xy}
+- \usepackage{enumerate}
+- \usepackage{mathrsfs}
+- \usepackage[margin=1in]{geometry}
+- \usepackage{thmtools}
+- \usepackage{verbatim}
+- \usepackage{xltxtra}
+- \XeTeXlinebreaklocale "ja"
+- \XeTeXlinebreakskip=0pt plus 1pt
+- \XeTeXlinebreakpenalty=0
+# - \setmainfont[]{IPAPMincho}
+# - \setsansfont[]{IPAPGothic}
+- \usepackage{afterpage}
+- \sectionfont{\fontsize{12}{15}\selectfont}
+- \author{学籍番号:}
+- \course{疫学演習 (2019) 回答用紙と採点基準}
+- \problemset{ }
+- \problem{ }
+- \collab{氏名:}
+# sansfont: IPAPGothic
+fontsize: 11pt
+---
+
+# 問題１：両群間計量データの平均値を比較する (20%)
+
+
+1. 帰無仮説を「遺伝子変異ありと変異なし両群の間で，COGの平均値は等しい」とする．上記のデータ及び適切な方法を使って検定し，検定の結果を分かりやすく説明せよ．なお，分散が等しいと仮定できる場合，以下の式で両群の共通標準偏差が計算できる：(6%)
+
+\begin{equation}
+  \label{eq:1}
+S = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}}
+\end{equation}
+
+- $S_A:$ A群の標準偏差；
+- $n_A:$ A群の人数；
+- $S_B:$ B群の標準偏差；
+- $n_B:$ B群の人数；
+- $S:$ A群及びB群の共通標準偏差；
+- $n_A + n_B -2:$ 分散が等しい時の自由度．
+
+
+
+公式(\ref{eq:1})により，共通分散/標準偏差を推定する：
+$$
+\begin{aligned}
+\because\;\;  S & = \sqrt{\frac{(n_A - 1)S^2_A + (n_B - 1)S^2_B}{n_A + n_B -2}} \\
+\therefore\;\; S & =  \sqrt{\frac{(50 - 1)9^2 + (150 - 1)9^2}{50 + 150 -2}} = 9 \\
+\Rightarrow\;\; T & = \frac{\bar{X}_A - \bar{X}_B}{S\sqrt{1/n_A + 1/n_B}} \\ 
+                  & = \frac{69.2 - 60.2}{9\times\sqrt{1/50 + 1/150}} \\ 
+                  & = \frac{9}{9\times0.1633} = 6.1237
+\end{aligned}
+$$
+
+- \underline{計算の過程と結果得点＝２}
+- \underline{共通分散とT統計量両方の計算過程がないと無得点}
+- \underline{片方だけ計算過程がある場合，得点＝１}
+- \underline{過程があるけど，結果だけ不正解１点}
+
+```{r eval=TRUE}
+2*pt(6.1237, 198, lower=FALSE)
+```
+
+- \underline{P 値の計算得点＝２}
+- \underline{P < 0.0001でも可}
+
+この検定結果は「両群のCOG平均値が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
+
+<!-- \newpage  -->
+<!-- \vfill  -->
+
+- \underline{結果の説明得点＝２}
+- \underline{「両群のCOG平均値が(統計学的に)有意に異なる」でも可}
+- \underline{「遺伝子変異あり群のCOG平均値は(統計学的に)有意に高い」でも可}
+- \underline{「遺伝子変異なし群のCOG平均値は(統計学的に)有意に低い」でも可}
+
+2. 遺伝子変異ありとなしの群の間の脳萎縮度 (atrophy) を比較する場合， 1. と同じ検定方法を用いてよいか？ それを判断するにはどの検定方法を使えばよいかを説明し，実際にこの検定方法を実施せよ．(6%)
+
+
+テーブルから両群の標準偏差はそれぞれ 0.21, 0.10 だと推定され，分散 (variance) が等しいという前提が満たされていない．１．の検定方法を使う時には，両群の分散が等しいという前提条件が必須だから，同じ Student t 検定を行うことができない\underline{（理由１点）}．「両群の分散」が等しいという帰無仮説を検定するには F 検定を利用する：
+
+
+$$
+\begin{aligned}
+F & = \frac{S^2_A}{S^2_B} \\
+  & = \frac{0.21^2}{0.10^2} \\
+  & = 4.41
+\end{aligned}
+$$
+
+- \underline{F検定方法の計算過程を示すと結果２点}
+- \underline{過程がない，結果だけ正しい無得点}
+- \underline{過程があるけど，結果だけ不正解１点}
+
+
+自由度 (degree of freedom)はそれぞれ $n_A - 1 = 49; n_B -1 = 149$，P値の計算は EZR を利用する：
+
+```{r eval=TRUE}
+2*pf(4.41, 49, 149, lower.tail = FALSE)
+```
+
+- \underline{P 値の計算得点＝１}
+- \underline{P < 0.0001でも可}
+
+
+この検定結果は「両群の脳萎縮度の分散が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
+
+- \underline{結果の説明得点＝２}
+- \underline{「両群の脳萎縮度の分散/標準偏差が(統計学的に)有意に異なる」でも可}
+- \underline{「遺伝子変異あり群の脳萎縮度の分散/標準偏差が(統計学的に)有意に高い」でも可}
+- \underline{「遺伝子変異なし群の脳萎縮度の分散/標準偏差が(統計学的に)有意に低い」でも可}
+
+
+<!-- \newpage -->
+<!-- \vfill -->
+
+3.  2.の結果を踏まえて，帰無仮説「両群の脳萎縮度の平均値が等しい」を検定せよ．なお，両群の分散が等しいという前提が満たされていない時に，自由度(df)の計算式は以下となる：(8%)
+
+
+\begin{equation}
+\label{eq:2}
+\mathbf{df} = \frac{(S^2_A/n_A + S^2_B/n_B)^2}{(S_A^2/n_A)^2/(n_A-1)+(S_B^2/n_B)^2/(n_B-1)}
+\end{equation}
+
+
+
+
+2.の検定結果から，「両群の脳萎縮度の分散が等しい」という帰無仮説を棄却されたため，Welch の t 検定を採用する．
+
+$$
+\begin{aligned}
+\Rightarrow\;\; T & = \frac{\bar{X}_A - \bar{X}_B}{\sqrt{S^2_A/n_A + S^2_B/n_B}} \\ 
+                  & = \frac{0.67 - 0.23}{\sqrt{0.21^2/50 + 0.10^2/150}} \\ 
+                  & = \frac{0.44}{\sqrt{0.0009486667}} = 14.28551
+\end{aligned}
+$$
+
+- \underline{T統計量の計算過程と結果２点}
+- \underline{計算過程がない場合，結果あっても無得点}
+- \underline{計算過程がある場合，結果間違っても１点}
+
+自由度は公式(\ref{eq:2})により計算できる：
+
+$$
+\begin{aligned}
+\mathbf{df} & = \frac{(S^2_A/n_A + S^2_B/n_B)^2}{(S_A^2/n_A)^2/(n_A-1)+(S_B^2/n_B)^2/(n_B-1)} \\
+            & = \frac{(0.21^2/50 + 0.10^2/150)^2}{(0.21^2/50)^2/(50-1)+(0.10^2/150)^2/(150-1)} \\
+            & = 58.58105
+\end{aligned}
+$$
+
+- \underline{自由度の計算過程と結果２点}
+- \underline{計算過程がない場合，結果あっても無得点}
+- \underline{計算過程がある場合，結果間違っても１点}
+
+P値の計算は EZR を利用する：
+
+```{r eval=TRUE}
+2*pt(14.28551, 58.58105, lower=FALSE)
+```
+
+
+- \underline{P 値の計算得点＝２}
+- \underline{P < 0.0001でも可}
+
+
+
+
+この検定結果は「両群の脳萎縮度の平均値が等しい」という帰無仮説を棄却するために非常に強い証拠を提供したと言える．
+
+
+- \underline{結果の説明得点＝２}
+- \underline{「両群の脳萎縮度の平均値が(統計学的に)有意に異なる」でも可}
+- \underline{「遺伝子変異あり群の脳萎縮度の平均値は(統計学的に)有意に高い」でも可}
+- \underline{「遺伝子変異なし群の脳萎縮度の平均値は(統計学的に)有意に低い」でも可}
+
+
+
+\newpage
+
+# 問題２：線形回帰モデル (30%)
+
+2.3 年齢，体重それぞれの平均値，分散を求めよ；また，年齢と体重の共分散を算出せよ．なお，EZRで計量データの平均値を計算するには，コマンド `mean(変数名)` を使う；共分散を計算したい時には，コマンド `cov(変数1, 変数2)` を利用する．
+
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\newline
+\underline{(結果を下の余白に記入すること)} (5%)
+
+```{r echo=FALSE}
+library(haven)
+Dataset <- read_dta("../LSHTMlearningnote/backupfiles/growgam1.dta")
+```
+
+
+- \underline{それぞれ１点}
+```{r eval=TRUE}
+# 年齢の平均値
+mean(Dataset$age)
+# 年齢の分散
+var(Dataset$age)
+# 体重の平均値
+mean(Dataset$wt)
+# 体重の分散
+var(Dataset$wt)
+# 体重と年齢の共分散 covariance
+cov(Dataset$wt, Dataset$age)
+```
+
+\newpage 
+
+2.4 年齢を説明変数，体重を目的変数とする場合，年齢の傾き(回帰係数)，と切片を求めよ．なお，分散と共分散の定義は以下とする，$\bar{X}$ は $X$ の平均値を示す：
+
+
+- 分散 variance:
+
+$$
+\begin{aligned}
+\mathbf{Var}(X) & = \frac{(X_1-\bar{X})^2+(X_2-\bar{X})^2+\cdots+(X_n-\bar{X})^2}{n - 1} \\
+                & = \frac{\sum_{i=1}^n(X_i-\bar{X})^2}{n -1}
+\end{aligned}
+$$
+
+- 共分散 covariance:
+
+$$
+\begin{aligned}
+\mathbf{Cov}(X, Y) & = \frac{(X_1 - \bar{X})(Y_1-\bar{Y}) + (X_2 - \bar{X})(Y_2-\bar{Y}) + \cdots + (X_n - \bar{X})(Y_n-\bar{Y})}{n - 1} \\
+                   & = \frac{\sum_{i = 1}^n(X_i - \bar{X})(Y_i-\bar{Y})}{n - 1}
+\end{aligned}
+$$
+
+以下のコードをRスクリプトに入力して,実行をクリックしてください．\newline
+\underline{(結果を下の余白に記入すること)} (2%)
+
+- \underline{それぞれ１点}
+
+```{r eval=TRUE}
+# 傾き (slope)
+beta <- cov(Dataset$wt, Dataset$age) / var(Dataset$age)
+beta
+# 切片 (intercept)
+alpha <- mean(Dataset$wt) - mean(Dataset$age)*beta
+alpha
+```
+
+
+\newpage
+
+2.6 今まで計算した傾きと切片の数字を用いて，年齢と体重の関係を線形と考える場合の計算式を記入せよ．傾きと切片の計算結果の意味をそれぞれ記述せよ．(4%)
+
+- \underline{計算式1点}
+$$
+Y = 6.838 + 0.165 X
+$$
+
+- $Y:$ 体重 (kg)； \underline{0.5点，計算式の中に書いても可}
+- $X:$ 年齢 (months)；\underline{0.5点，計算式の中に書いても可}
+- $0.165:$ 子供の年齢が1ヶ月上がると，体重が平均的 0.165 kg (165 g) 高くなる；\underline{1点，単位がない場合0.5点}
+- $6.838:$ 子供の年齢が0ヶ月の時に，体重の平均値は 6.838 kg．\underline{1点，単位がない場合0.5点}
+
+2.8 重回帰線形モデルの計算結果を用いて，体重の平均値を年齢と性別の線形モデルで表示せよ．各回帰係数の意味を説明せよ．(14%)
+
+- \underline{計算式2点}
+
+$$
+Y = 7.152 + 0.164 X_1 - 0.519X_2
+$$
+
+- $Y:$ 体重(kg)；\underline{1点，計算式の中に書いても可}
+- $X_1:$ 年齢 (months)；\underline{1点，計算式の中に書いても可}
+- $X_2 = 1:$ 女性；\underline{2点}
+- $X_2 = 0:$ 男性；\underline{2点}
+- $7.152:$ 男の子が年齢 0 ヶ月の時の平均体重(kg)；\underline{2点，単位がない場合1点}
+- $0.164:$ 同じ性別の子供の年齢が1ヶ月上がることによって，体重が平均的に 0.164 kg増える；\underline{2点，単位がない場合1点}
+- $-0.519:$ 子供年齢が同じ時に，女の子は男の子と比べ，体重が平均的に 0.519 kg低い．\underline{2点，単位がない場合1点}
+
+
+2.9 上記の重回帰線形モデルを用いて，年齢が34ヶ月の女の子の体重の予測値を計算せよ．(5%)
+
+
+- $X_1 = 34$；
+- $X_2 = 1$;
+
+$$
+\begin{aligned}
+Y & = 7.152 + 0.164 \times 34 -0.519\times 1 \\
+  & = 12.209\; \mathbf{(kg)}
+\end{aligned}
+$$
+
+- \underline{計算過程と結果5点，単位がない場合3点}
+- \underline{計算過程がない場合，結果あっても1点}
+- \underline{計算過程がある場合，結果間違っても3点}
+
+
+
+\newpage
+
+# 問題３：$\chi^2$ 検定，オッズ比，ロジスティック回帰モデル (40%)
+
+3.1 もし，視覚障害と対象者の死亡リスクに関連がない場合，下の表（各セルの期待値の人数）を答えよ：(4%)
+\bigskip\bigskip
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+死亡 & 視力正常                      & 視覚障害                   & 合計             \\ \hline
+0  &                                 &                            &   4161 (96.81\%)        \\ \hline
+1  &                                 &                            &  137 (3.19\%)    \\ \hline
+合計 & 3971 (100\%)             & 327 (100\%)            & 4298 (100\%)   \\ \hline
+\end{tabular}
+\end{center}
+\bigskip\bigskip\bigskip\bigskip\bigskip
+
+3.1.2 上記の２つの表の数字を使って $\chi^2$ 統計量を計算せよ (4%)
+
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+
+
+3.1.4 2 $\times$ 2 の分割表では，自由度は $\rule{3cm}{0.2mm}$ (2%)
+ 
+
+\newpage
+
+3.1.5 視覚障害と死亡の関係を示すテーブルのデータをもとに，下表を完成せよ：(6%)
+
+\bigskip\bigskip
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+                 & 視力正常   & 視覚障害    & 合計   \\ \hline
+リスク (risk)       &  &   & 0.0319 \\ \hline
+オッズ (odds)       &  &   & 0.0329 \\ \hline
+対数オッズ (log-odds) &  &  & -3.414 \\ \hline
+\end{tabular}
+\end{center}
+
+
+\bigskip
+
+視覚障害と死亡の関連を示すオッズ比を算出せよ：(2%)
+$$
+\mathbf{OR} = 
+$$
+
+
+このオッズ比の対数を取った値 $\mathbf{log(OR)}$ は：(2%)
+
+$$
+\mathbf{log(OR)} = 
+$$
+
+3.2 年齢の影響を考慮する
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+       & \multicolumn{10}{c|}{視覚障害 (0 = no, 1 = yes)}                                                                                                  \\ \hline
+死亡     & 0             & 1          & 0            & 1           & 0            & 1           & 0           & 1           & 0            & 1           \\ \hline
+1 = yes & 29            & 2          & 38           & 10          & 15           & 11          & 15          & 17          & 97           & 40          \\ \hline
+0 = no & 2301          & 22         & 1271         & 124         & 212          & 69          & 90          & 72          & 3874         & 287         \\ \hline
+  n     &           &           &          &          &           &           &           &           &          &          \\ \hline
+年齢     & \multicolumn{2}{c|}{15-34} & \multicolumn{2}{c|}{35-54} & \multicolumn{2}{c|}{55-64} & \multicolumn{2}{c|}{65 +} & \multicolumn{2}{c|}{Total} \\ \hline
+\end{tabular}
+\end{center}
+
+
+上記のデータをよく見ると，視覚障害のオッズは年齢と共に上昇している (年齢が15-34歳群の$(2 + 22) / (29 + 2301) = 0.010$から年齢が65歳以上群の$(17+72)/(15+90) =  0.848$に上がっている)．しかし，年齢の上昇と共に，死亡のオッズも上がる．年齢はここで，\underline{交絡因子 (confounder) }と定義される．
+
+3.2.1 以上のデータと解説をよく理解した上で，下表を完成せよ：(8%)
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+      & \multicolumn{2}{c|}{オッズ}    &        \\ \hline
+年齢    & 視力正常              & 視覚障害    & オッズ比   \\ \hline
+15-34 & 29/2301 = 0.01260 &   &   \\ \hline
+35-54 & 0.02990           &  &  \\ \hline
+55-64 & 0.07075           &  &  \\ \hline
+65+   & 0.16667           &  &  \\ \hline
+\end{tabular}
+\end{center}
+
+各年齢層では視覚障害と死亡との関連はどう変化しているか？(2%)
+
+\newpage
+
+3.2.2.3 単変量ロジスティック回帰モデルで評価した粗オッズ比 (crude odds ratio) と比べ，年齢調整オッズ比はどう変わったかを説明せよ．(10%)
+
+
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+
+# 問題４：生存分析 (10%)
+
+- 単変量ハザード比，及び信頼区間の意味を説明せよ．(5%)
+
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
+
+
+- 年齢調整ハザード比，及び信頼区間の意味を説明せよ．(5%)

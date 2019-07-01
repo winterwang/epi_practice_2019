@@ -50,9 +50,7 @@ header-includes:
 # fontsize: 10pt
 ---
 
-\makeatletter
-\def\verbatim@font{\normalfont\sffamily}
-\makeatother
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
