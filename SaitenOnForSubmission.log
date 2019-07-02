@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.6.28)  2 JUL 2019 11:44
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.6.28)  2 JUL 2019 14:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1546,9 +1546,6 @@ Package xcolor Warning: Incompatible color definition on input line 205.
 Package xcolor Warning: Incompatible color definition on input line 205.
 
 
-Package xcolor Warning: Incompatible color definition on input line 268.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 14.49998pt.
 We now make it that large for the rest of the document.
@@ -1556,131 +1553,134 @@ This may cause the page layout to be inconsistent, however.
 
 [2]
 
-Package xcolor Warning: Incompatible color definition on input line 272.
+Package xcolor Warning: Incompatible color definition on input line 270.
 
 
-Package xcolor Warning: Incompatible color definition on input line 272.
+Package xcolor Warning: Incompatible color definition on input line 274.
 
 
-Overfull \hbox (7.0106pt too wide) in paragraph at lines 293--295
+Package xcolor Warning: Incompatible color definition on input line 274.
+
+
+Overfull \hbox (7.0106pt too wide) in paragraph at lines 295--297
 []$[]$ 
  []
 
 
-Overfull \hbox (7.0106pt too wide) in paragraph at lines 295--296
+Overfull \hbox (7.0106pt too wide) in paragraph at lines 297--298
 []$[]$ 
  []
 
 [3]
 
-Package xcolor Warning: Incompatible color definition on input line 352.
-
-
 Package xcolor Warning: Incompatible color definition on input line 356.
 
 
-Package xcolor Warning: Incompatible color definition on input line 356.
+Package xcolor Warning: Incompatible color definition on input line 360.
 
-[4]
 
-Package xcolor Warning: Incompatible color definition on input line 400.
+Package xcolor Warning: Incompatible color definition on input line 360.
+
+[4] [5]
+
+Package xcolor Warning: Incompatible color definition on input line 404.
 
 
 LaTeX Font Warning: Font shape `TU/IPAexGothic(1)/m/it' undefined
-(Font)              using `TU/IPAexGothic(1)/m/n' instead on input line 402.
+(Font)              using `TU/IPAexGothic(1)/m/n' instead on input line 406.
 
 
-Package xcolor Warning: Incompatible color definition on input line 405.
+Package xcolor Warning: Incompatible color definition on input line 409.
 
 
-Package xcolor Warning: Incompatible color definition on input line 405.
+Package xcolor Warning: Incompatible color definition on input line 409.
 
 
-Package xcolor Warning: Incompatible color definition on input line 411.
+Package xcolor Warning: Incompatible color definition on input line 415.
 
 LaTeX Font Info:    Font shape `TU/IPAexGothic(1)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 413.
+(Font)              scaled to size 12.0pt on input line 417.
 
-Package xcolor Warning: Incompatible color definition on input line 416.
-
-
-Package xcolor Warning: Incompatible color definition on input line 416.
+Package xcolor Warning: Incompatible color definition on input line 420.
 
 
-Package xcolor Warning: Incompatible color definition on input line 422.
+Package xcolor Warning: Incompatible color definition on input line 420.
 
 
-Package xcolor Warning: Incompatible color definition on input line 427.
+Package xcolor Warning: Incompatible color definition on input line 426.
 
 
-Package xcolor Warning: Incompatible color definition on input line 427.
+Package xcolor Warning: Incompatible color definition on input line 431.
 
 
-Package xcolor Warning: Incompatible color definition on input line 433.
+Package xcolor Warning: Incompatible color definition on input line 431.
 
 
-Package xcolor Warning: Incompatible color definition on input line 438.
+Package xcolor Warning: Incompatible color definition on input line 437.
 
 
-Package xcolor Warning: Incompatible color definition on input line 438.
+Package xcolor Warning: Incompatible color definition on input line 442.
 
 
-Package xcolor Warning: Incompatible color definition on input line 444.
+Package xcolor Warning: Incompatible color definition on input line 442.
 
 
-Package xcolor Warning: Incompatible color definition on input line 449.
+Package xcolor Warning: Incompatible color definition on input line 448.
 
 
-Package xcolor Warning: Incompatible color definition on input line 449.
-
-[5]
-
-Package xcolor Warning: Incompatible color definition on input line 495.
+Package xcolor Warning: Incompatible color definition on input line 453.
 
 
-Package xcolor Warning: Incompatible color definition on input line 501.
-
-
-Package xcolor Warning: Incompatible color definition on input line 501.
-
-
-Package xcolor Warning: Incompatible color definition on input line 507.
-
-
-Package xcolor Warning: Incompatible color definition on input line 513.
-
-
-Package xcolor Warning: Incompatible color definition on input line 513.
+Package xcolor Warning: Incompatible color definition on input line 453.
 
 [6]
-Overfull \hbox (38.99472pt too wide) in paragraph at lines 539--541
+
+Package xcolor Warning: Incompatible color definition on input line 499.
+
+
+Package xcolor Warning: Incompatible color definition on input line 505.
+
+
+Package xcolor Warning: Incompatible color definition on input line 505.
+
+
+Package xcolor Warning: Incompatible color definition on input line 511.
+
+
+Package xcolor Warning: Incompatible color definition on input line 517.
+
+
+Package xcolor Warning: Incompatible color definition on input line 517.
+
+[7]
+Overfull \hbox (38.99472pt too wide) in paragraph at lines 543--545
 []$\OT1/lmr/m/n/12 6\OML/lmm/m/it/12 :\OT1/lmr/m/n/12 838 :$ \TU/IPAexMincho(0)
 /m/n/12 子 供 の 年 齢 が 0ヶ 月 の 時 に， 体 重 の 平 均 値 は 6.838 kg．$[]$ 
  []
 
-[7]
-Overfull \hbox (36.5543pt too wide) in paragraph at lines 620--627
+[8]
+Overfull \hbox (36.5543pt too wide) in paragraph at lines 624--631
  [] 
  []
 
-[8] [9]
-Overfull \hbox (1.0106pt too wide) in paragraph at lines 759--760
+[9] [10]
+Overfull \hbox (1.0106pt too wide) in paragraph at lines 763--764
 []$[]$ 
  []
 
 LaTeX Font Info:    Font shape `TU/IPAexMincho(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 766.
+(Font)              scaled to size 14.4pt on input line 770.
 
-Overfull \hbox (13.0106pt too wide) in paragraph at lines 781--782
+Overfull \hbox (13.0106pt too wide) in paragraph at lines 785--786
 []$[]$ 
  []
 
-[10] [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 806.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 806.
+[11] [12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 810.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 810.
 (./SaitenOnForSubmission.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 806.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 806.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 810.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 810.
 Package rerunfilecheck Info: File `SaitenOnForSubmission.out' has not changed.
 (rerunfilecheck)             Checksum: 1318DB12747B957CAE81AAEDB46F9363.
 
@@ -1693,10 +1693,10 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  37874 strings out of 494894
  718146 string characters out of 6173843
- 845899 words of memory out of 5000000
+ 845951 words of memory out of 5000000
  41213 multiletter control sequences out of 15000+600000
  569030 words of font info for 95 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,12n,121p,818b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,121p,818b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on SaitenOnForSubmission.pdf (11 pages).
+Output written on SaitenOnForSubmission.pdf (12 pages).
