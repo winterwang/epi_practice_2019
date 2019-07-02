@@ -218,7 +218,8 @@ Dataset <- read_dta("../LSHTMlearningnote/backupfiles/growgam1.dta")
 ```
 
 
-- \underline{それぞれ１点}
+- \underline{それぞれ１点，四捨五入可}
+
 ```{r eval=TRUE}
 # 年齢の平均値
 mean(Dataset$age)
@@ -258,7 +259,7 @@ $$
 以下のコードをRスクリプトに入力して,実行をクリックしてください．\newline
 \underline{(結果を下の余白に記入すること)} (2%)
 
-- \underline{それぞれ１点}
+- \underline{それぞれ１点，四捨五入可}
 
 ```{r eval=TRUE}
 # 傾き (slope)
@@ -325,31 +326,59 @@ $$
 # 問題３：$\chi^2$ 検定，オッズ比，ロジスティック回帰モデル (40%)
 
 3.1 もし，視覚障害と対象者の死亡リスクに関連がない場合，下の表（各セルの期待値の人数）を答えよ：(4%)
-\bigskip\bigskip
 
+- \underline{それぞれ１点，四捨五入可}
+
+<!-- \begin{center} -->
+<!-- \begin{tabular}{|c|c|c|c|} -->
+<!-- \hline -->
+<!-- 死亡 & 視力正常                      & 視覚障害                   & 合計             \\ \hline -->
+<!-- 0  &                                 &                            &   4161 (96.81\%)        \\ \hline -->
+<!-- 1  &                                 &                            &  137 (3.19\%)    \\ \hline -->
+<!-- 合計 & 3971 (100\%)             & 327 (100\%)            & 4298 (100\%)   \\ \hline -->
+<!-- \end{tabular} -->
+<!-- \end{center} -->
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline
-死亡 & 視力正常                      & 視覚障害                   & 合計             \\ \hline
-0  &                                 &                            &   4161 (96.81\%)        \\ \hline
-1  &                                 &                            &  137 (3.19\%)    \\ \hline
+死亡 & 視力正常                     & 視覚障害                   & 合計             \\ \hline
+0  & 3971$\times$4161/4298 = 3844.4232 & 327$\times$4161/4298 = 316.5768 & 4161 (96.81\%) \\ \hline
+1  & 3971$\times$137/4298 = 126.5768   & 327$\times$173/4298 = 10.4232   & 137 (3.19\%)   \\ \hline
 合計 & 3971 (100\%)             & 327 (100\%)            & 4298 (100\%)   \\ \hline
 \end{tabular}
 \end{center}
+
+
+
 \bigskip\bigskip\bigskip\bigskip\bigskip
 
 3.1.2 上記の２つの表の数字を使って $\chi^2$ 統計量を計算せよ (4%)
 
-\bigskip\bigskip\bigskip\bigskip\bigskip
-\bigskip\bigskip\bigskip\bigskip\bigskip
-\bigskip\bigskip\bigskip\bigskip\bigskip
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip -->
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip -->
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip -->
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip -->
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip -->
+
+$$
+\begin{aligned}
+\chi^2 & = \frac{(3874 - 3844.4232)^2}{3844.4232} + \frac{(287 - 316.5768)^2}{316.5768} + \frac{(97 - 126.5768)^2}{126.5768} + \frac{(40 - 10.4232)^2}{10.4232} \\
+       & = 93.829
+\end{aligned}
+$$
+
+
+- \underline{計算過程と結果４点}
+- \underline{計算過程がない場合，結果あっても1点}
+- \underline{計算過程がある場合，結果間違っても3点}
+
 \bigskip\bigskip\bigskip\bigskip\bigskip
 \bigskip\bigskip\bigskip\bigskip\bigskip
 
-
-3.1.4 2 $\times$ 2 の分割表では，自由度は $\rule{3cm}{0.2mm}$ (2%)
+3.1.4 2 $\times$ 2 の分割表では，自由度は \underline{1} (2% \underline{ = 2点)}
  
+ <!-- $\rule{3cm}{0.2mm}$ -->
 
 \newpage
 
@@ -357,29 +386,41 @@ $$
 
 \bigskip\bigskip
 
+- \underline{それぞれ１点，四捨五入可}
+
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline
                  & 視力正常   & 視覚障害    & 合計   \\ \hline
-リスク (risk)       &  &   & 0.0319 \\ \hline
-オッズ (odds)       &  &   & 0.0329 \\ \hline
-対数オッズ (log-odds) &  &  & -3.414 \\ \hline
+リスク (risk)       & \bf{0.0244} & \bf{0.1223}  & 0.0319 \\ \hline
+オッズ (odds)       & \bf{0.0250} & \bf{0.1394}  & 0.0329 \\ \hline
+対数オッズ (log-odds) & \bf{-3.689} & \bf{-1.9704} & -3.414 \\ \hline
 \end{tabular}
 \end{center}
+
+<!-- \begin{center} -->
+<!-- \begin{tabular}{|c|c|c|c|} -->
+<!-- \hline -->
+<!--                  & 視力正常   & 視覚障害    & 合計   \\ \hline -->
+<!-- リスク (risk)       &  &   & 0.0319 \\ \hline -->
+<!-- オッズ (odds)       &  &   & 0.0329 \\ \hline -->
+<!-- 対数オッズ (log-odds) &  &  & -3.414 \\ \hline -->
+<!-- \end{tabular} -->
+<!-- \end{center} -->
 
 
 \bigskip
 
-視覚障害と死亡の関連を示すオッズ比を算出せよ：(2%)
-$$
-\mathbf{OR} = 
-$$
-
-
-このオッズ比の対数を取った値 $\mathbf{log(OR)}$ は：(2%)
+視覚障害と死亡の関連を示すオッズ比を算出せよ：(2% \underline{ = 2点，四捨五入可)}
 
 $$
-\mathbf{log(OR)} = 
+\mathbf{OR} = 0.1394 \div 0.025 = 5.576
+$$
+
+このオッズ比の対数を取った値 $\mathbf{log(OR)}$ は：(2% \underline{ = 2点，四捨五入可)}
+
+$$
+\mathbf{log(OR)} = 1.717
 $$
 
 3.2 年齢の影響を考慮する
@@ -401,36 +442,85 @@ $$
 
 3.2.1 以上のデータと解説をよく理解した上で，下表を完成せよ：(8%)
 
+- \underline{それぞれ１点，四捨五入可}
+
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline
-      & \multicolumn{2}{c|}{オッズ}    &        \\ \hline
-年齢    & 視力正常              & 視覚障害    & オッズ比   \\ \hline
-15-34 & 29/2301 = 0.01260 &   &   \\ \hline
-35-54 & 0.02990           &  &  \\ \hline
-55-64 & 0.07075           &  &  \\ \hline
-65+   & 0.16667           &  &  \\ \hline
+                 & 視力正常   & 視覚障害    & 合計   \\ \hline
+リスク (risk)       & 0.0244 & \bf{0.1223}  & \bf{0.0319} \\ \hline
+オッズ (odds)       & 0.0250 & \bf{0.1394}  & \bf{0.0329} \\ \hline
+対数オッズ (log-odds) & -3.689 & \bf{-1.9704} & \bf{-3.414} \\ \hline
 \end{tabular}
 \end{center}
 
+<!-- \begin{center} -->
+<!-- \begin{tabular}{|c|c|c|c|} -->
+<!-- \hline -->
+<!--       & \multicolumn{2}{c|}{オッズ}    &        \\ \hline -->
+<!-- 年齢    & 視力正常              & 視覚障害    & オッズ比   \\ \hline -->
+<!-- 15-34 & 29/2301 = 0.01260 &   &   \\ \hline -->
+<!-- 35-54 & 0.02990           &  &  \\ \hline -->
+<!-- 55-64 & 0.07075           &  &  \\ \hline -->
+<!-- 65+   & 0.16667           &  &  \\ \hline -->
+<!-- \end{tabular} -->
+<!-- \end{center} -->
+
 各年齢層では視覚障害と死亡との関連はどう変化しているか？(2%)
 
-\newpage
+各年齢層では，視覚障害と死亡の関係を評価するオッズ比は大きく異なることがわかり，年齢と共に減っていく傾向があるかもしれない\underline{(1点)}．年齢を考慮せずに視覚障害と死亡との関係を評価することは妥当ではないことが示唆される．\underline{(1点)}
+
+- \underline{「年齢を考慮せずに視覚障害と死亡との関係を評価することは実際の関連を過大}\newline\underline{評価する」でも可}
+\bigskip\bigskip\bigskip\bigskip\bigskip
+
 
 3.2.2.3 単変量ロジスティック回帰モデルで評価した粗オッズ比 (crude odds ratio) と比べ，年齢調整オッズ比はどう変わったかを説明せよ．(10%)
 
+- 年齢を考慮していない場合，視覚障害者は視力正常者と比べ，3年の間に死亡するオッズが5.57倍であり\underline{(1点)}，95%信頼区間が 3.78 - 8.20 と推定される\underline{(1点)}．
 
-\bigskip\bigskip\bigskip\bigskip\bigskip
-\bigskip\bigskip\bigskip\bigskip\bigskip
-\bigskip\bigskip\bigskip\bigskip\bigskip
+- 多変量ロジスティクス回帰モデルを用いて，視覚障害と死亡の関係に年齢の交絡考慮した後，オッズ比が 2.20 になり\underline{(1点)}，95%信頼区間が 1.41 - 3.44 と推定される\underline{(1点)}．
+
+- このオッズ比が大きく変化した（小さくなった）ことは，年齢がこの関連の強い交絡因子であることを示唆している．\underline{(2点)}
+
+- また，年齢調整したオッズ比の95%信頼区間は 1 を跨いでいない．\underline{(2点)}
+
+以上の結果を踏まえて，「視覚障害者が視力正常者と比べ，観察期間中に死亡するオッズ比は1と等しい」を棄却するために，非常に強い証拠を提供した．\underline{(2点)}
+
+- \underline{「視覚障害者が視力正常者と比べ，観察期間中に死亡するオッズ比は(統計学的に)}\newline\underline{有意に1より高い」でも可}
+
+
+
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip -->
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip -->
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip -->
 
 # 問題４：生存分析 (10%)
 
-- 単変量ハザード比，及び信頼区間の意味を説明せよ．(5%)
+## 単変量ハザード比，及び信頼区間の意味を説明せよ．(5%)
 
-\bigskip\bigskip\bigskip\bigskip\bigskip
-\bigskip\bigskip\bigskip\bigskip\bigskip
-\bigskip\bigskip\bigskip\bigskip\bigskip
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip -->
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip -->
+<!-- \bigskip\bigskip\bigskip\bigskip\bigskip -->
+
+- 三年間の追跡期間における，視覚障害者の死亡ハザードは視力正常者の 5.197 倍，このハザード比の95% 信頼区間は 3.56 - 7.51 と推定される．\underline{(1点)}
+
+- 粗ハザード比の95%信頼区間は 1 を跨いでいない．\underline{(1点)}
+
+以上の結果から，「視覚障害者が視力正常者と比べ，観察期間中に死亡するハザード比は1と等しい」を棄却するために，非常に強い証拠を提供した．\underline{(3点)}
+
+- \underline{「視覚障害者が視力正常者と比べ，観察期間中に死亡するハザード比は(統計学的に)}\newline\underline{有意に1より高い」でも可}
 
 
-- 年齢調整ハザード比，及び信頼区間の意味を説明せよ．(5%)
+## 年齢調整ハザード比，及び信頼区間の意味を説明せよ．(5%)
+
+
+- 三年間の追跡期間における，視覚障害者の年齢調整死亡ハザードは視力正常者の 2.10 倍，このハザード比の 95% 信頼区間は 1.37 - 3.21 と推定される．\underline{(1点)}
+
+- 年齢調整ハザード比の95%信頼区間は 1 を跨いでいない．\underline{(1点)}
+
+- このハザード比が大きく変化した（小さくなった）ことは，年齢がこの関連の強い交絡因子であることを示唆している．\underline{(1点)}
+
+以上の結果から，「視覚障害者が視力正常者と比べ，観察期間中に死亡する年齢調整ハザード比は1と等しい」を棄却するために，非常に強い証拠を提供した．\underline{(2点)}
+
+- \underline{「視覚障害者が視力正常者と比べ，観察期間中に死亡する年齢調整ハザード比は}\newline\underline{(統計学的に)有意に1より高い」でも可}
+
